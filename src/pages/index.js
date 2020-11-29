@@ -10,9 +10,12 @@ import Projects from "../components/projects"
 import Skills from "../components/skills"
 import Thanks from "../components/thanks"
 
+import styles from './index.module.scss'
+
 const Home = () => {
+
   return (
-    <div className="orange-theme orange-transition" style={{backgroundColor: "rgb(244, 161, 39)"}}>
+    <div className={`${styles.app} orange-theme orange-transition`} >
       <Helmet>
         <meta charSet="utf-8" />
         <title>Ben Lammers</title>
