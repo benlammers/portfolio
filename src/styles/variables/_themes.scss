@@ -1,0 +1,61 @@
+:root {
+   --color-grey: #37322e;
+   --color-grey-light: #d3d3d3;
+   --color-white: #ffffff;
+   --color-white-clear: rgba(255, 255, 255, 0.6);
+   --orange: 244, 161, 39;
+   --blue: 117, 200, 174;
+   --rose: 192, 132, 133;
+
+   --color-orange: rgb(var(--orange));
+   --color-blue: rgb(var(--blue));
+   --color-rose: rgb(var(--rose));
+
+   --color-font: #37322e;
+
+   --color-background-grey: rgba(0, 0, 0, 0.9);
+}
+
+.orange-theme {
+   --color-primary: var(--color-orange);
+}
+
+.orange-transition {
+   --color-transition: var(--color-orange);
+
+   --color-shadow-subtle: rgba(var(--orange), 0.5);
+   --color-shadow: rgba(var(--orange), 0.6);
+   --color-shadow-hover: rgba(var(--orange), 0.8);
+}
+
+.blue-theme {
+   --color-primary: var(--color-blue);
+}
+
+.blue-transition {
+   --color-transition: var(--color-blue);
+
+   --color-shadow-subtle: rgba(var(--blue), 0.5);
+   --color-shadow: rgba(var(--blue), 0.7);
+   --color-shadow-hover: rgba(var(--blue), 0.9);
+}
+
+.rose-theme {
+   --color-primary: var(--color-rose);
+}
+
+.rose-transition {
+   --color-transition: var(--color-rose);
+
+   --color-shadow-subtle: rgba(var(--rose), 0.5);
+   --color-shadow: rgba(var(--rose), 0.6);
+   --color-shadow-hover: rgba(var(--rose), 0.8);
+}
+
+.grey-transition {
+   --color-transition: rgba(0, 0, 0, 0.1);
+
+   --color-shadow-subtle: rgba(0, 0, 0, 0.1);
+   --color-shadow: rgba(0, 0, 0, 0.2);
+   --color-shadow-hover: rgba(0, 0, 0, 0.5);
+}

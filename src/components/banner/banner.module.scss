@@ -1,0 +1,150 @@
+.banner {
+   height: 95vh;
+   display: grid;
+   grid-template-rows: max-content 1fr max-content;
+   grid-template-columns: 1fr;
+   padding: 1rem 1rem 8rem;
+   z-index: 2;
+}
+
+.socials {
+   display: grid;
+   grid-template-columns: repeat(3, min-content);
+   column-gap: 0.6rem;
+   list-style: none;
+}
+
+.social {
+   svg {
+      fill: var(--color-grey);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      padding: 0.2rem;
+      border: 2px solid var(--color-grey);
+   }
+}
+
+.text {
+   align-self: center;
+   justify-self: center;
+
+   display: grid;
+   justify-items: center;
+   row-gap: 0.8rem;
+}
+
+.line,
+.title {
+   opacity: 0;
+   transform: translateY(6px);
+   animation: bannerFadeUp 0.7s ease forwards 3.3s;
+}
+
+.line {
+   height: 2px;
+   width: 65%;
+   background-color: var(--color-font);
+}
+
+.quote {
+   justify-self: center;
+   padding: 0 2rem;
+   text-align: center;
+
+   display: grid;
+   row-gap: 0.4rem;
+
+   opacity: 0;
+   transform: translateY(6px);
+   animation: bannerFadeUp 0.7s ease forwards 4s;
+
+   max-width: 64rem;
+}
+
+@keyframes bannerFadeUp {
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.socials {
+   li {
+      &:nth-child(3) {
+         transform: translateX(-8.4rem) scale(0);
+         animation: bannerFirstSocialIn 2s forwards 4s;
+      }
+      &:nth-child(2) {
+         transform: translateX(-4.2rem) scale(0);
+         animation: bannerSecondSocialIn 2s forwards 4s;
+      }
+      &:nth-child(1) {
+         transform: scale(0);
+         animation: bannerThirdSocialIn 2s forwards 4s;
+      }
+   }
+}
+
+@keyframes bannerFirstSocialIn {
+   0% {
+      transform: translateX(-8.4rem) scale(0);
+   }
+   20% {
+      transform: translateX(-8.4rem) scale(1);
+   }
+   40% {
+      transform: translateX(-4.2rem) scale(1);
+   }
+   60% {
+      transform: translateX(-4.2rem) scale(1);
+   }
+   80% {
+      transform: translateX(0rem) scale(1);
+   }
+   100% {
+      transform: translateX(0rem) scale(1);
+   }
+}
+
+@keyframes bannerSecondSocialIn {
+   0% {
+      transform: translateX(-4.2rem) scale(0);
+   }
+   20% {
+      transform: translateX(-4.2rem) scale(0);
+   }
+   40% {
+      transform: translateX(-4.2rem) scale(0);
+   }
+   60% {
+      transform: translateX(-4.2rem) scale(1);
+   }
+   80% {
+      transform: translateX(0rem) scale(1);
+   }
+   100% {
+      transform: translateX(0rem) scale(1);
+   }
+}
+
+@keyframes bannerThirdSocialIn {
+   0% {
+      transform: scale(0);
+   }
+   20% {
+      transform: scale(0);
+   }
+   40% {
+      transform: scale(0);
+   }
+   60% {
+      transform: scale(0);
+   }
+   80% {
+      transform: scale(0);
+   }
+   100% {
+      transform: scale(1);
+   }
+}

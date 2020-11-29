@@ -1,0 +1,6 @@
+export const django = require('./django.svg')
+export const dotnet = require('./dotnet.svg')
+export const graphql = require('./graphql.svg')
+export const mongodb = require('./mongodb.svg')
+export const nodejs = require('./nodejs.svg')
+export const postgres = require('./postgres.svg')

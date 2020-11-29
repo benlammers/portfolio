@@ -1,0 +1,6 @@
+export const csharp = require('./c-sharp.svg')
+export const css = require('./css.svg')
+export const html = require('./html.svg')
+export const java = require('./java.svg')
+export const javascript = require('./javascript.svg')
+export const python = require('./python.svg')

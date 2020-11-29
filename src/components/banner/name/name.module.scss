@@ -1,0 +1,109 @@
+.name {
+   fill: transparent;
+   stroke: var(--color-font);
+   width: 70vw;
+   margin-bottom: 0.4rem;
+   z-index: 2;
+   animation: nameFillAnim 0.5s ease forwards 3s;
+
+   & path:nth-child(1) {
+      stroke-dasharray: 580px;
+      stroke-dashoffset: 580px;
+      animation: nameStrokeAnim 1.2s ease forwards;
+   }
+   & path:nth-child(2) {
+      stroke-dasharray: 451px;
+      stroke-dashoffset: 451px;
+      animation: nameStrokeAnim 1.2s ease forwards 0.2s;
+   }
+   & path:nth-child(3) {
+      stroke-dasharray: 409px;
+      stroke-dashoffset: 409px;
+      animation: nameStrokeAnim 1.2s ease forwards 0.4s;
+   }
+   & path:nth-child(4) {
+      stroke-dasharray: 351px;
+      stroke-dashoffset: 351px;
+      animation: nameStrokeAnim 1.2s ease forwards 0.6s;
+   }
+   & path:nth-child(5) {
+      stroke-dasharray: 448px;
+      stroke-dashoffset: 448px;
+      animation: nameStrokeAnim 1.2s ease forwards 0.8s;
+   }
+   & path:nth-child(6) {
+      stroke-dasharray: 623px;
+      stroke-dashoffset: 623px;
+      animation: nameStrokeAnim 1.2s ease forwards 1s;
+   }
+   & path:nth-child(7) {
+      stroke-dasharray: 623px;
+      stroke-dashoffset: 623px;
+      animation: nameStrokeAnim 1.2s ease forwards 1.2s;
+   }
+   & path:nth-child(8) {
+      stroke-dasharray: 451px;
+      stroke-dashoffset: 451px;
+      animation: nameStrokeAnim 1.2s ease forwards 1.4s;
+   }
+   & path:nth-child(9) {
+      stroke-dasharray: 408px;
+      stroke-dashoffset: 408px;
+      animation: nameStrokeAnim 1.2s ease forwards 1.6s;
+   }
+   & path:nth-child(10) {
+      stroke-dasharray: 356px;
+      stroke-dashoffset: 356px;
+      animation: nameStrokeAnim 1.2s ease forwards 1.8s;
+   }
+}
+
+@keyframes nameStrokeAnim {
+   to {
+      stroke-dashoffset: 0;
+   }
+}
+
+@keyframes nameFillAnim {
+   to {
+      fill: var(--color-font);
+      width: 14rem;
+   }
+}
+
+@media only screen and (min-width: 500px) {
+   @keyframes nameFillAnim {
+      to {
+         fill: var(--color-font);
+         width: 20rem;
+      }
+   }
+}
+
+@media only screen and (min-width: 700px) {
+   @keyframes nameFillAnim {
+      to {
+         fill: var(--color-font);
+         width: 24rem;
+      }
+   }
+}
+
+@media only screen and (min-width: 1000px) {
+   @keyframes nameFillAnim {
+      to {
+         fill: var(--color-font);
+         width: 28rem;
+      }
+   }
+
+   .name {
+      max-width: 44rem;
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+   .name {
+      max-width: 50rem;
+   }
+}

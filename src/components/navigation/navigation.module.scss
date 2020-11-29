@@ -1,0 +1,35 @@
+.navigation {
+   background-color: var(--color-background-grey);
+   height: 10rem;
+   color: var(--color-white);
+   mix-blend-mode: multiply;
+   z-index: 5;
+}
+
+.links {
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(4, max-content);
+   justify-content: center;
+   align-content: center;
+   list-style: none;
+}
+
+.link {
+   cursor: pointer;
+   
+   button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+   }
+
+   &:not(:last-child):after {
+      content: '/';
+      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      padding: 0 0.75rem;
+      cursor: auto;
+   }
+}

@@ -1,0 +1,105 @@
+.footer {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   padding: 1.2rem 1rem;
+   z-index: 2;
+   background-color: var(--color-white);
+
+   li {
+      &:nth-child(1) {
+         animation: githubSocialIn 2s forwards;
+      }
+      &:nth-child(2) {
+         animation: gmailSocialIn 2s forwards;
+      }
+      &:nth-child(3) {
+         animation: linkedinSocialIn 2s forwards;
+      }
+   }
+}
+
+.socials {
+   justify-self: end;
+   display: grid;
+   grid-template-columns: repeat(3, max-content);
+   column-gap: 0.6rem;
+   padding-top: 0rem;
+   list-style: none;
+
+   // ANIMATION PRESETS - Should be applied when visible
+   li {
+      &:nth-child(1) {
+         transform: translateX(4.2rem) scale(0);
+      }
+      &:nth-child(2) {
+         transform: translateX(0rem) scale(0);
+      }
+      &:nth-child(3) {
+         transform: translateX(-4.2rem) scale(0);
+      }
+   }
+}
+
+@keyframes githubSocialIn {
+   0% {
+      transform: translateX(4.2rem) scale(0);
+   }
+   20% {
+      transform: translateX(4.2rem) scale(1);
+   }
+   40% {
+      transform: translateX(0rem) scale(1);
+   }
+   100% {
+      transform: translateX(0rem) scale(1);
+   }
+}
+
+@keyframes gmailSocialIn {
+   0% {
+      transform: translateX(0rem) scale(0);
+   }
+   60% {
+      transform: translateX(0rem) scale(0);
+   }
+   80% {
+      transform: translateX(0rem) scale(1);
+   }
+   100% {
+      transform: translateX(0rem) scale(1);
+   }
+}
+
+@keyframes linkedinSocialIn {
+   0% {
+      transform: translateX(-4.2rem) scale(0);
+   }
+   20% {
+      transform: translateX(-4.2rem) scale(0);
+   }
+   40% {
+      transform: translateX(-4.2rem) scale(1);
+   }
+   60% {
+      transform: translateX(-4.2rem) scale(1);
+   }
+   80% {
+      transform: translateX(0rem) scale(1);
+   }
+   100% {
+      transform: translateX(0rem) scale(1);
+   }
+}
+
+@keyframes footerThirdSocialIn {
+   0% {
+      transform: scale(0);
+   }
+   80% {
+      transform: scale(0);
+   }
+   100% {
+      transform: scale(1);
+   }
+}

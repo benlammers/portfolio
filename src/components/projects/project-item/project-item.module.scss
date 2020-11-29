@@ -1,0 +1,109 @@
+.project-item {
+   display: grid;
+   width: 95%;
+   height: 28rem;
+   background-size: cover;
+   background-position: center;
+
+   box-shadow: var(--box-shadow);
+   border-radius: var(--border-radius);
+   margin: 1rem;
+
+   user-select: none;
+   -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+
+   transition: box-shadow 0.3s;
+
+   // ANIMATION PRESETS
+   // opacity: 0;
+   // transform: translateY(3rem);
+
+   // &--visible {
+   //    animation: projectFadeUp 0.4s ease-in forwards;
+   // }
+
+   &:hover {
+      box-shadow: var(--box-shadow-hover);
+   }
+}
+
+.details {
+   opacity: 0;
+   border-radius: var(--border-radius);
+
+   background-color: rgba(255, 255, 255, 0.8);
+   padding: 1rem 1.6rem 1.6rem;
+   display: grid;
+   grid-template-rows: max-content 1fr max-content max-content;
+   transition: opacity 0.2s;
+   overflow: hidden;
+
+   & > * {
+      transition: transform 0.2s;
+      transform: scale(0.8);
+   }
+
+   &:hover {
+      opacity: 1;
+
+      & > * {
+         transform: scale(1);
+      }
+   }
+}
+
+.description {
+   text-align: center;
+   align-self: center;
+   justify-self: center;
+   width: 90%;
+}
+
+.button {
+   justify-self: center;
+   justify-content: center;
+   padding: 0.4rem;
+   width: 12rem;
+   margin: 2rem 1rem 0;
+   transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.icon {
+   width: 2rem;
+   height: 2rem;
+   padding: 0.2rem;
+}
+
+@keyframes projectFadeUp {
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@media only screen and (min-width: 500px) {
+   .project-item {
+      width: 85%;
+
+      &__description {
+         width: 80%;
+      }
+   }
+}
+
+@media only screen and (min-width: 700px) {
+   .project-item {
+      width: 70%;
+   }
+}
+
+@media only screen and (min-width: 1000px) {
+   .project-item {
+      width: 38rem;
+
+      &__description {
+         width: 90%;
+      }
+   }
+}

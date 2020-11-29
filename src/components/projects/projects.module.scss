@@ -1,0 +1,18 @@
+.projects {
+   display: grid;
+   justify-items: center;
+   row-gap: 2rem;
+
+   background-color: var(--color-white);
+   color: var(--color-font);
+   font-family: var(--font-text);
+
+   padding: 3rem 1rem 5rem;
+}
+
+.list {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}

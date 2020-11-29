@@ -1,0 +1,63 @@
+.button {
+   &,
+   &--accent,
+   &--transition {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      align-items: center;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+      transition: box-shadow 0.3s, background-color 0.3s;
+
+      &__icon {
+         &,
+         &--white,
+         &--accent {
+            &:nth-child(1) {
+               margin-right: 0.6rem;
+            }
+            &:nth-child(2) {
+               margin-left: 0.6rem;
+            }
+         }
+      }
+   }
+
+   &,
+   &--transition {
+      box-shadow: var(--box-shadow);
+      &:hover {
+         box-shadow: var(--box-shadow-hover);
+      }
+   }
+
+   &--accent {
+      box-shadow: var(--box-shadow-accent);
+      &:hover {
+         box-shadow: var(--box-shadow-accent-hover);
+      }
+   }
+
+   & {
+      background-color: var(--color-grey);
+   }
+
+   &--accent {
+      background-color: var(--color-white);
+   }
+
+   &--transition {
+      background-color: var(--color-transition);
+   }
+
+   &__icon {
+      fill: var(--color-grey);
+   }
+
+   &__icon--white {
+      fill: var(--color-white);
+   }
+}

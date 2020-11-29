@@ -1,0 +1,86 @@
+.social {
+   a {
+      transform: scale(1);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.6rem;
+      height: 3.6rem;
+      cursor: pointer;
+      border: 2px solid var(--color-grey);
+      transition: all 0.3s;
+      border-radius: 50%;
+
+      &::after {
+         position: absolute;
+         content: '';
+         width: 2.8rem;
+         height: 2.8rem;
+         z-index: -1;
+         border-radius: 50%;
+         transform: scale(1.1);
+         background-color: transparent;
+         transition: all 0.3s;
+      }
+   }
+
+   svg {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--color-grey);
+      transform: scale(1.1);
+      transition: all 0.3s;
+   }
+
+   &:hover {
+      a {
+         transform: scale(1.1);
+      }
+
+      a::after,
+      svg {
+         transform: scale(1);
+      }
+
+      svg {
+         fill: var(--color-white);
+      }
+   }
+
+   &--accent:hover {
+      svg {
+         fill: var(--color-primary);
+      }
+   }
+
+   &--linkedin:hover {
+      a {
+         border-color: var(--color-linkedin);
+      }
+
+      a::after {
+         background-color: var(--color-linkedin);
+      }
+   }
+
+   &--gmail:hover {
+      a {
+         border-color: var(--color-gmail);
+      }
+
+      a::after {
+         background-color: var(--color-gmail);
+      }
+   }
+
+   &--github:hover {
+      a {
+         border-color: var(--color-github);
+      }
+
+      a::after {
+         background-color: var(--color-github);
+      }
+   }
+}

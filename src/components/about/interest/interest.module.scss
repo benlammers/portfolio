@@ -1,0 +1,45 @@
+.interest {
+   display: flex;
+   margin-right: 0.2rem;
+   margin-bottom: 0.4rem;
+}
+
+.action {
+   align-self: center;
+   justify-self: start;
+   font-size: 1.4rem;
+}
+
+.action,
+.label {
+   font-family: var(--font-text);
+}
+
+.item {
+   border-radius: var(--border-radius);
+   display: grid;
+   grid-template-columns: max-content max-content;
+   text-decoration: underline;
+   text-decoration-color: var(--color-transition);
+   cursor: pointer;
+   column-gap: 0.4rem;
+   padding: 0.4rem;
+   transition: all 0.3s;
+}
+
+.logo {
+   align-self: center;
+   justify-self: center;
+   fill: var(--color-grey);
+   height: 2rem;
+   width: 2rem;
+}
+
+.label {
+   align-self: center;
+   font-family: var(--font-text);
+   color: var(--color-grey);
+   font-weight: 700;
+   font-size: 1.6rem;
+   text-decoration: none;
+}

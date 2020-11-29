@@ -1,0 +1,28 @@
+.thanks {
+   padding: 3.6rem 0;
+   text-align: center;
+   display: grid;
+   row-gap: 0.4rem;
+   z-index: 2;
+   mix-blend-mode: multiply;
+   
+   a {
+      text-decoration: underline;
+      text-decoration-color: var(--color-font);
+   
+      &:link,
+      &:visited {
+         background-color: var(--color-white);
+         display: inline-block;
+         transition: all 0.2s;
+         padding: 0.1rem 0.3rem;
+         margin: -0.1rem -0.3rem;
+      }
+   
+      &:hover,
+      &:active {
+         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+         transform: rotate(5deg) scale(1.3);
+      }
+   }
+}

@@ -1,0 +1,40 @@
+.skills {
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-items: center;
+   row-gap: 2rem;
+   padding: 4rem 2.4rem;
+   text-align: center;
+   position: relative;
+   z-index: 2;
+}
+
+.heading {
+   display: grid;
+   row-gap: 0.6rem;
+}
+
+.list {
+   width: 100%;
+   display: grid;
+   row-gap: 2rem;
+   list-style: none;
+}
+
+@media only screen and (min-width: 500px) {
+   .skills {
+      padding: 5rem 6rem;
+   }
+}
+
+@media only screen and (min-width: 700px) {
+   .skills {
+      padding: 5rem 8rem;
+   }
+}
+
+@media only screen and (min-width: 1000px) {
+   .skills {
+      padding: 5rem 20vw;
+   }
+}

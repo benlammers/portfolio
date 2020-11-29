@@ -1,0 +1,37 @@
+.text-primary,
+.text-secondary,
+.text-tertiary {
+   &,
+   &--white,
+   &--accent {
+      font-family: var(--font-text);
+      font-weight: 500;
+   }
+   & {
+      color: var(--color-font);
+   }
+   &--accent {
+      color: var(--color-white);
+   }
+}
+
+.text-primary {
+   &,
+   &--accent {
+      font-size: 1.6rem;
+   }
+}
+
+.text-secondary {
+   &,
+   &--accent {
+      font-size: 1.4rem;
+   }
+}
+
+.text-tertiary {
+   &,
+   &--accent {
+      font-size: 1.2rem;
+   }
+}

@@ -1,0 +1,93 @@
+.heading-primary,
+.heading-secondary,
+.heading-secondary-thin,
+.heading-tertiary,
+.heading-tertiary-thin {
+   &,
+   &--accent {
+      font-family: var(--font-heading);
+      font-weight: 700;
+   }
+   & {
+      color: var(--color-font);
+   }
+   &--accent {
+      color: var(--color-white);
+   }
+}
+
+.heading-primary {
+   &,
+   &--accent {
+      font-size: 2rem;
+   }
+}
+
+.heading-secondary,
+.heading-secondary-thin {
+   &,
+   &--accent {
+      font-size: 1.6rem;
+   }
+}
+
+.heading-tertiary,
+.heading-tertiary-thin {
+   &,
+   &--accent {
+      font-size: 1.4rem;
+   }
+}
+
+.heading-secondary-thin,
+.heading-tertiary-thin {
+   &,
+   &--accent {
+      font-weight: 500;
+   }
+}
+
+@media only screen and (min-width: 500px) {
+   .heading-primary {
+      &,
+      &--accent {
+         font-size: 2.4rem;
+      }
+   }
+
+   .heading-secondary,
+   .heading-secondary-thin {
+      &,
+      &--accent {
+         font-size: 2rem;
+      }
+   }
+
+   .heading-tertiary,
+   .heading-tertiary-thin {
+      &,
+      &--accent {
+         font-size: 1.6rem;
+      }
+   }
+}
+
+@media only screen and (min-width: 1000px) {
+   .heading-primary {
+      &,
+      &--accent {
+         font-size: 2.6rem;
+      }
+   }
+
+   .heading-secondary,
+   .heading-secondary-thin {
+      &,
+      &--accent {
+         font-size: 2.2rem;
+      }
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+}
