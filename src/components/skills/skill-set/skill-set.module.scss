@@ -1,6 +1,10 @@
 .skill-set {
    display: grid;
    row-gap: 1rem;
+
+   // ANIMATION PRESETS
+   opacity: 0;
+   transform: translateY(6px);
 }
 
 .list {
@@ -38,8 +42,37 @@
    grid-row: 1 / 2;
    grid-column: 3 / 4;
    height: 100%;
-   transform-origin: 0 0;
    justify-self: start;
+
+   // ANIMATION PRESETS
+   transform-origin: 0 0;
+   transform: scaleX(0);
    transition: transform 0.5s;
    transition-delay: 1s;
+}
+
+.skill-set--visible {
+   animation: skillFadeUp 1s;
+   opacity: 1;
+   transform: translateY(0);
+
+   .bar {
+      transform: scaleX(1);
+   }
+}
+
+
+@keyframes skillFadeUp {
+   0% {
+      opacity: 0;
+      transform: translateY(6px);
+   }
+   40% {
+      opacity: 0.6;
+      transform: translateY(-4px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }

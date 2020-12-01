@@ -1,12 +1,11 @@
 import React from "react"
+import { useInView } from "react-intersection-observer"
 
 import styles from "./skill-set.module.scss"
 
-console.log(styles)
-
 const SkillItem = ({ data }) => {
   let { logo, title, percent } = data
-
+  
   return (
     <li className={styles.skillItem}>
       <img className={styles.logo} src={logo} alt={`${title} logo`} />
@@ -17,8 +16,10 @@ const SkillItem = ({ data }) => {
 }
 
 const SkillSet = ({ data }) => {
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+
   return (
-    <li className={styles.skillSet}>
+    <li className={`${styles.skillSet} ${inView ? styles.skillSetVisible : null}`} ref={ref}>
       <h2 className="heading-secondary">{data.title}</h2>
       <ul className={styles.list}>
         {data.skills.map((skill, index) => (

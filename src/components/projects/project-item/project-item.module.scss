@@ -16,12 +16,12 @@
    transition: box-shadow 0.3s;
 
    // ANIMATION PRESETS
-   // opacity: 0;
-   // transform: translateY(3rem);
+   opacity: 0;
+   transform: translateY(3rem);
 
-   // &--visible {
-   //    animation: projectFadeUp 0.4s ease-in forwards;
-   // }
+   &--visible {
+      animation: projectFadeUp 0.4s ease-in forwards;
+   }
 
    &:hover {
       box-shadow: var(--box-shadow-hover);
