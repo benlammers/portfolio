@@ -5,8 +5,8 @@ import styles from './line.module.scss'
 const Line = ({ timelineData }) => {
    return (
       <div className={styles.lineWrapper}>
-         {timelineData.map(() => 
-            <div className={styles.line}>
+         {timelineData.map((_, index) => 
+            <div className={styles.line} key={index}>
                <div className={styles.circle} />
             </div>
          )}
