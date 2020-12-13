@@ -1,11 +1,10 @@
 .footer {
    display: grid;
    align-items: center;
-   grid-template-columns: max-content 1fr;
-   padding: 4rem 2rem 3rem;
-   z-index: 2;
-   background-color: var(--color-white);
-
+   row-gap: 3rem;
+   padding: 3rem 2rem 3rem;
+   background-color: var(--color-secondary);
+   
    &--visible .socials li {
       &:nth-child(1) {
          animation: firstSocialIn 2s forwards;
@@ -16,6 +15,10 @@
       &:nth-child(3) {
          animation: thirdSocialIn 2s forwards;
       }
+   }
+   
+   @media only screen and (min-width: 500px) {
+      grid-template-columns: max-content 1fr;
    }
 }
 
@@ -28,11 +31,27 @@
 }
 
 .credit {
-   text-align: end;
+   display: grid;
+   justify-items: start;
+   
+   @media only screen and (min-width: 500px) {
+      justify-items: end;
+   }
+}
+
+.people {
+   display: grid;
+   grid-template-columns: repeat(3, max-content);
+   column-gap: 0.4rem;
+
+   span:not(:nth-child(2)) {
+      padding-right: -0.3rem;
+   }
+
 }
 
 .socials {
-   justify-self: end;
+   justify-self: center;
    display: grid;
    grid-template-columns: repeat(3, max-content);
    column-gap: 0.6rem;

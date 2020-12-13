@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
           <img src={project.image} alt={project.title}/>
           <div className={styles.details}>
             <h2 className="text--md font--bold">{project.title}</h2>
-            <p className="text--sm font--bold">{project.description}</p>
+            <p className="text--sm">{project.description}</p>
           </div>
           <span className="text--sm">{isMobile ? "Tap" : "Hover"} Card for Details</span>
         </div>

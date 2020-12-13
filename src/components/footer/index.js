@@ -23,12 +23,13 @@ const Footer = () => {
             ))}
          </ul>
          <div className={styles.credit}>
-            <span className="text--md">Design Inspired by 
-               <a className={["animated-link font--bold", styles.link].join(" ")} href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" rel="noopener noreferrer">Jonas Schmedtmann</a>
-               and
-               <a className={["animated-link font--bold", styles.link].join(" ")} href="https://mattfarley.ca/" target="_blank" rel="noopener noreferrer">Matt Farley</a>
-            </span>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <span className="text--md font--bold space--sm">Design Inspired by</span> 
+            <div className={`space--lg ${styles.people}`}>
+               <a className={["text--md animated-link", styles.link].join(" ")} href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" rel="noopener noreferrer">Jonas Schmedtmann</a>
+               <span className="text--md">and</span>
+               <a className={["text--md animated-link", styles.link].join(" ")} href="https://mattfarley.ca/" target="_blank" rel="noopener noreferrer">Matt Farley</a>
+            </div>
+            <span className="text--sm">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span>
          </div>
       </footer>
    )

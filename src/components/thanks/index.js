@@ -6,10 +6,10 @@ const Thanks = () => {
   return (
     <section className={styles.thanksBackground}>
       <div className={styles.thanks}>
-        <p className="text--md color--secondary">
+        <p className="text--sm color--secondary">
           Thanks to&nbsp;
           <a
-            className="text--md color--secondary animated-link"
+            className="text--sm color--secondary animated-link"
             href="https://ericlammers.dev/"
             target="_blank"
             rel="noopener noreferrer"
@@ -18,7 +18,7 @@ const Thanks = () => {
           </a>
           &nbsp;for introducing me to my passion
         </p>
-        <p className="text--md color--secondary">
+        <p className="text--sm color--secondary">
           And to Madison Scheerhoorn for supporting it
         </p>
       </div>
