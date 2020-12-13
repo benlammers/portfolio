@@ -16,13 +16,13 @@ const TimelineItem = ({ item, index }) => {
    return (
       <div className={`${styles.item} ${isOdd ? styles.itemOdd : ""} ${inView ? styles.itemVisible : ""}`} key={index}
          style={{ gridRow: rows }} ref={ref} >
-            <span className={`text--md color--secondary ${styles.type} ${styles[`type${item.type}`]}`}>{item.type}</span>
-            <span className={`text--sm ${styles.date}`}>{item.date}</span>
+            <span className={`text--sm color--secondary ${styles.type} ${styles[`type${item.type}`]}`}>{item.type}</span>
+            <span className={`text--xs ${styles.date}`}>{item.date}</span>
             <div className={styles.details}>
-               <h2 className="text--md font--bold space--sm">{item.title}</h2>
-               <span>{item.description}</span>
+               <h2 className="text--sm font--bold space--sm">{item.title}</h2>
+               <span className="text--xs">{item.description}</span>
             </div>
-            <a className={`text--sm ${styles.link}`} href={item.link} target="_blank" rel="noopener noreferrer">{item.linkText}</a>
+            <a className={`text--xs ${styles.link}`} href={item.link} target="_blank" rel="noopener noreferrer">{item.linkText}</a>
       </div>
    )
 }
