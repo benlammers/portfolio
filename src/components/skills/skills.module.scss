@@ -9,16 +9,35 @@
    display: grid;
    row-gap: 1.2rem;
    text-align: center;
+   padding-top: 1rem;
 
-   // ANIMATION PRESETS
-   opacity: 0;
-   transform: translateY(6px);
+   h2 {
+      // ANIMATION PRESETS
+      opacity: 0;
+      transform: translateY(6px);
+   }
+
+   li {
+      // ANIMATION PRESETS
+      opacity: 0;
+      transform: translateX(-6px);
+   }
 }
 
 .skill-set--visible {
-   animation: skillFadeUp 1s;
-   opacity: 1;
-   transform: translateY(0);
+   h2 {
+      animation: skillFadeUp 0.6s forwards;
+   }
+
+   li {
+      animation: skillFadeIn 0.6s forwards;
+   }
+
+   @for $i from 1 to 20 {
+      li:nth-child(#{$i}) {
+         animation-delay: $i * 0.1s;
+      }
+   }
 }
 
 .skill-list {
@@ -42,5 +61,20 @@
    100% {
       opacity: 1;
       transform: translateY(0);
+   }
+}
+
+@keyframes skillFadeIn {
+   0% {
+      opacity: 0;
+      transform: translateX(-6px);
+   }
+   40% {
+      opacity: 0.6;
+      transform: translateX(4px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
    }
 }

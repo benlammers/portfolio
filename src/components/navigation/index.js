@@ -19,7 +19,7 @@ const Navigation = () => {
       <ul className={`${styles.links} ${inView ? styles.linksVisible : null}`} ref={ref}>
         {SECTIONS.map((section, index) => 
           <li className={styles.link} key={index}>
-            <button className="text--md color--primary" onClick={() => scrollTo(`#${section}`)}>{section}</button>
+            <button className="text--lg color--primary" onClick={() => scrollTo(`#${section}`)}>{section}</button>
           </li>
         )}
       </ul>

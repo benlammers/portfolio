@@ -45,6 +45,14 @@
       grid-template-rows: max-content 1fr max-content;
    }
 
+   // ANIMATION PRESETS
+   opacity: 0;
+   transform: translateX(-1rem);
+
+   &--visible {
+      animation: itemFadeIn 0.4s ease-in forwards;
+   }
+
    &:after {
       content: "";
       width: 0;
@@ -63,6 +71,9 @@
    &--odd {
       grid-column: 2 / 3;
       justify-self: start;
+
+      // ANIMATION PRESETS
+      transform: translateX(1rem);
 
       &:after {
          top: calc(50% - 0.8rem);
@@ -127,5 +138,12 @@
    
    @media only screen and (min-width: 700px) {
       grid-column: 2 / 3;
+   }
+}
+
+@keyframes itemFadeIn {
+   to {
+      opacity: 1;
+      transform: translateX(0);
    }
 }

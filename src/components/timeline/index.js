@@ -1,4 +1,5 @@
 import React from 'react'
+import { useInView } from "react-intersection-observer"
 
 import Line from './line'
 
@@ -7,18 +8,21 @@ import { timelineData } from "../../data"
 import styles from './timeline.module.scss'
 
 const TimelineItem = ({ item, index }) => {
+   const [ref, inView] = useInView({ threshold: 0.6, triggerOnce: true })
+
    let rows = `${(index * 2) + 1} / span 3`
+   let isOdd = index % 2 === 1
 
    return (
-      <div className={index % 2 === 0 ? styles.item : [styles.item, styles.itemOdd].join(" ")} key={index}
-         style={{ gridRow: rows }}>
-            <span className={["text--md color--secondary", styles.type, styles[`type${item.type}`]].join(" ")}>{item.type}</span>
-            <span className={["text--sm", styles.date].join(" ")}>{item.date}</span>
+      <div className={`${styles.item} ${isOdd ? styles.itemOdd : ""} ${inView ? styles.itemVisible : ""}`} key={index}
+         style={{ gridRow: rows }} ref={ref} >
+            <span className={`text--md color--secondary ${styles.type} ${styles[`type${item.type}`]}`}>{item.type}</span>
+            <span className={`text--sm ${styles.date}`}>{item.date}</span>
             <div className={styles.details}>
                <h2 className="text--md font--bold space--sm">{item.title}</h2>
                <span>{item.description}</span>
             </div>
-            <a className={["text--sm", styles.link].join(" ")} href={item.link} target="_blank" rel="noopener noreferrer">{item.linkText}</a>
+            <a className={`text--sm ${styles.link}`} href={item.link} target="_blank" rel="noopener noreferrer">{item.linkText}</a>
       </div>
    )
 }

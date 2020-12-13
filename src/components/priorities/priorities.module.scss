@@ -36,11 +36,16 @@
 .priority {
    display: grid;
    justify-items: center;
+   grid-template-rows: 6rem max-content 1fr;
+   
    padding: 2rem 1rem 3rem;
    row-gap: 0.6rem;
    text-align: center;
 
-   grid-template-rows: 6rem max-content 1fr;
+   & > * {
+      // ANIMATION PRESETS
+      opacity: 0;
+   }
 
    &:not(:last-child) {
       border-right: 1px solid var(--color-grey-light);
@@ -49,5 +54,17 @@
    img {
       width: 5rem;
       align-self: center;
+   }
+}
+
+.priority-visible {
+   .priority > * {
+      animation: prioritiesFadeIn 0.4s ease-in forwards;
+   }
+}
+
+@keyframes prioritiesFadeIn {
+   to {
+      opacity: 1;
    }
 }
