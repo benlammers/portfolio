@@ -12,10 +12,12 @@ const ProjectCard = ({ project }) => {
 
   const [flip, setFlip] = useState(false)
 
+  console.log({ project, flip })
+
   return (
     <li className={styles.cardWrapper}>
       <button className={`${styles.card} ${inView ? styles.cardVisible : null} ${flip ? styles.cardFlip : null}`} ref={ref}
-      onMouseEnter={() => setFlip(true)} onMouseLeave={() => setFlip(false)} onClick={() => setFlip(!flip)} >
+      onMouseEnter={!isMobile ? () => setFlip(true) : null} onMouseLeave={!isMobile ? () => setFlip(false) : null} onClick={() => setFlip(!flip)} >
         <div className={[styles.cardSide, styles.cardFront].join(" ")}>
           <img src={project.image} alt={project.title}/>
           <div className={styles.details}>
