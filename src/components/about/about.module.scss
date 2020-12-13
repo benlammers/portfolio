@@ -1,48 +1,11 @@
 .about {
    display: grid;
-   grid-template-columns: 1fr;
-   justify-items: center;
-   row-gap: 1rem;
-   z-index: 3;
-   background-color: var(--color-white);
-   padding: 8rem 2.4rem;
-   text-align: center;
-}
-
-.heading {
-   display: grid;
-   row-gap: 0.6rem;
-   max-width: 50rem;
-}
-
-.title {
-   color: var(--color-font);
-}
-
-.text {
-   color: var(--color-font);
-}
-
-.interests {
-   list-style: none;
-   margin-top: 1rem;
-   display: flex;
-   flex-wrap: wrap;
    justify-content: center;
-   width: 80%;
-   max-width: 50rem;
-}
+   row-gap: 0.8rem;
+   padding: 7rem 4rem;
+   text-align: center;
 
-@media only screen and (min-width: 700px) {
-   .about {
-      padding: 6rem 2.4rem;
-      row-gap: 2rem;
-   }
-}
-
-@media only screen and (min-width: 1000px) {
-   .about {
-      padding: 8rem 2.4rem;
-      row-gap: 4rem;
+   p {
+      max-width: 50rem;
    }
 }

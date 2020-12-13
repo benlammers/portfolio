@@ -1,8 +1,7 @@
 .name {
    fill: transparent;
-   stroke: var(--color-font);
+   stroke: var(--color-text);
    width: 70vw;
-   margin-bottom: 0.4rem;
    z-index: 2;
    animation: nameFillAnim 0.5s ease forwards 3s;
 
@@ -66,7 +65,7 @@
 
 @keyframes nameFillAnim {
    to {
-      fill: var(--color-font);
+      fill: var(--color-text);
       width: 14rem;
    }
 }
@@ -74,7 +73,7 @@
 @media only screen and (min-width: 500px) {
    @keyframes nameFillAnim {
       to {
-         fill: var(--color-font);
+         fill: var(--color-text);
          width: 20rem;
       }
    }
@@ -83,7 +82,7 @@
 @media only screen and (min-width: 700px) {
    @keyframes nameFillAnim {
       to {
-         fill: var(--color-font);
+         fill: var(--color-text);
          width: 24rem;
       }
    }
@@ -92,7 +91,7 @@
 @media only screen and (min-width: 1000px) {
    @keyframes nameFillAnim {
       to {
-         fill: var(--color-font);
+         fill: var(--color-text);
          width: 28rem;
       }
    }

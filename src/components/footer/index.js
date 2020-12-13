@@ -8,7 +8,7 @@ import Social from '../social'
 import styles from './footer.module.scss'
 
 const Footer = () => {
-   const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true })
+   const [ref, inView] = useInView({ threshold: 0.6, triggerOnce: true })
 
    return (
       <footer className={`${styles.footer} ${inView ? styles.footerVisible : null}`} ref={ref} >
@@ -22,6 +22,14 @@ const Footer = () => {
                />
             ))}
          </ul>
+         <div className={styles.credit}>
+            <span className="text--md">Design Inspired by 
+               <a className={["animated-link font--bold", styles.link].join(" ")} href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" rel="noopener noreferrer">Jonas Schmedtmann</a>
+               and
+               <a className={["animated-link font--bold", styles.link].join(" ")} href="https://mattfarley.ca/" target="_blank" rel="noopener noreferrer">Matt Farley</a>
+            </span>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+         </div>
       </footer>
    )
 }

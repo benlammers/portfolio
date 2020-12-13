@@ -1,6 +1,0 @@
-export const blender = require('./blender.svg')
-export const cmder = require('./cmder.svg')
-export const figma = require('./figma.svg')
-export const git = require('./git.svg')
-export const unity = require('./unity.svg')
-export const vscode = require('./vscode.svg')

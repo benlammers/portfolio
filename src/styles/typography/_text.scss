@@ -1,37 +1,19 @@
-.text-primary,
-.text-secondary,
-.text-tertiary {
-   &,
-   &--white,
-   &--accent {
-      font-family: var(--font-text);
-      font-weight: 500;
-   }
-   & {
-      color: var(--color-font);
-   }
-   &--accent {
-      color: var(--color-white);
-   }
+.text--xs {
+   font-size: var(--text-xs);
 }
 
-.text-primary {
-   &,
-   &--accent {
-      font-size: 1.6rem;
-   }
+.text--sm {
+   font-size: var(--text-sm);
 }
 
-.text-secondary {
-   &,
-   &--accent {
-      font-size: 1.4rem;
-   }
+.text--md {
+   font-size: var(--text-md);
 }
 
-.text-tertiary {
-   &,
-   &--accent {
-      font-size: 1.2rem;
-   }
+.text--lg {
+   font-size: var(--text-lg);
+}
+
+.text--xl {
+   font-size: var(--text-xl);
 }

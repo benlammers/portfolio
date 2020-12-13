@@ -1,8 +1,8 @@
 .footer {
    display: grid;
    align-items: center;
-   justify-content: center;
-   padding: 1.2rem 1rem;
+   grid-template-columns: max-content 1fr;
+   padding: 4rem 2rem 3rem;
    z-index: 2;
    background-color: var(--color-white);
 
@@ -17,6 +17,18 @@
          animation: thirdSocialIn 2s forwards;
       }
    }
+}
+
+.link {
+   text-decoration-color: var(--color-text);
+
+   &:link, &:visited {
+      background-color: var(--color-secondary);
+   }
+}
+
+.credit {
+   text-align: end;
 }
 
 .socials {

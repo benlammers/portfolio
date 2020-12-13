@@ -1,15 +1,17 @@
 :root {
-   // Border Radius
-   --border-radius: 0.4rem;
+   --radius-xs: 2px;
+   --radius-sm: 4px;
+   --radius-md: 6px;
+   --radius-lg: 12px;
+   --radius-xl: 20px;
 
-   // Shadows
-   --box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2),
-      0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
-   --box-shadow-hover: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   --shadow-1: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+   --shadow-2: -1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+   --shadow-3: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
-   --box-shadow-accent: 0 1px 2px 0 rgba(255, 255, 255, 0.2),
-      0 1.5px 5px 0 rgba(255, 255, 255, 0.19);
-   --box-shadow-accent-hover: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
-      0 6px 20px 0 rgba(255, 255, 255, 0.19);
+   --space-xs: 0.2rem;
+   --space-sm: 0.4rem;
+   --space-md: 0.6rem;
+   --space-lg: 0.8rem;
+   --space-xl: 1rem;
 }

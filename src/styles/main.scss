@@ -1,11 +1,14 @@
 @import 'base/config';
 
 @import 'components/buttons';
+@import 'components/heading';
+@import 'components/section';
 
-@import 'typography/headings';
+@import 'typography/modifiers';
+@import 'typography/spaces';
 @import 'typography/text';
 
 @import 'variables/colors';
-@import 'variables/fonts';
 @import 'variables/layout';
 @import 'variables/themes';
+@import 'variables/typography';

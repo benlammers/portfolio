@@ -5,7 +5,7 @@ import styles from "./name.module.scss"
 const Name = () => {
   return (
     <svg
-      className={styles.name}
+      className={`${styles.name} space--md`}
       id="name"
       viewBox="0 0 1014 107"
       fill="none"

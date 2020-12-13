@@ -1,0 +1,16 @@
+.skill-item {
+   display: grid;
+   grid-template-columns: max-content 1fr;
+   align-items: center;
+   background-color: var(--color-grey-light);
+   box-shadow: var(--shadow-2);
+   border-radius: var(--radius-xs);
+   text-align: center;
+}
+
+.logo {
+   background-color: var(--color-secondary);
+   height: 2.8rem;
+   width: 2.8rem;
+   padding: 0.4rem;
+}

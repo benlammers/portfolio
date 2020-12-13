@@ -1,5 +1,0 @@
-export const aws = require('./aws.svg')
-export const docker = require('./docker.svg')
-export const firebase = require('./firebase.svg')
-export const googlecloud = require('./google-cloud.svg')
-export const kubernetes = require('./kubernetes.svg')

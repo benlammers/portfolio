@@ -4,22 +4,24 @@ import styles from "./thanks.module.scss"
 
 const Thanks = () => {
   return (
-    <section className={styles.thanks}>
-      <p className="text-secondary">
-        {"Thanks to "}
-        <a
-          className="text-secondary"
-          href="https://ericlammers.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Eric Lammers
-        </a>
-        {" for introducing me to my passion"}
-      </p>
-      <p className="text-secondary">
-        And to Madison Scheerhoorn for supporting it
-      </p>
+    <section className={styles.thanksBackground}>
+      <div className={styles.thanks}>
+        <p className="text--md color--secondary">
+          Thanks to&nbsp;
+          <a
+            className="text--md color--secondary animated-link"
+            href="https://ericlammers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Eric Lammers
+          </a>
+          &nbsp;for introducing me to my passion
+        </p>
+        <p className="text--md color--secondary">
+          And to Madison Scheerhoorn for supporting it
+        </p>
+      </div>
     </section>
   )
 }

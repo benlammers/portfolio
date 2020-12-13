@@ -4,24 +4,24 @@ import { useInView } from "react-intersection-observer"
 
 import styles from "./navigation.module.scss"
 
+const SECTIONS = [
+  "about",
+  "skills",
+  "projects",
+  "timeline"
+]
+
 const Navigation = () => {
-  const [ref, inView] = useInView({ threshold: 0.8, triggerOnce: true })
+  const [ref, inView] = useInView({ threshold: 1, triggerOnce: true })
 
   return (
     <nav className={styles.navigation}>
       <ul className={`${styles.links} ${inView ? styles.linksVisible : null}`} ref={ref}>
-        <li className={styles.link}>
-          <button className="heading-secondary--accent" onClick={() => scrollTo("#about")}>About</button>
-        </li>
-        <li className={styles.link}>
-          <button className="heading-secondary--accent" onClick={() => scrollTo("#skills")}>Skill Set</button>
-        </li>
-        <li className={styles.link}>
-          <button className="heading-secondary--accent" onClick={() => scrollTo("#projects")}>Projects</button>
-        </li>
-        <li className={styles.link}>
-          <button className="heading-secondary--accent" onClick={() => scrollTo("#contact")}>Contact</button>
-        </li>
+        {SECTIONS.map((section, index) => 
+          <li className={styles.link} key={index}>
+            <button className="text--md color--primary" onClick={() => scrollTo(`#${section}`)}>{section}</button>
+          </li>
+        )}
       </ul>
     </nav>
   )

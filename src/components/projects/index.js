@@ -1,6 +1,6 @@
 import React from "react"
 
-import ProjectItem from "./project-item"
+import ProjectCard from "./project-card"
 
 import { projectsData } from "../../data"
 
@@ -8,11 +8,17 @@ import styles from "./projects.module.scss"
 
 const Projects = () => {
   return (
-    <section className={styles.projects} id="projects">
-      <h1 className="heading-primary">Projects</h1>
+    <section className="section" id="projects">
+      <div className="heading">
+        <h1 className="text--lg font--heading font--bold">Projects</h1>
+        <p className="text--sm font--heading">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, 
+          lectus turpis tristique ex, vitae tristique.
+        </p>
+      </div>
       <ul className={styles.list}>
         {projectsData.map((project, index) => (
-          <ProjectItem project={project} key={index} />
+          <ProjectCard project={project} key={index} />
         ))}
       </ul>
     </section>

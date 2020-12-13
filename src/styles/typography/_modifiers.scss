@@ -1,0 +1,27 @@
+.font {
+   &--bold {
+      font-weight: var(--weight-bold);
+   }
+   
+   &--thin {
+      font-weight: var(--weight-thin);
+   }
+   
+   &--heading {
+      font-family: var(--font-heading)
+   }
+}
+
+.color {
+   &--primary {
+      color: var(--color-primary);
+   }
+   
+   &--secondary {
+      color: var(--color-secondary);
+   }
+   
+   &--accent {
+      color: var(--color-accent);
+   }
+}

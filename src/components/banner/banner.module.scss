@@ -5,6 +5,7 @@
    grid-template-columns: 1fr;
    padding: 1rem 1rem 8rem;
    z-index: 2;
+   background-color: var(--color-primary);
 }
 
 .socials {
@@ -31,7 +32,7 @@
 
    display: grid;
    justify-items: center;
-   row-gap: 0.8rem;
+   row-gap: 1rem;
 }
 
 .line,
@@ -44,7 +45,7 @@
 .line {
    height: 2px;
    width: 65%;
-   background-color: var(--color-font);
+   background-color: var(--color-text);
 }
 
 .quote {
@@ -53,20 +54,13 @@
    text-align: center;
 
    display: grid;
-   row-gap: 0.4rem;
+   row-gap: 0.6rem;
 
    opacity: 0;
    transform: translateY(6px);
    animation: bannerFadeUp 0.7s ease forwards 4s;
 
    max-width: 64rem;
-}
-
-@keyframes bannerFadeUp {
-   to {
-      opacity: 1;
-      transform: translateY(0);
-   }
 }
 
 .socials {
@@ -83,6 +77,13 @@
          transform: scale(0);
          animation: bannerThirdSocialIn 2s forwards 4s;
       }
+   }
+}
+
+@keyframes bannerFadeUp {
+   to {
+      opacity: 1;
+      transform: translateY(0);
    }
 }
 
@@ -111,9 +112,6 @@
    0% {
       transform: translateX(-4.2rem) scale(0);
    }
-   20% {
-      transform: translateX(-4.2rem) scale(0);
-   }
    40% {
       transform: translateX(-4.2rem) scale(0);
    }
@@ -130,15 +128,6 @@
 
 @keyframes bannerThirdSocialIn {
    0% {
-      transform: scale(0);
-   }
-   20% {
-      transform: scale(0);
-   }
-   40% {
-      transform: scale(0);
-   }
-   60% {
       transform: scale(0);
    }
    80% {

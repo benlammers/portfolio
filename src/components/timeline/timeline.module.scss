@@ -1,0 +1,121 @@
+.timeline {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 7rem;
+   margin: 2rem 0;
+   padding: 2rem 0;
+   position: relative;
+
+   &--even {
+      padding: 2rem 0 5rem;
+   }
+
+   --item-wrapper-height: 26rem;
+   --item-height: 16rem;
+   --item-triangle-offset: 1.4rem;
+}
+
+.item {
+   height: var(--item-height);
+   width: 80%;
+   background-color: var(--color-secondary);
+   border-radius: var(--radius-sm);
+   box-shadow: var(--shadow-1);
+   position: relative;
+
+   display: grid;
+   grid-template-columns: 12rem 1fr;
+   grid-template-rows: max-content 1fr max-content;
+   row-gap: 1rem;
+
+   &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      border: 1rem solid;
+      border-color: transparent transparent var(--color-secondary) var(--color-secondary);
+      transform-origin: 0 0;
+      
+      top: calc(50% + var(--item-triangle-offset));
+      right: -2rem;
+      transform: rotate(225deg);
+      box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.25);
+   }
+}
+
+.item-wrapper {
+   grid-column: 1 / 2;
+   display: grid;
+   height: var(--item-wrapper-height);
+
+   &:last-child {
+      height: max-content;
+   }
+
+   .item {
+      justify-self: end;
+   }
+   
+   &--even {
+      grid-column: 2 / 3;
+
+      &:last-child {
+         height: var(--item-wrapper-height);
+      }
+
+      .item {
+         justify-self: start;
+         align-self: end;
+         transform: translateY(3rem);
+         justify-content: start;
+
+         &:after {
+            top: calc(50% - var(--item-triangle-offset));
+            left: 0;
+            transform: rotate(45deg);
+            box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.25);
+         }
+      }
+   }
+}
+
+.type {
+   text-align: center;
+   border-bottom-right-radius: var(--radius-sm);
+   border-top-left-radius: var(--radius-sm);
+   padding: 0.4rem 0;
+   
+   &--book {
+      background-color: var(--color-book);
+   }
+   &--conference {
+      background-color: var(--color-conference);
+   }
+   &--course {
+      background-color: var(--color-course);
+   }
+   &--employment {
+      background-color: var(--color-employment);
+   }
+}
+
+.date {
+   align-self: center;
+   text-align: end;
+   padding-right: 1rem;
+}
+
+.details {
+   padding: 0 1.4rem 0 1rem;
+   grid-column: 1 / -1;
+}
+
+.link {
+   grid-column: 2 / 3;
+   margin: 1rem;
+   justify-self: end;
+   text-decoration: none;
+   border-bottom: 1px solid var(--color-grey);
+}

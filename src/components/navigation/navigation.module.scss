@@ -1,13 +1,12 @@
+$nav-height: 6rem;
+
 .navigation {
-   background-color: var(--color-background-grey);
-   height: 10rem;
-   color: var(--color-white);
-   mix-blend-mode: multiply;
-   z-index: 5;
+   height: $nav-height;
+   display: grid;
+   background-color: var(--color-accent);
 }
 
 .links {
-   height: 100%;
    display: grid;
    grid-template-columns: repeat(4, max-content);
    justify-content: center;
@@ -27,16 +26,19 @@
    cursor: pointer;
    
    button {
+      height: $nav-height;
       background: transparent;
       border: none;
       cursor: pointer;
+      text-transform: capitalize;
    }
-
+   
    &:not(:last-child):after {
       content: '/';
-      font-weight: 700;
+      color: var(--color-primary);
+      font-weight: var(--weight-bold);
       font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-size: var(--text-lg);
       padding: 0 0.75rem;
       cursor: auto;
    }

@@ -1,0 +1,74 @@
+.line-wrapper {
+   --line-width: 0.8rem;
+   --circle-size: 1.6rem;
+
+   position: absolute;
+   right: calc(50% - (var(--line-width) / 2));
+   z-index: 1;
+}
+
+.line {
+   height: 13rem;
+   width: var(--line-width);
+   border-radius: var(--radius-xs);
+   background-color: var(--color-secondary);
+   box-shadow: var(--shadow-1);
+   position: relative;
+   
+   &:first-child {
+      height: 16.5rem;
+   }
+   
+   &:last-child {
+      height: 17rem;
+   }
+
+   &:not(:first-child) {
+      &:before {
+         content: "";
+         position: absolute;
+         width: var(--line-width);
+         background: inherit;
+         height: 1rem;
+         transform: translateY(-0.5rem);
+      }
+   }
+}
+
+.circle {
+   background-color: var(--color-secondary);
+   box-shadow: var(--shadow-1);
+
+   &:before, &:after {
+      content: "";
+      height: var(--circle-size);
+      width: var(--circle-size);
+      position: absolute;
+      top: calc(50% - (var(--circle-size) / 2));
+      left: calc(50% - (var(--circle-size) / 2));
+      background: inherit;
+      border-radius: var(--radius-xl);
+   }
+   
+   &:after {
+      z-index: 1;
+   }
+
+   &:before {
+      box-shadow: inherit;
+      z-index: -1;
+   }
+}
+
+.line {
+   &:first-child .circle {
+      &:before, &:after {
+         top: calc(50% - (var(--circle-size) / 2) + 1.75rem);
+      }
+   } 
+   &:last-child .circle {
+      &:before, &:after {
+         top: calc(50% - (var(--circle-size) / 2) - 2rem);
+      }
+   } 
+}
