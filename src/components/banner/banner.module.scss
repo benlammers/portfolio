@@ -42,9 +42,13 @@
    animation: bannerFadeUp 0.7s ease forwards 3.3s;
 }
 
+.title {
+   animation: bannerFadeUp 0.7s ease forwards 3.5s;
+}
+
 .line {
    height: 2px;
-   width: 65%;
+   width: 75%;
    background-color: var(--color-text);
 }
 

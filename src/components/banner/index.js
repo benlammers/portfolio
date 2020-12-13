@@ -33,13 +33,13 @@ const Banner = () => {
       <div className={styles.text}>
         <Name />
         <div className={styles.line} />
-        <h2 className={`${styles.title} text--md font--bold`}>
+        <h2 className={`${styles.title} text--lg font--bold`}>
           Full Stack Developer
         </h2>
       </div>
       <div className={styles.quote}>
-        <q className="text--sm">{quote.quote}</q>
-        <p className="text--sm">- {quote.author}</p>
+        <q className="text--md">{quote.quote}</q>
+        <p className="text--md">- {quote.author}</p>
       </div>
     </section>
   )

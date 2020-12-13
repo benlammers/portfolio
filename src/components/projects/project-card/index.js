@@ -19,15 +19,15 @@ const ProjectCard = ({ project }) => {
         <div className={[styles.cardSide, styles.cardFront].join(" ")}>
           <img src={project.image} alt={project.title}/>
           <div className={styles.details}>
-            <h2 className="text--md font--bold">{project.title}</h2>
-            <p className="text--sm">{project.description}</p>
+            <h2 className="text--lg font--bold">{project.title}</h2>
+            <p className="text--md">{project.description}</p>
           </div>
           <span className="text--sm">{isMobile ? "Tap" : "Hover"} Card for Details</span>
         </div>
         <div className={[styles.cardSide, styles.cardBack].join(" ")}>
           <div className={styles.heading}>
-            <h2 className="text--md font--bold">{project.role}</h2>
-            <h3 className="text--md">{project.type}</h3>
+            <h2 className="text--lg font--bold">{project.role}</h2>
+            <h3 className="text--lg">{project.type}</h3>
           </div>
           <h2 className="text--lg space--lg">Tech Stack</h2>
           <ul className={styles.stack}>
