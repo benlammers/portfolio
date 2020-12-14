@@ -5,18 +5,25 @@ import { prioritiesData } from "../../data"
 
 import styles from "./priorities.module.scss"
 
+const Priority = ({ priority }) => {
+   const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true })
+
+   return (
+      <div className={`${styles.priority} ${inView ? styles.priorityVisible : ""}`} ref={ref}>
+         <img src={priority.icon} alt={priority.altText} />
+         <h2 className="text--lg font--bold font--heading">{priority.title}</h2>
+         <p className="text--md">{priority.text}</p>
+      </div>
+   )
+}
+
 const Priorities = () => {
-   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true })
 
   return (
    <section className={styles.prioritiesBackground}>
-      <div className={`${styles.prioritiesWrapper} ${inView ? styles.priorityVisible : ""}`} ref={ref}>
+      <div className={styles.prioritiesWrapper}>
          { prioritiesData.map((priority, index) => 
-            <div className={styles.priority} key={index}>
-               <img src={priority.icon} alt={priority.altText} />
-               <h2 className="text--lg font--bold font--heading">{priority.title}</h2>
-               <p className="text--md">{priority.text}</p>
-            </div>
+            <Priority priority={priority} key={index} />
          )}
       </div>
    </section>

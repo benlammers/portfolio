@@ -37,7 +37,7 @@
       margin: 1rem 2rem;
       grid-template-rows: 1fr;
       grid-template-columns: repeat(3, 1fr);
-      max-width: 70rem;
+      max-width: var(--items-max-width);
    }
    @media only screen and (min-width: 1000px) {
       margin: 1rem 6rem;
@@ -56,6 +56,10 @@
    & > * {
       // ANIMATION PRESETS
       opacity: 0;
+   }
+
+   &--visible > * {
+      animation: prioritiesFadeIn 0.4s ease-in forwards;
    }
    
    @media only screen and (min-width: 700px) {
@@ -83,12 +87,6 @@
       @media only screen and (min-width: 700px) {
          width: 6rem;
       }
-   }
-}
-
-.priority-visible {
-   .priority > * {
-      animation: prioritiesFadeIn 0.4s ease-in forwards;
    }
 }
 

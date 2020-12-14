@@ -11,6 +11,10 @@
    text-align: center;
    padding-top: 1rem;
 
+   @media only screen and (min-width: 1200px) {
+      row-gap: 1.6rem
+   }
+
    h2 {
       // ANIMATION PRESETS
       opacity: 0;
@@ -49,6 +53,11 @@
    
    @media only screen and (min-width: 700px) {
       grid-template-columns: repeat(3, 16rem);
+      gap: 1.2rem;
+   }
+
+   @media only screen and (min-width: 1200px) {
+      grid-template-columns: repeat(4, 18rem);
       gap: 1.2rem;
    }
 }

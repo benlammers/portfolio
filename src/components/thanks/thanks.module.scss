@@ -36,7 +36,7 @@
    
    @media only screen and (min-width: 700px) {
       width: calc(100% - 4rem);
-      max-width: 70rem;
+      max-width: var(--items-max-width);
       border-radius: var(--radius-sm);
       justify-self: center;
    }
