@@ -10,24 +10,24 @@ export const timelineData = [
       type: timelineTypes.CONFERENCE,
       date: "Dec 7-9, 2020",
       title: "Reactathon",
-      description: "Attended workshops and topic tables from industry leaders",
-      link: "",
+      description: "Attended workshops and topic tables to interact with industry leaders and learn about complex concepts in React",
+      link: "https://www.reactathon.com/",
       linkText: "View Event"
-   },
-   {
-      type: timelineTypes.COURSE,
-      date: "March 4, 2020",
-      title: "Advanced CSS and Sass",
-      description: "Completed course about modern CSS including grids and flexbox",
-      link: "",
-      linkText: "View Course"
    },
    {
       type: timelineTypes.EMPLOYMENT,
       date: "May 1, 2020",
       title: "Centre for Advanced Computing",
-      description: "Internship leveraging modern AI solutions in web applications",
-      link: "",
+      description: "Started a 16 month software development internship leveraging modern AI solutions in web applications",
+      link: "https://cac.queensu.ca/",
       linkText: "View Company"
+   },
+   {
+      type: timelineTypes.COURSE,
+      date: "March 4, 2020",
+      title: "Advanced CSS and Sass",
+      description: "Completed Jonas Schmedtmann's course on advanced and modern CSS including CSS Grid, flexbox and responsive design",
+      link: "https://www.udemy.com/course/advanced-css-and-sass/",
+      linkText: "View Course"
    }
 ]

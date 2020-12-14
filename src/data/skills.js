@@ -1,5 +1,5 @@
 import { apollo, css, django, docker, gatsby, graphql, html, javascript, kubernetes, 
-   mongodb, nextjs, nodejs, postgres, prisma, python, react, redux, sass, tailwind } from '../img/logos'
+   mongodb, nextjs, nodejs, postgres, prisma, python, react, redux, sass, tailwind, typescript } from '../img/logos'
 
 export const skillsData = [
    {  
@@ -8,10 +8,10 @@ export const skillsData = [
    },
    {
       phrase: "familiar with",
-      items: [ django, graphql, mongodb, postgres, python]
+      items: [ django, gatsby, graphql, mongodb, postgres, python]
    },
    {
       phrase: "and exploring",
-      items: [apollo, docker, gatsby, kubernetes, nextjs, prisma, tailwind]
+      items: [apollo, docker, kubernetes, nextjs, prisma, tailwind, typescript]
    }
 ]

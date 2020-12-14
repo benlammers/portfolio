@@ -32,8 +32,8 @@ const Timeline = () => (
       <div className="heading">
          <h1 className="text--xl font--heading font--bold">My Timeline</h1>
          <p className="text--md font--heading">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, 
-            lectus turpis tristique ex, vitae tristique.
+            Notable achievements and events on my road to explore and master concepts
+            in modern web development
          </p>
       </div>
       <div className={styles.timeline}>

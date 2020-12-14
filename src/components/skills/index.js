@@ -8,7 +8,7 @@ import SkillItem from "../skill-item"
 import styles from "./skills.module.scss"
 
 const SkillSet = ({ data }) => {
-  const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true })
+  const [ref, inView] = useInView({ threshold: 0.6, triggerOnce: true })
   return (
     <li className={`${styles.skillSet} ${inView ? styles.skillSetVisible : null}`} ref={ref}>
       <h2 className="text--md font--heading">{data.phrase}</h2>

@@ -74,3 +74,7 @@ export const tailwind = {
    logo: require('./tailwind.svg'),
    title: "Tailwind"
 }
+export const typescript = {
+   logo: require('./typescript.svg'),
+   title: "TypeScript"
+}

@@ -1,15 +1,17 @@
 import { showdown, portfolio, unite } from "../img/projects"
 
-import { apollo, django, gatsby, graphql, html, nextjs, postgres, prisma, react, redux, sass, tailwind } from '../img/logos'
+import { apollo, django, gatsby, graphql, html, nextjs, postgres, prisma, react, redux, sass, tailwind, typescript } from '../img/logos'
 
 export const projectsData = [
    {
       title: "Showdown",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, lectus turpis tristique ex, vitae tristique.",
+      description: `An application currently in development with the goal of enabling tournament coveneers 
+      with the ability to easily manage and display tournament details in real time`,
       image: showdown,
       role: "Full Stack Developer",
       type: "Family Venture",
       stack: [
+         typescript,
          nextjs,
          react,
          apollo,
@@ -21,7 +23,8 @@ export const projectsData = [
    },
    {
       title: "Portfolio",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, lectus turpis tristique ex, vitae tristique.",
+      description: `My personal portfolio used to showcase my experience and achievements as a 
+      web developer. Created with a focus on mobile first design and leveraging modern CSS`,
       image: portfolio,
       role: "Front End Developer",
       type: "Personal Project",
@@ -39,7 +42,8 @@ export const projectsData = [
    },
    {
       title: "Unite",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, lectus turpis tristique ex, vitae tristique.",
+      description: `An application that provides the ability to RSVP and view details for our wedding. 
+      Developed with a focus on completing my first full stack application and practicing semantic HTML`,
       image: unite,
       role: "Full Stack Developer",
       type: "Personal Project",
@@ -51,13 +55,13 @@ export const projectsData = [
          postgres
       ],
       buttons: [{
-         text: "View Frontend Git",
+         text: "View Frontend Repo",
          link: "https://github.com/benlammers/unite-frontend",
          icon: '#icon-github'
       },
       {
-         text: "View Backend Git",
-         link: "https://github.com/benlammers/unite-backend",
+         text: "View API Repo",
+         link: "https://github.com/benlammers/unite-api",
          icon: '#icon-github'
       },
       {

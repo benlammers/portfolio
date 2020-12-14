@@ -1,6 +1,6 @@
 .timeline {  
    --timeline-item-overlap: 5rem;
-   --timeline-item-gap: 10rem;
+   --timeline-item-gap: 12rem;
    
    --timeline-line-gap: 5rem;
    --timeline-line-width: 0.6rem;
@@ -9,7 +9,6 @@
    --timeline-circle-size: 1.4rem;
    
    @media only screen and (min-width: 800px) {
-      --timeline-line-gap: 6rem;
       --timeline-item-gap: 8rem;
    }
    
@@ -36,7 +35,7 @@
 
    display: grid;
    grid-template-columns: 12rem 1fr;
-   grid-template-rows: max-content 1fr max-content;
+   grid-template-rows: max-content 1fr;
    row-gap: 1rem;
 
    // ANIMATION PRESETS
@@ -100,8 +99,6 @@
    }
 }
 
-
-
 .type {
    border-bottom-right-radius: var(--radius-sm);
    border-top-left-radius: var(--radius-sm);
@@ -135,11 +132,11 @@
 }
 
 .link {
-   grid-column: 2 / 3;
-   margin: 1rem;
-   justify-self: end;
+   position: absolute;
+   bottom: 1rem;
+   right: 1rem;
    text-decoration: none;
-   border-bottom: 1px solid var(--color-grey);
+   border-bottom: 1px solid var(--color-text);
 }
 
 @keyframes itemFadeIn {

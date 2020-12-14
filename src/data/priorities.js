@@ -5,18 +5,18 @@ export const prioritiesData = [
       title: "Concise",
       icon: html,
       altText: "Lineal HTML",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at consequat urna proin aliquam nunc magna"
+      text: "Writing clean and concise code to gaurantee that it conveys its purpose effectively"
    },
    {
       title: "Modern",
       icon: rocket,
       altText: "Lineal Rocket Ship",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at consequat urna proin aliquam nunc magna"
+      text: "Keeping up to date with modern technologies through hobby work and podcasts"
    },
    {
       title: "Responsive",
       icon: responsiveDesign,
       altText: "Lineal Phone and Desktop",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at consequat urna proin aliquam nunc magna"
+      text: "Using advanced CSS to ensure pages adapt and respond seamlessly to all device sizes"
    },
 ]
