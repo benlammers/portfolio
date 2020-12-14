@@ -1,5 +1,7 @@
 .app {
    will-change: opacity;
    background-color: var(--color-secondary);
-   overflow-x: hidden;
+   
+   display: grid;
+   width: 100%;
 }

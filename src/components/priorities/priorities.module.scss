@@ -31,11 +31,16 @@
    
    display: grid;
    grid-template-rows: repeat(3, 1fr);
+   justify-self: center;
    
-   @media only screen and (min-width: 600px) {
+   @media only screen and (min-width: 700px) {
+      margin: 1rem 2rem;
       grid-template-rows: 1fr;
       grid-template-columns: repeat(3, 1fr);
-      margin: 1rem 2rem;
+      max-width: 70rem;
+   }
+   @media only screen and (min-width: 1000px) {
+      margin: 1rem 6rem;
    }
 }
 
@@ -44,7 +49,7 @@
    justify-items: center;
    grid-template-rows: max-content max-content 1fr;
    
-   padding: 4rem 2rem 5rem;
+   padding: 4rem 3rem 5rem;
    row-gap: 0.6rem;
    text-align: center;
    
@@ -52,15 +57,19 @@
       // ANIMATION PRESETS
       opacity: 0;
    }
+   
+   @media only screen and (min-width: 700px) {
+      padding: 4rem 5rem 5rem;
+   }
 
-   @media only screen and (min-width: 600px) {
-      padding: 2rem 1rem 3rem;
+   @media only screen and (min-width: 700px) {
+      padding: 4rem 1.6rem;
    }
    
    &:not(:last-child) {
       border-bottom: 1px solid var(--color-grey-light);
       
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 700px) {
          border-bottom: none;
          border-right: 1px solid var(--color-grey-light);
       }
@@ -71,8 +80,8 @@
       align-self: center;
       padding-bottom: 1rem;
       
-      @media only screen and (min-width: 600px) {
-         width: 5rem;
+      @media only screen and (min-width: 700px) {
+         width: 6rem;
       }
    }
 }

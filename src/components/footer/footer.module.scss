@@ -17,7 +17,7 @@
       }
    }
    
-   @media only screen and (min-width: 500px) {
+   @media only screen and (min-width: 600px) {
       grid-template-columns: max-content 1fr;
    }
 }
@@ -34,7 +34,7 @@
    display: grid;
    justify-items: start;
    
-   @media only screen and (min-width: 500px) {
+   @media only screen and (min-width: 600px) {
       justify-items: end;
    }
 }

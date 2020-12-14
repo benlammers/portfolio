@@ -12,8 +12,6 @@ const ProjectCard = ({ project }) => {
 
   const [flip, setFlip] = useState(false)
 
-  console.log({ project, flip })
-
   return (
     <li className={styles.cardWrapper}>
       <button className={`${styles.card} ${inView ? styles.cardVisible : null} ${flip ? styles.cardFlip : null}`} ref={ref}
@@ -41,7 +39,7 @@ const ProjectCard = ({ project }) => {
             <div className={styles.buttons}>
               {project.buttons.map((button, index) => 
                 <a className="button" href={button.link} target="_blank" rel="noopener noreferrer" key={index}>
-                  <span className="text--sm font--bold">{button.text}</span>
+                  <span className="text--sm">{button.text}</span>
                   <svg>
                     <use href={sprites + button.icon} />
                   </svg>
