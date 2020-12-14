@@ -5,8 +5,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 3.6rem;
-      height: 3.6rem;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
       border: 2px solid var(--color-grey);
       transition: all 0.3s;
@@ -15,8 +15,8 @@
       &::after {
          position: absolute;
          content: '';
-         width: 2.8rem;
-         height: 2.8rem;
+         width: 38px;
+         height: 38px;
          z-index: -1;
          border-radius: 50%;
          transform: scale(1.1);
@@ -26,8 +26,8 @@
    }
 
    svg {
-      width: 2rem;
-      height: 2rem;
+      width: 28px;
+      height: 28px;
       fill: var(--color-grey);
       transform: scale(1.1);
       transition: all 0.3s;
