@@ -27,6 +27,11 @@
          animation: thirdSocialIn 2s forwards;
       }
    }
+
+   & > span:last-child {
+      justify-self: center;
+      grid-column: 1 / -1;
+   }
    
    @media only screen and (min-width: 600px) {
       grid-template-columns: max-content 1fr;
@@ -43,7 +48,7 @@
 
 .credit {
    display: grid;
-   justify-items: start;
+   justify-items: center;
    
    @media only screen and (min-width: 600px) {
       justify-items: end;

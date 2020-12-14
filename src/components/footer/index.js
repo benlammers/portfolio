@@ -32,8 +32,8 @@ const Footer = () => {
                   <span className="text--md">and</span>
                   <a className={`text--md animated-link ${styles.link}`} href="https://mattfarley.ca/" { ...openInNewTab }>Matt Farley</a>
                </div>
-               <span className="text--sm">Icons made by <a href="https://www.flaticon.com/authors/freepik" { ...openInNewTab } title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" { ...openInNewTab } title="Flaticon">www.flaticon.com</a></span>
             </div>
+            <span className="text--xs">Icons made by <a href="https://www.flaticon.com/authors/freepik" { ...openInNewTab } title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" { ...openInNewTab } title="Flaticon">www.flaticon.com</a></span>
          </div>
       </footer>
    )
