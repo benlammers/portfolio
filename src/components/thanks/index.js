@@ -18,7 +18,7 @@ const Thanks = () => (
         &nbsp;for introducing me to my passion
       </p>
       <p className="text--sm color--secondary">
-        And to Madison Scheerhoorn for supporting it
+        and to Madison Scheerhoorn for supporting it.
       </p>
     </div>
   </section>

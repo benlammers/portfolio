@@ -3,7 +3,7 @@ import { apollo, css, django, docker, gatsby, graphql, html, javascript, kuberne
 
 export const skillsData = [
    {  
-      phrase: "I am experienced in",
+      phrase: "I am proficient in",
       items: [css, html, javascript, nodejs, react, redux, sass]
    },
    {

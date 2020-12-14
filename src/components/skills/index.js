@@ -27,8 +27,8 @@ const Skills = () => {
       <div className="heading">
         <h1 className="text--xl font--heading font--bold">Skill Set</h1>
         <p className="text--md font--heading">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, 
-          lectus turpis tristique ex, vitae tristique.
+          A variety of frameworks, libraries and languages that I have 
+          had the oppurtunity to work with.
         </p>
       </div>
       <ul className={styles.list}>

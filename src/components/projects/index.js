@@ -12,8 +12,8 @@ const Projects = () => {
       <div className="heading">
         <h1 className="text--xl font--heading font--bold">Projects</h1>
         <p className="text--md font--heading">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, 
-          lectus turpis tristique ex, vitae tristique.
+          Reinforcing my knowledge practically by applying new skills 
+          and open-source frameworks to complete personal projects
         </p>
       </div>
       <ul className={styles.list}>
