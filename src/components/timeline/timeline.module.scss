@@ -38,6 +38,10 @@
    grid-template-rows: max-content 1fr;
    row-gap: 1rem;
 
+   @media only screen and (max-width: 700px) {
+      grid-template-rows: max-content 1fr max-content;
+   }
+
    // ANIMATION PRESETS
    opacity: 0;
    transform: translateX(-1rem);
@@ -88,10 +92,10 @@
          // ANIMATION PRESETS
          transform: translateY(1rem);
          grid-row: unset !important;
-
+         
          grid-column: 1 / 2;
          justify-self: center;
-
+         
          &:after {
             display: none;
          }
@@ -132,11 +136,17 @@
 }
 
 .link {
-   position: absolute;
-   bottom: 1rem;
-   right: 1rem;
    text-decoration: none;
    border-bottom: 1px solid var(--color-text);
+   margin: 1rem;
+   justify-self: end;
+   grid-column: 2 / 3;
+   
+   @media only screen and (min-width: 700px) {      
+      position: absolute;
+      bottom: 0;
+      right: 0;
+   }
 }
 
 @keyframes itemFadeIn {
