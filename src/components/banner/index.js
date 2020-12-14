@@ -33,7 +33,7 @@ const Banner = () => {
       <div className={styles.text}>
         <Name />
         <div className={styles.line} />
-        <h2 className={`${styles.title} text--lg font--bold`}>
+        <h2 className={styles.title}>
           Full Stack Developer
         </h2>
       </div>

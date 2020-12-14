@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
     <li className={styles.cardWrapper}>
       <button className={`${styles.card} ${inView ? styles.cardVisible : null} ${flip ? styles.cardFlip : null}`} ref={ref}
       onMouseEnter={!isMobile ? () => setFlip(true) : null} onMouseLeave={!isMobile ? () => setFlip(false) : null} onClick={() => setFlip(!flip)} >
-        <div className={[styles.cardSide, styles.cardFront].join(" ")}>
+        <div className={`${styles.cardSide} ${styles.cardFront}`}>
           <img src={project.image} alt={project.title}/>
           <div className={styles.details}>
             <h2 className="text--lg font--bold">{project.title}</h2>
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
           </div>
           <span className="text--sm">{isMobile ? "Tap" : "Hover"} Card for Details</span>
         </div>
-        <div className={[styles.cardSide, styles.cardBack].join(" ")}>
+        <div className={`${styles.cardSide} ${styles.cardBack}`}>
           <div className={styles.heading}>
             <h2 className="text--lg font--bold">{project.role}</h2>
             <h3 className="text--lg">{project.type}</h3>
@@ -38,7 +38,7 @@ const ProjectCard = ({ project }) => {
           {project.buttons && 
             <div className={styles.buttons}>
               {project.buttons.map((button, index) => 
-                <a className="button" href={button.link} target="_blank" rel="noopener noreferrer" key={index}>
+                <a className="button" href={button.link} target="_blank" rel="noopener noreferrer" key={index} onFocus={() => setFlip(true)}>
                   <span className="text--sm">{button.text}</span>
                   <svg>
                     <use href={sprites + button.icon} />

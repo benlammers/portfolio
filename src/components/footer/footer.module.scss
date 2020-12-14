@@ -1,10 +1,21 @@
+.footer-wrapper {
+   display: grid;
+   
+   @media only screen and (min-width: 1300px) {
+      justify-content: center;
+   }
+}
+
 .footer {
    display: grid;
    align-items: center;
    row-gap: 3rem;
    padding: 3rem 2rem 3rem;
-   background-color: var(--color-secondary);
    
+   @media only screen and (min-width: 1300px) {
+      width: 100rem;
+   }
+
    &--visible .socials li {
       &:nth-child(1) {
          animation: firstSocialIn 2s forwards;

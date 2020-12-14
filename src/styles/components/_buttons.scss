@@ -26,14 +26,25 @@
    background-color: var(--color-white);
    overflow: hidden;
    box-shadow: var(--shadow-3);
-   height: 3.4rem;
+   height: 40px;
    text-align: center;
+   transition: all 0.3s;
+
+   &:hover, &:focus {
+      box-shadow: var(--shadow-4);
+      transform: translateY(-2px);
+   }
+
+   &:active {
+      box-shadow: var(--shadow-5);
+      transform: translateY(2px);
+   }
    
    svg {
-      background-color: var(--color-black);
+      background-color: var(--color-text);
       fill: var(--color-white);
-      width: 4rem;
+      width: 50px;
       height: 100%;
-      padding: 0.2rem 0.6rem;
+      padding: 2px 6px;
    }
 }
