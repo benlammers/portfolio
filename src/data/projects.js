@@ -6,7 +6,7 @@ export const projectsData = [
    {
       title: "Showdown",
       description: `An application currently in development with the goal of enabling tournament coveneers 
-      with the ability to easily manage and display tournament details in real time`,
+      with the ability to easily manage and display tournament details in real time.`,
       image: showdown,
       role: "Full Stack Developer",
       type: "Family Venture",
@@ -24,7 +24,7 @@ export const projectsData = [
    {
       title: "Portfolio",
       description: `My personal portfolio used to showcase my experience and achievements as a 
-      web developer. Created with a focus on mobile first design and leveraging modern CSS`,
+      web developer. Created with a focus on mobile first design and leveraging modern CSS.`,
       image: portfolio,
       role: "Front End Developer",
       type: "Personal Project",
@@ -43,7 +43,7 @@ export const projectsData = [
    {
       title: "Unite",
       description: `An application that provides the ability to RSVP and view details for our wedding. 
-      Developed with a focus on completing my first full stack application and practicing semantic HTML`,
+      Developed with a focus on completing my first full stack application and practicing semantic HTML.`,
       image: unite,
       role: "Full Stack Developer",
       type: "Personal Project",
