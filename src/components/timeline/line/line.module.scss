@@ -3,6 +3,10 @@
    right: calc(50% - (var(--timeline-line-width) / 2));
    z-index: 1;
    top: calc(-1 * var(--timeline-line-overflow));
+
+   @media only screen and (max-width: 700px) {
+      display: none;      
+   }  
 }
 
 .line {
@@ -66,5 +70,3 @@
       }
    } 
 }
-
-

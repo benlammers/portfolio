@@ -1,17 +1,16 @@
 import React from 'react'
 import { useInView } from "react-intersection-observer"
 
-import { useWindowDimensions } from '../../hooks'
 import { timelineData } from "../../data"
 
 import Line from './line'
 
 import styles from './timeline.module.scss'
 
-const TimelineItem = ({ item, index, fullTimeline }) => {
+const TimelineItem = ({ item, index }) => {
    const [ref, inView] = useInView({ threshold: 0.6, triggerOnce: true })
 
-   let rows =  fullTimeline ? `${(index * 2) + 1} / span 3` : `${index + 1} / span 1`
+   let rows =  `${(index * 2) + 1} / span 3`
    let isOdd = index % 2 === 1
    
    return (
@@ -28,25 +27,20 @@ const TimelineItem = ({ item, index, fullTimeline }) => {
    )
 }
 
-const Timeline = () => {
-   const { width } = useWindowDimensions()
-   let fullTimeline = width > 700
-
-   return (
-      <section className="section section--primary" id="timeline">
-         <div className="heading">
-            <h1 className="text--xl font--heading font--bold">My Timeline</h1>
-            <p className="text--md font--heading">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, 
-               lectus turpis tristique ex, vitae tristique.
-            </p>
-         </div>
-         <div className={`${styles.timeline} ${fullTimeline ? "" : styles.timelineMobile}`}>
-            {fullTimeline && <Line timelineData={timelineData} /> }
-            {timelineData.map((item, index) => <TimelineItem item={item} index={index} key={index} fullTimeline={fullTimeline} /> )}
-         </div>
-      </section>
-   )
-}
+const Timeline = () => (
+   <section className="section section--primary" id="timeline">
+      <div className="heading">
+         <h1 className="text--xl font--heading font--bold">My Timeline</h1>
+         <p className="text--md font--heading">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat, libero quis sodales feugiat, 
+            lectus turpis tristique ex, vitae tristique.
+         </p>
+      </div>
+      <div className={styles.timeline}>
+         <Line timelineData={timelineData} />
+         {timelineData.map((item, index) => <TimelineItem item={item} index={index} key={index} /> )}
+      </div>
+   </section>
+)
 
 export default Timeline
