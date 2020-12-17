@@ -80,6 +80,9 @@
 .socials {
    li {
       opacity: 0;
+      
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
 
       &:nth-child(3) {
          transform: translateX(-8.4rem) scale(0);
