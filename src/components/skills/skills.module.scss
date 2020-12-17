@@ -30,11 +30,11 @@
 
 .skill-set--visible {
    h2 {
-      animation: skillFadeUp 0.6s forwards;
+      animation: fadeUp 0.6s forwards;
    }
 
    li {
-      animation: skillFadeIn 0.6s forwards;
+      animation: fadeIn 0.6s forwards;
    }
 
    @for $i from 1 to 20 {
@@ -62,7 +62,7 @@
    }
 }
 
-@keyframes skillFadeUp {
+@keyframes fadeUp {
    0% {
       opacity: 0;
       transform: translateY(6px);
@@ -77,7 +77,7 @@
    }
 }
 
-@keyframes skillFadeIn {
+@keyframes fadeIn {
    0% {
       opacity: 0;
       transform: translateX(-6px);

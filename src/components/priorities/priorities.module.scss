@@ -66,7 +66,7 @@
    }
 
    &--visible > * {
-      animation: prioritiesFadeIn 0.4s ease-in forwards;
+      animation: fadeIn 0.4s ease-in forwards;
    }
    
    @media only screen and (min-width: 700px) {
@@ -93,7 +93,7 @@
    }
 }
 
-@keyframes prioritiesFadeIn {
+@keyframes fadeIn {
    to {
       opacity: 1;
    }

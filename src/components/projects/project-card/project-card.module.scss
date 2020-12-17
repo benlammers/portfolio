@@ -40,7 +40,7 @@
    }
    
    &--visible {
-      animation: projectFadeUp 0.6s ease-in forwards;
+      animation: fadeUp 0.6s ease-in forwards;
    }
 
    &--side {
@@ -121,7 +121,7 @@
    row-gap: 0.8rem;
 }
 
-@keyframes projectFadeUp {
+@keyframes fadeUp {
    0% {
       opacity: 0;
       transform: translateY(3rem);
