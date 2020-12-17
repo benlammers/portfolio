@@ -82,7 +82,7 @@
       transform: rotateY(180deg);
 
       display: grid;
-      grid-template-rows: max-content max-content 1fr max-content;
+      grid-template-rows: max-content 1fr max-content;
       background-color: var(--color-primary);
       padding: 2rem;
       justify-items: center;
@@ -112,6 +112,8 @@
    row-gap: 0.6rem;
    align-content: start;
    width: 70%;
+   align-self: center;
+   padding-bottom: 3rem;
 }
 
 .buttons {

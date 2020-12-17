@@ -76,65 +76,81 @@
 
    // ANIMATION PRESETS
    li {
+      opacity: 0;
+
       &:nth-child(1) {
-         transform: translateX(4.2rem) scale(0);
+         transform: translateX(4.2rem);
       }
       &:nth-child(2) {
-         transform: translateX(0rem) scale(0);
+         transform: translateX(0rem);
       }
       &:nth-child(3) {
-         transform: translateX(-4.2rem) scale(0);
+         transform: translateX(-4.2rem);
       }
    }
 }
 
 @keyframes firstSocialIn {
    0% {
-      transform: translateX(4.2rem) scale(0);
+      opacity: 0;
+      transform: translateX(4.2rem);
    }
    20% {
-      transform: translateX(4.2rem) scale(1);
+      opacity: 1;
+      transform: translateX(4.2rem);
    }
    40% {
-      transform: translateX(0rem) scale(1);
+      opacity: 1;
+      transform: translateX(0rem);
    }
    100% {
-      transform: translateX(0rem) scale(1);
+      opacity: 1;
+      transform: translateX(0rem);
    }
 }
 
 @keyframes secondSocialIn {
    0% {
-      transform: translateX(0rem) scale(0);
+      opacity: 0;
+      transform: translateX(0rem);
    }
    60% {
-      transform: translateX(0rem) scale(0);
+      opacity: 0;
+      transform: translateX(0rem);
    }
    80% {
-      transform: translateX(0rem) scale(1);
+      opacity: 1;
+      transform: translateX(0rem);
    }
    100% {
-      transform: translateX(0rem) scale(1);
+      opacity: 1;
+      transform: translateX(0rem);
    }
 }
 
 @keyframes thirdSocialIn {
    0% {
-      transform: translateX(-4.2rem) scale(0);
+      opacity: 0;
+      transform: translateX(-4.2rem);
    }
    20% {
-      transform: translateX(-4.2rem) scale(0);
+      opacity: 0;
+      transform: translateX(-4.2rem);
    }
    40% {
-      transform: translateX(-4.2rem) scale(1);
+      opacity: 1;
+      transform: translateX(-4.2rem);
    }
    60% {
-      transform: translateX(-4.2rem) scale(1);
+      opacity: 1;
+      transform: translateX(-4.2rem);
    }
    80% {
-      transform: translateX(0rem) scale(1);
+      opacity: 1;
+      transform: translateX(0rem);
    }
    100% {
-      transform: translateX(0rem) scale(1);
+      opacity: 1;
+      transform: translateX(0rem);
    }
 }

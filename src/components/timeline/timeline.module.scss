@@ -90,11 +90,15 @@
       
       .item {
          // ANIMATION PRESETS
-         transform: translateY(1rem);
+         transform: translateY(3rem);
          grid-row: unset !important;
          
          grid-column: 1 / 2;
          justify-self: center;
+
+         &--visible {
+            animation: itemFadeUp 0.6s ease-in forwards;
+         }
          
          &:after {
             display: none;
@@ -153,5 +157,20 @@
    to {
       opacity: 1;
       transform: translate(0, 0);
+   }
+}
+
+@keyframes itemFadeUp {
+   0% {
+      opacity: 0;
+      transform: translateY(3rem);
+   }
+   40% {
+      opacity: 0.6;
+      transform: translateY(-1rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
    }
 }

@@ -29,8 +29,8 @@ const ProjectCard = ({ project }) => {
             <h2 className="text--lg font--bold">{project.role}</h2>
             <h3 className="text--lg">{project.type}</h3>
           </div>
-          <h2 className="text--lg space--lg">Tech Stack</h2>
           <ul className={styles.stack}>
+            <h2 className="text--lg space--lg">Tech Stack</h2>
             {project.stack.map((skill, index) => (
               <SkillItem skill={skill} key={index} />
             ))}
