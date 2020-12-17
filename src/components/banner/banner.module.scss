@@ -77,23 +77,21 @@
    max-width: 64rem;
 }
 
+
+
 .socials {
    li {
       opacity: 0;
-      
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
 
       &:nth-child(3) {
-         transform: translateX(-8.4rem) scale(0);
+         transform: translateX(-8.4rem);
          animation: bannerFirstSocialIn 2s forwards 4s;
       }
       &:nth-child(2) {
-         transform: translateX(-4.2rem) scale(0);
+         transform: translateX(-4.2rem);
          animation: bannerSecondSocialIn 2s forwards 4s;
       }
       &:nth-child(1) {
-         transform: scale(0);
          animation: bannerThirdSocialIn 2s forwards 4s;
       }
    }
@@ -108,50 +106,50 @@
 
 @keyframes bannerFirstSocialIn {
    0% {
-      transform: translateX(-8.4rem) scale(0);
+      transform: translateX(-8.4rem);
       opacity: 0;
    }
    20% {
-      transform: translateX(-8.4rem) scale(1);
+      transform: translateX(-8.4rem);
       opacity: 1;
    }
    40% {
-      transform: translateX(-4.2rem) scale(1);
+      transform: translateX(-4.2rem);
       opacity: 1;
    }
    60% {
-      transform: translateX(-4.2rem) scale(1);
+      transform: translateX(-4.2rem);
       opacity: 1;
    }
    80% {
-      transform: translateX(0rem) scale(1);
+      transform: translateX(0rem);
       opacity: 1;
    }
    100% {
-      transform: translateX(0rem) scale(1);
+      transform: translateX(0rem);
       opacity: 1;
    }
 }
 
 @keyframes bannerSecondSocialIn {
    0% {
-      transform: translateX(-4.2rem) scale(0);
+      transform: translateX(-4.2rem);
       opacity: 0;
    }
    40% {
-      transform: translateX(-4.2rem) scale(0);
+      transform: translateX(-4.2rem);
       opacity: 0;
    }
    60% {
-      transform: translateX(-4.2rem) scale(1);
+      transform: translateX(-4.2rem);
       opacity: 1;
    }
    80% {
-      transform: translateX(0rem) scale(1);
+      transform: translateX(0rem);
       opacity: 1;
    }
    100% {
-      transform: translateX(0rem) scale(1);
+      transform: translateX(0rem);
       opacity: 1;
    }
 }
@@ -159,14 +157,11 @@
 @keyframes bannerThirdSocialIn {
    0% {
       opacity: 0;
-      transform: scale(0);
    }
    80% {
       opacity: 0;
-      transform: scale(0);
    }
    100% {
       opacity: 1;
-      transform: scale(1);
    }
 }
