@@ -1,3 +1,3 @@
-export const showdown = require('./showdown.png')
-export const portfolio = require('./portfolio.png')
-export const unite = require('./unite.png')
+export const showdown = require('./showdown.jpg')
+export const portfolio = require('./portfolio.jpg')
+export const unite = require('./unite.jpg')
