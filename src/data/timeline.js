@@ -11,7 +11,7 @@ export const timelineData = [
     date: "Jan 7, 2021",
     title: "Understanding Typescript",
     description:
-      "Completed Maximilian Schwarzmüller's course on the basics, features and workkflows of Typescript.",
+      "Completed Maximilian Schwarzmüller's course on the basics, features and workflows of Typescript.",
     link: "https://www.udemy.com/course/understanding-typescript/",
     linkText: "View Course",
   },
