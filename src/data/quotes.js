@@ -11,17 +11,17 @@ export const quotesData = [
    {
       quote:
          'Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid',
-      author: 'Albert Einstien',
+      author: 'Albert Einstein',
    },
    {
       quote:
          'Try not to become a man of success, but rather try to become a man of value',
-      author: 'Albert Einstien',
+      author: 'Albert Einstein',
    },
    {
       quote:
          'Education is not the learning of facts, it’s rather the training of the mind to think',
-      author: 'Albert Einstien',
+      author: 'Albert Einstein',
    },
    {
       quote:
