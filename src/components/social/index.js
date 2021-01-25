@@ -1,5 +1,4 @@
 import React from "react"
-import sprites from "../../img/sprites.svg"
 
 import styles from "./social.module.scss"
 
@@ -11,11 +10,7 @@ const Social = ({ icon, aValues, classNames = [] }) => {
 
   return (
     <li className={classNames}>
-      <a {...aValues}>
-        <svg>
-          <use href={sprites + icon} />
-        </svg>
-      </a>
+      <a {...aValues}>{icon}</a>
     </li>
   )
 }

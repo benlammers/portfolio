@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useInView } from "react-intersection-observer"
-import { isMobile } from "react-device-detect";
-import sprites from "../../../img/sprites.svg"
+import { isMobile } from "react-device-detect"
 
 import SkillItem from "../../skill-item"
 
@@ -14,15 +13,24 @@ const ProjectCard = ({ project }) => {
 
   return (
     <li className={styles.cardWrapper}>
-      <button className={`${styles.card} ${inView ? styles.cardVisible : null} ${flip ? styles.cardFlip : null}`} ref={ref}
-      onMouseEnter={!isMobile ? () => setFlip(true) : null} onMouseLeave={!isMobile ? () => setFlip(false) : null} onClick={() => setFlip(!flip)} >
+      <button
+        className={`${styles.card} ${inView ? styles.cardVisible : null} ${
+          flip ? styles.cardFlip : null
+        }`}
+        ref={ref}
+        onMouseEnter={!isMobile ? () => setFlip(true) : null}
+        onMouseLeave={!isMobile ? () => setFlip(false) : null}
+        onClick={() => setFlip(!flip)}
+      >
         <div className={`${styles.cardSide} ${styles.cardFront}`}>
-          <img src={project.image} alt={project.title}/>
+          <img src={project.image} alt={project.title} />
           <div className={styles.details}>
             <h2 className="text--lg font--bold">{project.title}</h2>
             <p className="text--md">{project.description}</p>
           </div>
-          <span className="text--sm">{isMobile ? "Tap" : "Hover"} Card for Details</span>
+          <span className="text--sm">
+            {isMobile ? "Tap" : "Hover"} Card for Details
+          </span>
         </div>
         <div className={`${styles.cardSide} ${styles.cardBack}`}>
           <div className={styles.heading}>
@@ -35,18 +43,23 @@ const ProjectCard = ({ project }) => {
               <SkillItem skill={skill} key={index} />
             ))}
           </ul>
-          {project.buttons && 
+          {project.buttons && (
             <div className={styles.buttons}>
-              {project.buttons.map((button, index) => 
-                <a className="button" href={button.link} target="_blank" rel="noopener noreferrer" key={index} onFocus={() => setFlip(true)}>
+              {project.buttons.map((button, index) => (
+                <a
+                  className="button"
+                  href={button.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={index}
+                  onFocus={() => setFlip(true)}
+                >
                   <span className="text--sm">{button.text}</span>
-                  <svg>
-                    <use href={sprites + button.icon} />
-                  </svg>
+                  {button.icon}
                 </a>
-              )}
+              ))}
             </div>
-          }
+          )}
         </div>
       </button>
     </li>
