@@ -1,6 +1,6 @@
 .animated-link {
    text-decoration: underline;
-   
+
    &:link,
    &:visited {
       display: inline-block;
@@ -29,8 +29,10 @@
    height: 40px;
    text-align: center;
    transition: all 0.3s;
+   backface-visibility: hidden;
 
-   &:hover, &:focus {
+   &:hover,
+   &:focus {
       box-shadow: var(--shadow-4);
       transform: translateY(-2px);
    }
@@ -39,7 +41,7 @@
       box-shadow: var(--shadow-5);
       transform: translateY(2px);
    }
-   
+
    svg {
       background-color: var(--color-text);
       fill: var(--color-white);
