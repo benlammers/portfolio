@@ -21,7 +21,7 @@ export const socialData = [
   {
     icon: <LinkedinIcon />,
     aValues: {
-      href: "https://www.linkedin.com/in/benjamin-lammers-3bb8bb168/",
+      href: "https://www.linkedin.com/in/ben-lammers-3bb8bb168/",
       target: "_blank",
       rel: "noopener noreferrer",
     },
