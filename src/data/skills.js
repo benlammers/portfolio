@@ -1,5 +1,5 @@
-import { apollo, css, django, docker, gatsby, graphql, html, javascript, kubernetes, 
-   mongodb, nextjs, nodejs, postgres, prisma, python, react, redux, sass, tailwind, typescript } from '../img/logos'
+import { apollo, chakra, css, django, docker, gatsby, graphql, html, javascript, kubernetes, 
+   mongodb, nextjs, nodejs, postgres, prisma, python, react, redux, sass, typescript } from '../img/logos'
 
 export const skillsData = [
    {  
@@ -8,10 +8,10 @@ export const skillsData = [
    },
    {
       phrase: "familiar with",
-      items: [ django, gatsby, graphql, mongodb, postgres, python]
+      items: [ chakra, django, gatsby, graphql, mongodb, python]
    },
    {
       phrase: "and exploring",
-      items: [apollo, docker, kubernetes, nextjs, prisma, tailwind, typescript]
+      items: [apollo, docker, kubernetes, nextjs, postgres, prisma, typescript]
    }
 ]

@@ -4,6 +4,7 @@ import { showdown, portfolio, unite } from "../img/projects"
 import { ExternalIcon, GithubIcon } from "../img/icons"
 import {
   apollo,
+  chakra,
   django,
   gatsby,
   graphql,
@@ -14,7 +15,6 @@ import {
   react,
   redux,
   sass,
-  tailwind,
   typescript,
 } from "../img/logos"
 
@@ -30,8 +30,8 @@ export const projectsData = [
       typescript,
       nextjs,
       react,
+      chakra,
       apollo,
-      tailwind,
       graphql,
       prisma,
       postgres,

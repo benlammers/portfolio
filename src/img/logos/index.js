@@ -2,6 +2,10 @@ export const apollo = {
    logo: require('./apollo.svg'),
    title: "Apollo"
 }
+export const chakra = {
+   logo: require('./chakra-ui.svg'),
+   title: "Chakra UI"
+}
 export const css = {
    logo: require('./css.svg'),
    title: "CSS"
