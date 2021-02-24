@@ -13,12 +13,12 @@ const Thanks = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          Eric Lammers
+          Eric
         </a>
         &nbsp;for introducing me to my passion
       </p>
       <p className="text--sm color--secondary">
-        and to Madison Scheerhoorn for supporting it.
+        and to Madison for supporting it.
       </p>
     </div>
   </section>
