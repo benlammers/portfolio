@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
   const [flip, setFlip] = useState(false)
 
   return (
-    <li className={styles.cardWrapper}>
+    <article className={styles.cardWrapper}>
       <button
         className={`${styles.card} ${inView ? styles.cardVisible : null} ${
           flip ? styles.cardFlip : null
@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
         <div className={`${styles.cardSide} ${styles.cardFront}`}>
           <img src={project.image} alt={project.title} />
           <div className={styles.details}>
-            <h2 className="text--lg font--bold">{project.title}</h2>
+            <h3 className="text--lg font--bold">{project.title}</h3>
             <p className="text--md">{project.description}</p>
           </div>
           <span className="text--sm">
@@ -34,15 +34,17 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className={`${styles.cardSide} ${styles.cardBack}`}>
           <div className={styles.heading}>
-            <h2 className="text--lg font--bold">{project.role}</h2>
-            <h3 className="text--lg">{project.type}</h3>
+            <p className="text--lg font--bold">{project.role}</p>
+            <p className="text--lg">{project.type}</p>
           </div>
-          <ul className={styles.stack}>
-            <h2 className="text--lg space--lg">Tech Stack</h2>
-            {project.stack.map((skill, index) => (
-              <SkillItem skill={skill} key={index} />
-            ))}
-          </ul>
+          <div className={styles.stackWrapper}>
+            <span className="text--lg space--lg">Tech Stack</span>
+            <ul className={styles.stack}>
+              {project.stack.map((skill, index) => (
+                <SkillItem skill={skill} key={index} />
+              ))}
+            </ul>
+          </div>
           {project.buttons && (
             <div className={styles.buttons}>
               {project.buttons.map((button, index) => (
@@ -51,6 +53,7 @@ const ProjectCard = ({ project }) => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={button.linkAriaLabel}
                   key={index}
                   onFocus={() => setFlip(true)}
                 >
@@ -62,7 +65,7 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
       </button>
-    </li>
+    </article>
   )
 }
 

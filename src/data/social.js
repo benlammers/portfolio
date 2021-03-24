@@ -8,6 +8,7 @@ export const socialData = [
       href: "https://github.com/benlammers",
       target: "_blank",
       rel: "noopener noreferrer",
+      ariaLabel: "Open Github profile for Ben Lammers"
     },
     className: "socialGithub",
   },
@@ -15,6 +16,7 @@ export const socialData = [
     icon: <GmailIcon />,
     aValues: {
       href: "mailto:21benlammers@gmail.com",
+      ariaLabel: "Send mail to 21benlammers@gmail.com"
     },
     className: "socialGmail",
   },
@@ -24,6 +26,7 @@ export const socialData = [
       href: "https://www.linkedin.com/in/ben-lammers-3bb8bb168/",
       target: "_blank",
       rel: "noopener noreferrer",
+      ariaLabel: "Open LinkedIn profile for Ben Lammers"
     },
     className: "socialLinkedin",
   },

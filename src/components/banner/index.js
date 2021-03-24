@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react"
 
 import { quotesData, socialData } from "../../data"
 
+import { ExternalIcon } from "../../img/icons"
+
+
 import Name from "./name"
 import Social from "../social"
 
@@ -19,7 +22,12 @@ const Banner = () => {
   }, [])
 
   return (
-    <section className={styles.banner}>
+    <header className={styles.banner}>
+
+      <a className={styles.syntax}>
+        View Version Reviewed <br />by Syntax <ExternalIcon />     
+      </a>
+
       <ul className={styles.socials}>
         {socialData.map((social, index) => (
           <Social
@@ -31,7 +39,10 @@ const Banner = () => {
         ))}
       </ul>
       <div className={styles.text}>
-        <Name />
+        <h1>
+          <span className="visually-hidden">Ben Lammers</span>
+          <Name />
+        </h1>
         <div className={styles.line} />
         <h2 className={styles.title}>
           Full Stack Developer
@@ -41,7 +52,7 @@ const Banner = () => {
         <q className="text--md">{quote.quote}</q>
         <p className="text--md">- {quote.author}</p>
       </div>
-    </section>
+    </header>
   )
 }
 
