@@ -1,5 +1,5 @@
 .banner {
-   height: 97vh;
+   height: 100vh;
    display: grid;
    grid-template-rows: max-content 1fr max-content;
    grid-template-columns: 1fr;
@@ -163,3 +163,53 @@
       opacity: 1;
    }
 }
+
+
+.syntax {
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 1000;
+   padding: 1rem;
+   margin: 1rem;
+
+   border: none;
+   border-radius: var(--radius-sm);
+   box-shadow: var(--shadow-3);
+   cursor: pointer;
+   transition: all 0.3s;
+   text-align: center;
+
+   opacity: 0;
+   transform: translateY(6px);
+   animation: fadeUp 0.7s ease forwards 4s;
+
+   font-family: 'Courier New', Courier, monospace;
+   font-size: var(--text-sm);
+   background-color: var(--color-black);
+   color: #f1c15d;
+   font-weight: bold;
+   
+   @media only screen and (max-width: 700px) {
+      font-size: var(--text-xs);
+   }
+
+   svg {
+      height: 2rem;
+      transform: translateY(4px);
+
+      @media only screen and (max-width: 700px) {
+         height: 1.6rem;
+      }
+   }
+
+   &:hover,
+   &:focus {
+      box-shadow: var(--shadow-4);
+   }
+
+   &:active {
+      box-shadow: var(--shadow-5);
+   }
+}
+
