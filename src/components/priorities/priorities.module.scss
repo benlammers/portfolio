@@ -4,14 +4,14 @@
    grid-template-columns: 100%;
    width: 100%;
 
-   &:after {
+   &::after {
       content: "";
       grid-row: 1 / 2;
       grid-column: 1 / 2;
       z-index: -1;
    }
    
-   &:before {
+   &::before {
       content: "";
       grid-row: 2 / 3;
       grid-column: 1 / 2;

@@ -23,8 +23,12 @@ const Banner = () => {
 
   return (
     <header className={styles.banner}>
-
-      <a className={styles.syntax}>
+      <a 
+        className={styles.syntax} 
+        href="https://laughing-wing-9fad30.netlify.app/"                   
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         View Version Reviewed <br />by Syntax <ExternalIcon />     
       </a>
 
