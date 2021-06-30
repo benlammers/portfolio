@@ -74,6 +74,10 @@ export const sass = {
    logo: require('./sass.svg'),
    title: "SASS"
 }
+export const svelte = {
+   logo: require('./svelte.svg'),
+   title: "Svelte"
+}
 export const tailwind = {
    logo: require('./tailwind.svg'),
    title: "Tailwind"

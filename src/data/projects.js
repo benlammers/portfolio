@@ -1,5 +1,5 @@
 import React from "react"
-import { showdown, portfolio, unite } from "../img/projects"
+import { showdown, portfolio, tastetest, unite } from "../img/projects"
 
 import { ExternalIcon, GithubIcon } from "../img/icons"
 import {
@@ -15,6 +15,7 @@ import {
   react,
   redux,
   sass,
+  svelte,
   typescript,
 } from "../img/logos"
 
@@ -49,8 +50,31 @@ export const projectsData = [
       {
         text: "View Git Project",
         link: "https://github.com/benlammers/portfolio",
-        linkAriaLabel: "",
+        linkAriaLabel: "View Github repository for portfolio",
         icon: <GithubIcon />,
+      },
+    ],
+  },
+  {
+    title: "Taste Test",
+    description: `A small application that helps calculate some simple rankings and statistics for family held
+     taste tests. Created as project led approach to learning Svelte.`,
+    image: tastetest,
+    role: "Front End Developer",
+    type: "Personal Project",
+    stack: [svelte, typescript, sass],
+    buttons: [
+      {
+        text: "View Git Project",
+        link: "https://github.com/benlammers/taste-test",
+        linkAriaLabel: "View Github repository for taste test",
+        icon: <GithubIcon />,
+      },
+      {
+        text: "View Site",
+        link: "https://taste-test.vercel.app/",
+        linkAriaLabel: "View the hosted version of Taste Test",
+        icon: <ExternalIcon />,
       },
     ],
   },
