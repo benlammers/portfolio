@@ -8,10 +8,10 @@ export const skillsData = [
    },
    {
       phrase: "familiar with",
-      items: [ chakra, gatsby, graphql, mongodb, python, svelte]
+      items: [ chakra, gatsby, graphql, mongodb, nextjs, python, svelte]
    },
    {
       phrase: "and exploring",
-      items: [apollo, docker, kubernetes, nextjs, postgres, prisma, typescript]
+      items: [apollo, docker, kubernetes, postgres, prisma, typescript]
    }
 ]
