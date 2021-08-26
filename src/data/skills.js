@@ -4,14 +4,14 @@ import { apollo, chakra, css, docker, gatsby, graphql, html, javascript, kuberne
 export const skillsData = [
    {  
       phrase: "I am proficient in",
-      items: [css, html, javascript, nodejs, react, redux, sass]
+      items: [css, html, javascript, nodejs, react, redux, sass, typescript]
    },
    {
       phrase: "familiar with",
-      items: [ chakra, gatsby, graphql, mongodb, nextjs, python, svelte]
+      items: [apollo, chakra, gatsby, graphql, mongodb, nextjs, python, svelte]
    },
    {
       phrase: "and exploring",
-      items: [apollo, docker, kubernetes, postgres, prisma, typescript]
+      items: [docker, kubernetes, postgres, prisma]
    }
 ]
