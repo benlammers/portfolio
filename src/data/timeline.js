@@ -6,6 +6,16 @@ const timelineTypes = {
 }
 
 export const timelineData = [
+   {
+    type: timelineTypes.COURSE,
+    date: "Feb 18, 2021",
+    title: "NodeJS - The Complete Guide",
+    description:
+      "Completed Maximilian Schwarzmüller's course on the REST, GraphQL, Authentication, MongoDB and more in NodeJS.",
+    link: "https://www.udemy.com/course/nodejs-the-complete-guide",
+    linkText: "View Course",
+    linkAriaLabel: "View Maximilian Schwarzmüller's Udemy course on NodeJS"
+  },
   {
     type: timelineTypes.COURSE,
     date: "Jan 7, 2021",
