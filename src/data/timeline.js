@@ -1,11 +1,21 @@
 const timelineTypes = {
-  BOOK: "Book",
+  EDUCATION: "Education",
   CONFERENCE: "Conference",
   COURSE: "Course",
   EMPLOYMENT: "Employment",
 }
 
-export const timelineData = [
+export const timelineData = [   
+   {
+      type: timelineTypes.COURSE,
+      date: "Sept 9, 2021",
+      title: "Just JavaScript",
+      description:
+      "Completed Dan Abramov's course rebuilding your mental model of JavaScript, focusing on concepts of equality and mutability.",
+      link: "https://justjavascript.com/",
+      linkText: "View Course",
+      linkAriaLabel: "View Dan Abramovs's course JustJavascript, a course on JavaScript mental models"
+   },
    {
     type: timelineTypes.COURSE,
     date: "Feb 18, 2021",
@@ -19,12 +29,12 @@ export const timelineData = [
   {
     type: timelineTypes.COURSE,
     date: "Jan 7, 2021",
-    title: "Understanding Typescript",
+    title: "Understanding TypeScript",
     description:
-      "Completed Maximilian Schwarzmüller's course on the basics, features and workflows of Typescript.",
+      "Completed Maximilian Schwarzmüller's course on the basics, features and workflows of TypeScript.",
     link: "https://www.udemy.com/course/understanding-typescript/",
     linkText: "View Course",
-    linkAriaLabel: "View Maximilian Schwarzmüller's Udemy course on Typescript"
+    linkAriaLabel: "View Maximilian Schwarzmüller's Udemy course on TypeScript"
   },
   {
     type: timelineTypes.CONFERENCE,
@@ -56,4 +66,13 @@ export const timelineData = [
     linkText: "View Course",
     linkAriaLabel: "View Jonas Schmedtmann's Udemy course on advanced and modern CSS"
   },
+  {
+     type: timelineTypes.EDUCATION,
+     date: "Sept 7, 2017",
+     title: "Software Design, BComp",
+     description: "Started studying Software Design at Queen's Univeristy in Kingston, ON to earn a Bachelor of Computing.",
+     link: "https://www.cs.queensu.ca/applicants/softwaredesign/",
+     linkText: "View Degree",
+     linkAriaLabel: "View Queen's Univiersity degree outline for Software Design"
+  }
 ]
