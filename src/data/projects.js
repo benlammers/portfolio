@@ -37,6 +37,14 @@ export const projectsData = [
       prisma,
       postgres,
     ],
+    buttons: [
+      {
+        text: "View On GitHub",
+        link: "https://github.com/benlammers/showdown-frontend",
+        linkAriaLabel: "View Github repository for the frontend of Showdown",
+        icon: <GithubIcon />,
+      },
+    ],
   },
   {
     title: "Portfolio",
@@ -48,7 +56,7 @@ export const projectsData = [
     stack: [gatsby, react, sass, html],
     buttons: [
       {
-        text: "View Git Project",
+        text: "View On GitHub",
         link: "https://github.com/benlammers/portfolio",
         linkAriaLabel: "View Github repository for portfolio",
         icon: <GithubIcon />,
@@ -65,7 +73,7 @@ export const projectsData = [
     stack: [svelte, typescript, sass],
     buttons: [
       {
-        text: "View Git Project",
+        text: "View On GitHub",
         link: "https://github.com/benlammers/taste-test",
         linkAriaLabel: "View Github repository for taste test",
         icon: <GithubIcon />,
