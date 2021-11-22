@@ -109,7 +109,7 @@ export const projectsData = [
       },
       {
         text: "View Site",
-        link: "https://benandmadison.ca",
+        link: "https://eager-leavitt-ce2070.netlify.app",
         linkAriaLabel: "View the hosted version of Unite",
         icon: <ExternalIcon />,
       },
