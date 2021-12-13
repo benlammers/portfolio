@@ -26,7 +26,7 @@ export const projectsData = [
       with the ability to easily manage and display tournament details in real time.`,
     image: showdown,
     role: "Full Stack Developer",
-    type: "Family Venture",
+    type: "Personal Project",
     stack: [
       typescript,
       nextjs,
