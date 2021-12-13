@@ -8,11 +8,9 @@ const Social = ({ icon, aValues, classNames = [] }) => {
     ...classNames.map(className => styles[className]),
   ].join(" ")
 
-  const { ariaLabel, ...otherAValues} = aValues;
-
   return (
     <li className={classNames}>
-      <a aria-label={ariaLabel} {...otherAValues}>{icon}</a>
+      <a {...aValues}>{icon}</a>
     </li>
   )
 }

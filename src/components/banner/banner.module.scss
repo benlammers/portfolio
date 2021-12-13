@@ -1,5 +1,5 @@
 .banner {
-   height: 100vh;
+   height: 97vh;
    display: grid;
    grid-template-rows: max-content 1fr max-content;
    grid-template-columns: 1fr;
@@ -164,7 +164,6 @@
    }
 }
 
-
 .syntax {
    position: absolute;
    top: 0;
@@ -212,4 +211,3 @@
       box-shadow: var(--shadow-5);
    }
 }
-

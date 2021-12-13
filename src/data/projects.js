@@ -49,7 +49,6 @@ export const projectsData = [
       {
         text: "View Git Project",
         link: "https://github.com/benlammers/portfolio",
-        linkAriaLabel: "",
         icon: <GithubIcon />,
       },
     ],
@@ -66,19 +65,16 @@ export const projectsData = [
       {
         text: "View Frontend Repo",
         link: "https://github.com/benlammers/unite-frontend",
-        linkAriaLabel: "View Github repository for the frontend of Unite",
         icon: <GithubIcon />,
       },
       {
         text: "View API Repo",
         link: "https://github.com/benlammers/unite-api",
-        linkAriaLabel: "View Github repository for the API of Unite",
         icon: <GithubIcon />,
       },
       {
         text: "View Site",
         link: "https://benandmadison.ca",
-        linkAriaLabel: "View the hosted version of Unite",
         icon: <ExternalIcon />,
       },
     ],

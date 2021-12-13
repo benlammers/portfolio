@@ -1,5 +1,6 @@
 .card-wrapper {
    list-style: none;
+   // width: ;
 }
 
 .card {
@@ -106,17 +107,11 @@
    width: 100%;
 }
 
-.stack-wrapper {
-   width: 70%;
-   display: grid;
-   align-content: center;
-   row-gap: 0.6rem;
-}
-
 .stack {
    display: grid;
    row-gap: 0.6rem;
    align-content: start;
+   width: 70%;
    align-self: center;
    padding-bottom: 3rem;
 }

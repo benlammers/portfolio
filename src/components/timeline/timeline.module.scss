@@ -50,7 +50,7 @@
       animation: fadeIn 0.4s ease-in forwards;
    }
 
-   &::after {
+   &:after {
       content: "";
       width: 0;
       height: 0;
@@ -72,7 +72,7 @@
       // ANIMATION PRESETS
       transform: translateX(1rem);
 
-      &::after {
+      &:after {
          top: calc(50% - 0.8rem);
          left: 0;
          transform: rotate(45deg);
@@ -100,7 +100,7 @@
             animation: fadeUp 0.6s ease-in forwards;
          }
          
-         &::after {
+         &:after {
             display: none;
          }
       }

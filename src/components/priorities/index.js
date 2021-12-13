@@ -11,7 +11,7 @@ const Priority = ({ priority }) => {
    return (
       <div className={`${styles.priority} ${inView ? styles.priorityVisible : ""}`} ref={ref}>
          <img src={priority.icon} alt={priority.altText} />
-         <p className="text--lg font--bold font--heading">{priority.title}</p>
+         <h2 className="text--lg font--bold font--heading">{priority.title}</h2>
          <p className="text--md">{priority.text}</p>
       </div>
    )

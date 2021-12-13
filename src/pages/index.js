@@ -17,25 +17,19 @@ const Home = () => {
 
   return (
     <div className={`${styles.app} theme--default`} >
-      <Helmet
-        htmlAttributes={{
-          lang: "en"
-        }}
-      >
+      <Helmet>
         <meta charSet="utf-8" />
         <title>Ben Lammers</title>
       </Helmet>
-
+      
       <Banner />
       <Navigation />
-      <main>
-        <About />
-        <Priorities />
-        <Skills />
-        <Projects />
-        <Timeline />
-        <Thanks />
-      </main>
+      <About />
+      <Priorities />
+      <Skills />
+      <Projects />
+      <Timeline />
+      <Thanks />
       <Footer />
     </div>
   )

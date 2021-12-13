@@ -10,17 +10,17 @@ const Projects = () => {
   return (
     <section className="section" id="projects">
       <div className="heading">
-        <h2 className="text--xl font--heading font--bold">Projects</h2>
+        <h1 className="text--xl font--heading font--bold">Projects</h1>
         <p className="text--md font--heading">
           Reinforcing my knowledge practically by applying new skills 
           and open-source frameworks to complete personal projects.
         </p>
       </div>
-      <div className={styles.list}>
+      <ul className={styles.list}>
         {projectsData.map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}
-      </div>
+      </ul>
     </section>
   )
 }

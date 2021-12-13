@@ -22,7 +22,7 @@
    }
 
    &:not(:first-child) {
-      &::before {
+      &:before {
          content: "";
          position: absolute;
          width: var(--timeline-line-width);
@@ -37,7 +37,7 @@
    background-color: var(--color-secondary);
    box-shadow: var(--shadow-1);
 
-   &::before, &::after {
+   &:before, &:after {
       content: "";
       height: var(--timeline-circle-size);
       width: var(--timeline-circle-size);
@@ -48,11 +48,11 @@
       border-radius: var(--radius-xl);
    }
    
-   &::after {
+   &:after {
       z-index: 1;
    }
 
-   &::before {
+   &:before {
       box-shadow: inherit;
       z-index: -1;
    }
@@ -60,12 +60,12 @@
 
 .line {
    &:first-child .circle {
-      &::before, &::after {
+      &:before, &:after {
          top: calc(50% - (var(--timeline-circle-size) / 2) + (var(--timeline-item-overlap) / 4) + (var(--timeline-line-overflow) / 2));
       }
    } 
    &:last-child .circle {
-      &::before, &::after {
+      &:before, &:after {
          top: calc(50% - (var(--timeline-circle-size) / 2) - (var(--timeline-item-overlap) / 4) - (var(--timeline-line-overflow) / 2));
       }
    } 
