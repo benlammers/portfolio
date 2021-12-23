@@ -65,7 +65,7 @@ export const projectsData = [
   {
     title: "TS Engine",
     description: `Simple 2D Game Engine running in the browser on HTML Canvas. 
-    Currently only supporting rectangle based games`,
+    Currently only supporting rectangle based games.`,
     image: tsengine,
     role: "Full Stack Developer",
     type: "Personal Project",
