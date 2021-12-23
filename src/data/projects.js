@@ -1,5 +1,5 @@
 import React from "react"
-import { showdown, portfolio, tastetest, unite } from "../img/projects"
+import { showdown, portfolio, tastetest, tsengine, unite } from "../img/projects"
 
 import { ExternalIcon, GithubIcon } from "../img/icons"
 import {
@@ -35,7 +35,6 @@ export const projectsData = [
       apollo,
       graphql,
       prisma,
-      postgres,
     ],
     buttons: [
       {
@@ -60,6 +59,29 @@ export const projectsData = [
         link: "https://github.com/benlammers/portfolio",
         linkAriaLabel: "View Github repository for portfolio",
         icon: <GithubIcon />,
+      },
+    ],
+  },
+  {
+    title: "TS Engine",
+    description: `Simple 2D Game Engine running in the browser on HTML Canvas. 
+    Currently only supporting rectangle based games`,
+    image: tsengine,
+    role: "Full Stack Developer",
+    type: "Personal Project",
+    stack: [svelte, typescript, sass],
+    buttons: [
+      {
+        text: "View On GitHub",
+        link: "https://github.com/benlammers/ts-engine",
+        linkAriaLabel: "View Github repository for TS engine",
+        icon: <GithubIcon />,
+      },
+      {
+        text: "View Site",
+        link: "https://ts-engine.vercel.app/",
+        linkAriaLabel: "View the hosted version of TS Engine",
+        icon: <ExternalIcon />,
       },
     ],
   },
@@ -109,7 +131,7 @@ export const projectsData = [
       },
       {
         text: "View Site",
-        link: "https://eager-leavitt-ce2070.netlify.app",
+        link: "https://unite-app.netlify.app",
         linkAriaLabel: "View the hosted version of Unite",
         icon: <ExternalIcon />,
       },
