@@ -25,7 +25,7 @@ const Banner = () => {
     <header className={styles.banner}>
       <a 
         className={styles.syntax} 
-        href="https://laughing-wing-9fad30.netlify.app/"                   
+        href="https://ben-lammers-syntax.netlify.app/"                   
         target="_blank"
         rel="noopener noreferrer"
       >
