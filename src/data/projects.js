@@ -26,7 +26,7 @@ export const projectsData = [
       with the ability to easily manage and display tournament details in real time.`,
     image: showdown,
     role: "Full Stack Developer",
-    type: "Personal Project",
+    type: "Side Project",
     stack: [
       typescript,
       nextjs,
@@ -51,7 +51,7 @@ export const projectsData = [
       web developer. Created with a focus on mobile first design and leveraging modern CSS.`,
     image: portfolio,
     role: "Front End Developer",
-    type: "Personal Project",
+    type: "Side Project",
     stack: [gatsby, react, sass, html],
     buttons: [
       {
@@ -91,7 +91,7 @@ export const projectsData = [
      taste tests. Created as project led approach to learning Svelte.`,
     image: tastetest,
     role: "Front End Developer",
-    type: "Personal Project",
+    type: "Side Project",
     stack: [svelte, typescript, sass],
     buttons: [
       {
@@ -114,7 +114,7 @@ export const projectsData = [
       Developed with a focus on completing my first full stack application and practicing semantic HTML.`,
     image: unite,
     role: "Full Stack Developer",
-    type: "Personal Project",
+    type: "Side Project",
     stack: [react, redux, sass, django, postgres],
     buttons: [
       {

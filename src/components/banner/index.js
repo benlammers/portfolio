@@ -29,7 +29,7 @@ const Banner = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        View Version Reviewed <br />by Syntax <ExternalIcon />     
+        View Version Reviewed <br />by Syntax Podcast<ExternalIcon />     
       </a>
 
       <ul className={styles.socials}>
