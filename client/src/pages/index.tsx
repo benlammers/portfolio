@@ -1,58 +1,24 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import { ProjectsQuery } from '../generated/types';
+import { About } from '../components/About';
+import { Background } from '../components/Background';
+import { Banner } from '../components/Banner';
+import { Footer } from '../components/Footer';
+import { Projects } from '../components/Projects';
+import { Skills } from '../components/Skills';
+import { Timeline } from '../components/Timeline';
 
-interface Props {
-   data: ProjectsQuery;
-}
-
-const Projects: React.FC<Props> = ({ data }) => {
-   console.log({ data });
+const Home: React.FC = () => {
    return (
-      <div>
-         {data.allSanityProject.nodes.map((project) => (
-            <div key={project._id}>
-               <h1>{project.title}</h1>
-               <p>{project.description}</p>
-               <img width="100px" src={project.image.asset.url} />
-            </div>
-         ))}
-      </div>
+      <main className="relative">
+         <Background />
+         <Banner />
+         <About />
+         <Projects />
+         <Skills />
+         <Timeline />
+         <Footer />
+      </main>
    );
 };
 
-export default Projects;
-
-export const query = graphql`
-   query Projects {
-      allSanityProject {
-         nodes {
-            _id
-            date
-            description
-            image {
-               asset {
-                  url
-               }
-            }
-            role
-            title
-            skills {
-               _id
-               icon {
-                  asset {
-                     url
-                  }
-               }
-               name
-               level
-            }
-         }
-      }
-      allSanitySkill {
-         nodes {
-            _id
-         }
-      }
-   }
-`;
+export default Home;

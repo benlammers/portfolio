@@ -4,6 +4,13 @@ module.exports = {
       title: 'portfolio',
    },
    plugins: [
+      {
+         resolve: 'gatsby-plugin-google-fonts',
+         options: {
+            fonts: ['lato:300,400,700', 'sen:400,700'],
+            display: 'swap',
+         },
+      },
       'gatsby-plugin-postcss',
       {
          resolve: 'gatsby-source-sanity',
