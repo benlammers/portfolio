@@ -24,9 +24,15 @@ export default {
          validation: (Rule) => Rule.required(),
       },
       {
-         title: 'Icon',
-         name: 'icon',
-         type: 'icon',
+         name: 'image',
+         title: 'Image',
+         type: 'image',
+         validation: (Rule) => Rule.required(),
+      },
+      {
+         name: 'alt',
+         title: 'Alt Text',
+         type: 'string',
          validation: (Rule) => Rule.required(),
       },
    ],
