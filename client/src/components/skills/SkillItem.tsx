@@ -1,9 +1,9 @@
 import React from 'react';
-import { SanitySkill } from '../generated/types';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { SkillsQuery } from '../../generated/types';
 
 interface Props {
-   skill: SanitySkill;
+   skill: SkillsQuery['allSanitySkill']['nodes'][number];
 }
 
 export const SkillItem: React.FC<Props> = ({ skill }) => {

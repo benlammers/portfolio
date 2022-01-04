@@ -1524,6 +1524,7 @@ export type Query = {
   allSanityAbout: SanityAboutConnection;
   allSanityFileAsset: SanityFileAssetConnection;
   allSanityImageAsset: SanityImageAssetConnection;
+  allSanityInfo: SanityInfoConnection;
   allSanityProject: SanityProjectConnection;
   allSanitySkill: SanitySkillConnection;
   allSanityTimelineItem: SanityTimelineItemConnection;
@@ -1538,6 +1539,7 @@ export type Query = {
   sanityAbout: Maybe<SanityAbout>;
   sanityFileAsset: Maybe<SanityFileAsset>;
   sanityImageAsset: Maybe<SanityImageAsset>;
+  sanityInfo: Maybe<SanityInfo>;
   sanityProject: Maybe<SanityProject>;
   sanitySkill: Maybe<SanitySkill>;
   sanityTimelineItem: Maybe<SanityTimelineItem>;
@@ -1594,6 +1596,14 @@ export type QueryAllSanityImageAssetArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<SanityImageAssetSortInput>;
+};
+
+
+export type QueryAllSanityInfoArgs = {
+  filter: InputMaybe<SanityInfoFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<SanityInfoSortInput>;
 };
 
 
@@ -1831,6 +1841,22 @@ export type QuerySanityImageAssetArgs = {
   title: InputMaybe<StringQueryOperatorInput>;
   uploadId: InputMaybe<StringQueryOperatorInput>;
   url: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+export type QuerySanityInfoArgs = {
+  _createdAt: InputMaybe<DateQueryOperatorInput>;
+  _id: InputMaybe<StringQueryOperatorInput>;
+  _key: InputMaybe<StringQueryOperatorInput>;
+  _rawStack: InputMaybe<JsonQueryOperatorInput>;
+  _rev: InputMaybe<StringQueryOperatorInput>;
+  _type: InputMaybe<StringQueryOperatorInput>;
+  _updatedAt: InputMaybe<DateQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  stack: InputMaybe<SanitySkillFilterListInput>;
 };
 
 
@@ -3244,6 +3270,338 @@ export type SanityImagePaletteSwatchFilterInput = {
   foreground: InputMaybe<StringQueryOperatorInput>;
   population: InputMaybe<FloatQueryOperatorInput>;
   title: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type SanityInfo = Node & SanityDocument & {
+  __typename?: 'SanityInfo';
+  _createdAt: Maybe<Scalars['Date']>;
+  _id: Maybe<Scalars['String']>;
+  _key: Maybe<Scalars['String']>;
+  _rawStack: Maybe<Scalars['JSON']>;
+  _rev: Maybe<Scalars['String']>;
+  _type: Maybe<Scalars['String']>;
+  _updatedAt: Maybe<Scalars['Date']>;
+  children: Array<Node>;
+  id: Scalars['ID'];
+  internal: Internal;
+  parent: Maybe<Node>;
+  stack: Maybe<Array<Maybe<SanitySkill>>>;
+};
+
+
+export type SanityInfo_CreatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+export type SanityInfo_RawStackArgs = {
+  resolveReferences: InputMaybe<SanityResolveReferencesConfiguration>;
+};
+
+
+export type SanityInfo_UpdatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+export type SanityInfoConnection = {
+  __typename?: 'SanityInfoConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<SanityInfoEdge>;
+  group: Array<SanityInfoGroupConnection>;
+  max: Maybe<Scalars['Float']>;
+  min: Maybe<Scalars['Float']>;
+  nodes: Array<SanityInfo>;
+  pageInfo: PageInfo;
+  sum: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type SanityInfoConnectionDistinctArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+
+export type SanityInfoConnectionGroupArgs = {
+  field: SanityInfoFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+export type SanityInfoConnectionMaxArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+
+export type SanityInfoConnectionMinArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+
+export type SanityInfoConnectionSumArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+export type SanityInfoEdge = {
+  __typename?: 'SanityInfoEdge';
+  next: Maybe<SanityInfo>;
+  node: SanityInfo;
+  previous: Maybe<SanityInfo>;
+};
+
+export enum SanityInfoFieldsEnum {
+  _createdAt = '_createdAt',
+  _id = '_id',
+  _key = '_key',
+  _rawStack = '_rawStack',
+  _rev = '_rev',
+  _type = '_type',
+  _updatedAt = '_updatedAt',
+  children = 'children',
+  children___children = 'children___children',
+  children___children___children = 'children___children___children',
+  children___children___children___children = 'children___children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___id = 'children___children___id',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___parent___id = 'children___children___parent___id',
+  children___id = 'children___id',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___parent___id = 'children___parent___parent___id',
+  id = 'id',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type',
+  parent___children = 'parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___id = 'parent___children___id',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___id = 'parent___id',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  stack = 'stack',
+  stack____createdAt = 'stack____createdAt',
+  stack____id = 'stack____id',
+  stack____key = 'stack____key',
+  stack____rawImage = 'stack____rawImage',
+  stack____rev = 'stack____rev',
+  stack____type = 'stack____type',
+  stack____updatedAt = 'stack____updatedAt',
+  stack___alt = 'stack___alt',
+  stack___children = 'stack___children',
+  stack___children___children = 'stack___children___children',
+  stack___children___children___children = 'stack___children___children___children',
+  stack___children___children___id = 'stack___children___children___id',
+  stack___children___id = 'stack___children___id',
+  stack___children___internal___content = 'stack___children___internal___content',
+  stack___children___internal___contentDigest = 'stack___children___internal___contentDigest',
+  stack___children___internal___description = 'stack___children___internal___description',
+  stack___children___internal___fieldOwners = 'stack___children___internal___fieldOwners',
+  stack___children___internal___ignoreType = 'stack___children___internal___ignoreType',
+  stack___children___internal___mediaType = 'stack___children___internal___mediaType',
+  stack___children___internal___owner = 'stack___children___internal___owner',
+  stack___children___internal___type = 'stack___children___internal___type',
+  stack___children___parent___children = 'stack___children___parent___children',
+  stack___children___parent___id = 'stack___children___parent___id',
+  stack___id = 'stack___id',
+  stack___image____key = 'stack___image____key',
+  stack___image____rawAsset = 'stack___image____rawAsset',
+  stack___image____rawCrop = 'stack___image____rawCrop',
+  stack___image____rawHotspot = 'stack___image____rawHotspot',
+  stack___image____type = 'stack___image____type',
+  stack___image___asset____createdAt = 'stack___image___asset____createdAt',
+  stack___image___asset____id = 'stack___image___asset____id',
+  stack___image___asset____key = 'stack___image___asset____key',
+  stack___image___asset____rawMetadata = 'stack___image___asset____rawMetadata',
+  stack___image___asset____rawSource = 'stack___image___asset____rawSource',
+  stack___image___asset____rev = 'stack___image___asset____rev',
+  stack___image___asset____type = 'stack___image___asset____type',
+  stack___image___asset____updatedAt = 'stack___image___asset____updatedAt',
+  stack___image___asset___altText = 'stack___image___asset___altText',
+  stack___image___asset___assetId = 'stack___image___asset___assetId',
+  stack___image___asset___children = 'stack___image___asset___children',
+  stack___image___asset___description = 'stack___image___asset___description',
+  stack___image___asset___extension = 'stack___image___asset___extension',
+  stack___image___asset___gatsbyImageData = 'stack___image___asset___gatsbyImageData',
+  stack___image___asset___id = 'stack___image___asset___id',
+  stack___image___asset___label = 'stack___image___asset___label',
+  stack___image___asset___mimeType = 'stack___image___asset___mimeType',
+  stack___image___asset___originalFilename = 'stack___image___asset___originalFilename',
+  stack___image___asset___path = 'stack___image___asset___path',
+  stack___image___asset___sha1hash = 'stack___image___asset___sha1hash',
+  stack___image___asset___size = 'stack___image___asset___size',
+  stack___image___asset___title = 'stack___image___asset___title',
+  stack___image___asset___uploadId = 'stack___image___asset___uploadId',
+  stack___image___asset___url = 'stack___image___asset___url',
+  stack___image___crop____key = 'stack___image___crop____key',
+  stack___image___crop____type = 'stack___image___crop____type',
+  stack___image___crop___bottom = 'stack___image___crop___bottom',
+  stack___image___crop___left = 'stack___image___crop___left',
+  stack___image___crop___right = 'stack___image___crop___right',
+  stack___image___crop___top = 'stack___image___crop___top',
+  stack___image___hotspot____key = 'stack___image___hotspot____key',
+  stack___image___hotspot____type = 'stack___image___hotspot____type',
+  stack___image___hotspot___height = 'stack___image___hotspot___height',
+  stack___image___hotspot___width = 'stack___image___hotspot___width',
+  stack___image___hotspot___x = 'stack___image___hotspot___x',
+  stack___image___hotspot___y = 'stack___image___hotspot___y',
+  stack___internal___content = 'stack___internal___content',
+  stack___internal___contentDigest = 'stack___internal___contentDigest',
+  stack___internal___description = 'stack___internal___description',
+  stack___internal___fieldOwners = 'stack___internal___fieldOwners',
+  stack___internal___ignoreType = 'stack___internal___ignoreType',
+  stack___internal___mediaType = 'stack___internal___mediaType',
+  stack___internal___owner = 'stack___internal___owner',
+  stack___internal___type = 'stack___internal___type',
+  stack___level = 'stack___level',
+  stack___name = 'stack___name',
+  stack___parent___children = 'stack___parent___children',
+  stack___parent___children___children = 'stack___parent___children___children',
+  stack___parent___children___id = 'stack___parent___children___id',
+  stack___parent___id = 'stack___parent___id',
+  stack___parent___internal___content = 'stack___parent___internal___content',
+  stack___parent___internal___contentDigest = 'stack___parent___internal___contentDigest',
+  stack___parent___internal___description = 'stack___parent___internal___description',
+  stack___parent___internal___fieldOwners = 'stack___parent___internal___fieldOwners',
+  stack___parent___internal___ignoreType = 'stack___parent___internal___ignoreType',
+  stack___parent___internal___mediaType = 'stack___parent___internal___mediaType',
+  stack___parent___internal___owner = 'stack___parent___internal___owner',
+  stack___parent___internal___type = 'stack___parent___internal___type',
+  stack___parent___parent___children = 'stack___parent___parent___children',
+  stack___parent___parent___id = 'stack___parent___parent___id'
+}
+
+export type SanityInfoFilterInput = {
+  _createdAt: InputMaybe<DateQueryOperatorInput>;
+  _id: InputMaybe<StringQueryOperatorInput>;
+  _key: InputMaybe<StringQueryOperatorInput>;
+  _rawStack: InputMaybe<JsonQueryOperatorInput>;
+  _rev: InputMaybe<StringQueryOperatorInput>;
+  _type: InputMaybe<StringQueryOperatorInput>;
+  _updatedAt: InputMaybe<DateQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  stack: InputMaybe<SanitySkillFilterListInput>;
+};
+
+export type SanityInfoGroupConnection = {
+  __typename?: 'SanityInfoGroupConnection';
+  distinct: Array<Scalars['String']>;
+  edges: Array<SanityInfoEdge>;
+  field: Scalars['String'];
+  fieldValue: Maybe<Scalars['String']>;
+  group: Array<SanityInfoGroupConnection>;
+  max: Maybe<Scalars['Float']>;
+  min: Maybe<Scalars['Float']>;
+  nodes: Array<SanityInfo>;
+  pageInfo: PageInfo;
+  sum: Maybe<Scalars['Float']>;
+  totalCount: Scalars['Int'];
+};
+
+
+export type SanityInfoGroupConnectionDistinctArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+
+export type SanityInfoGroupConnectionGroupArgs = {
+  field: SanityInfoFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+export type SanityInfoGroupConnectionMaxArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+
+export type SanityInfoGroupConnectionMinArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+
+export type SanityInfoGroupConnectionSumArgs = {
+  field: SanityInfoFieldsEnum;
+};
+
+export type SanityInfoSortInput = {
+  fields: InputMaybe<Array<InputMaybe<SanityInfoFieldsEnum>>>;
+  order: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityPageSection = {
@@ -5715,7 +6073,27 @@ export type WebPOptions = {
   quality: InputMaybe<Scalars['Int']>;
 };
 
+export type AboutQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AboutQuery = { __typename?: 'Query', sanityAbout: { __typename?: 'SanityAbout', title: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', marks: Array<string>, text: string }> }> } };
+
+export type InfoQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type InfoQuery = { __typename?: 'Query', sanityInfo: { __typename?: 'SanityInfo', stack: Array<{ __typename?: 'SanitySkill', name: string, alt: string, id: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };
+
+export type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ProjectsQuery = { __typename?: 'Query', allSanityProject: { __typename?: 'SanityProjectConnection', nodes: Array<{ __typename?: 'SanityProject', id: string, name: string, title: string, roles: Array<string>, imageAlt: string, isHighlighted: boolean, repository: string, description: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', text: string, marks: Array<string> }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, projectLink: { __typename?: 'SanityExternalLink', url: string, title: string }, stack: Array<{ __typename?: 'SanitySkill', id: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } }, body: Array<{ __typename?: 'SanityBlock', list: string }> }> }> } };
+
 export type SkillsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type SkillsQuery = { __typename?: 'Query', allSanitySkill: { __typename?: 'SanitySkillConnection', nodes: Array<{ __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };
+
+export type TimelineQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TimelineQuery = { __typename?: 'Query', allSanityTimelineItem: { __typename?: 'SanityTimelineItemConnection', nodes: Array<{ __typename?: 'SanityTimelineItem', id: string, title: string, date: any, alt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', text: string, marks: Array<string> }> }>, link: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };

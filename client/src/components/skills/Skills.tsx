@@ -1,28 +1,10 @@
 import React from 'react';
-import { SkillItem } from './SkillItem';
 import { graphql, useStaticQuery } from 'gatsby';
-import { SkillsQuery } from '../generated/types';
+import { SkillsQuery } from '../../generated/types';
+import { SkillItem } from './SkillItem';
 
 export const Skills: React.FC = () => {
-   const data = useStaticQuery<SkillsQuery>(graphql`
-      query Skills {
-         allSanitySkill(sort: { fields: name }, filter: { level: { ne: "hidden" } }) {
-            nodes {
-               id
-               name
-               level
-               image {
-                  asset {
-                     gatsbyImageData(placeholder: BLURRED, width: 36, height: 36)
-                  }
-               }
-               alt
-            }
-         }
-      }
-   `);
-
-   console.log(data);
+   const data = useStaticQuery<SkillsQuery>(query);
 
    return (
       <div className="flex flex-col gap-8 w-full items-center py-24 bg-amber-400">
@@ -59,3 +41,21 @@ export const Skills: React.FC = () => {
       </div>
    );
 };
+
+const query = graphql`
+   query Skills {
+      allSanitySkill(sort: { fields: name }, filter: { level: { ne: "hidden" } }) {
+         nodes {
+            id
+            name
+            level
+            image {
+               asset {
+                  gatsbyImageData(placeholder: BLURRED, width: 36, height: 36)
+               }
+            }
+            alt
+         }
+      }
+   }
+`;

@@ -5,6 +5,13 @@ export default () =>
       .title('Content')
       .items([
          S.listItem()
+            .title('Info')
+            .child(
+                  S.document()
+                     .schemaType('info')
+                     .documentId('info')
+                  ),
+         S.listItem()
             .title('About')
             .child(
                   S.document()
@@ -13,5 +20,5 @@ export default () =>
                   ),
          S.divider(),
          ...S.documentTypeListItems()
-            .filter((item) => !['about'].includes(item.getId())),
+            .filter((item) => !['about', 'info'].includes(item.getId())),
       ]);

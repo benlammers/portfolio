@@ -3,9 +3,9 @@ import { About } from '../components/About';
 import { Background } from '../components/Background';
 import { Banner } from '../components/Banner';
 import { Footer } from '../components/Footer';
-import { Projects } from '../components/Projects';
-import { Skills } from '../components/Skills';
-import { Timeline } from '../components/Timeline';
+import { Projects } from '../components/projects/Projects';
+import { Skills } from '../components/skills/Skills';
+import { Timeline } from '../components/timeline/Timeline';
 
 const Home: React.FC = () => {
    return (

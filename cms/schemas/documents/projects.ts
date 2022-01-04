@@ -77,6 +77,7 @@ export default {
          name: 'isHighlighted',
          title: 'Is Highlighted',
          type: 'boolean',
+         validation: (Rule) => Rule.required(),
       },
       {
          name: 'page',
