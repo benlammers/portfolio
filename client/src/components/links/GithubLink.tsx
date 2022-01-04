@@ -8,7 +8,7 @@ export const GithubLink: React.FC<Props> = ({ inFooter }) => {
    return (
       <a className="cursor-pointer" href="https://github.com/benlammers" target="_blank" rel="noopener">
          <svg
-            className={`h-9 w-9 transition-colors ${inFooter ? 'fill-github hover:fill-red-500' : 'fill-amber-400 hover:fill-amber-500'}`}
+            className={`h-9 w-9 transition-colors ${inFooter ? 'fill-github hover:fill-github-hover' : 'fill-amber-400 hover:fill-amber-500'}`}
             width="36"
             height="36"
             viewBox="0 0 36 36"

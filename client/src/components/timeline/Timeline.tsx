@@ -2,12 +2,13 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { TimelineQuery } from '../../generated/types';
 import { TimelineItem } from './TimelineItem';
+import { Section } from '../Section';
 
 export const Timeline: React.FC = () => {
    const data = useStaticQuery<TimelineQuery>(query);
 
    return (
-      <div className="flex flex-col gap-12 w-full items-center py-16 px-24">
+      <Section id="timeline" bg="bg-amber-400 md:bg-white" className="flex flex-col gap-12 items-center">
          <div className="flex flex-col items-center">
             <h2 className="text-lg uppercase font-normal font-body">Timeline</h2>
             <span className="text-4xl font-bold font-display">What I've Been Up To</span>
@@ -18,7 +19,7 @@ export const Timeline: React.FC = () => {
                <TimelineItem key={item.id} item={item} alignEnd={index % 2 === 1} />
             ))}
          </div>
-      </div>
+      </Section>
    );
 };
 

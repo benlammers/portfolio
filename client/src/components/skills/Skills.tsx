@@ -1,60 +1,48 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { SkillsQuery } from '../../generated/types';
-import { SkillItem } from './SkillItem';
+import { SkillsSection } from './SkillsSection';
+import { Section } from '../Section';
 
 export const Skills: React.FC = () => {
    const data = useStaticQuery<SkillsQuery>(query);
 
    return (
-      <div className="flex flex-col gap-8 w-full items-center py-24 bg-amber-400">
-         <div className="flex flex-col gap-4 w-3/5 items-center">
-            <span className="text-xl font-display">I am proficient in</span>
-            <ul className="grid grid-cols-3 gap-4 w-full">
-               {data.allSanitySkill.nodes
-                  .filter((skill) => skill.level === 'proficient')
-                  .map((skill) => (
-                     <SkillItem key={skill.id} skill={skill} />
-                  ))}
-            </ul>
-         </div>
-         <div className="flex flex-col gap-4 w-3/5 items-center">
-            <span className="text-xl font-display">familiar with</span>
-            <ul className="grid grid-cols-3 gap-4 w-full">
-               {data.allSanitySkill.nodes
-                  .filter((skill) => skill.level === 'familiar')
-                  .map((skill) => (
-                     <SkillItem key={skill.id} skill={skill} />
-                  ))}
-            </ul>
-         </div>
-         <div className="flex flex-col gap-4 w-3/5 items-center">
-            <span className="text-xl font-display">and exploring</span>
-            <ul className="grid grid-cols-3 gap-4 w-full">
-               {data.allSanitySkill.nodes
-                  .filter((skill) => skill.level === 'exploring')
-                  .map((skill) => (
-                     <SkillItem key={skill.id} skill={skill} />
-                  ))}
-            </ul>
-         </div>
-      </div>
+      <Section id="skills" bg="bg-amber-400" className="grid gap-8 max-w-[42rem]">
+         <SkillsSection title="I am proficient in" skills={data.proficient.nodes} />
+         <SkillsSection title="comfortable with" skills={data.familiar.nodes} />
+         <SkillsSection title="and exploring" skills={data.exploring.nodes} />
+      </Section>
    );
 };
 
 const query = graphql`
+   fragment SkillItemFragment on SanitySkill {
+      id
+      name
+      level
+      alt
+      image {
+         asset {
+            gatsbyImageData(placeholder: BLURRED, fit: FILL)
+         }
+      }
+   }
+
    query Skills {
-      allSanitySkill(sort: { fields: name }, filter: { level: { ne: "hidden" } }) {
+      proficient: allSanitySkill(sort: { fields: name }, filter: { level: { eq: "proficient" } }) {
          nodes {
-            id
-            name
-            level
-            image {
-               asset {
-                  gatsbyImageData(placeholder: BLURRED, width: 36, height: 36)
-               }
-            }
-            alt
+            ...SkillItemFragment
+         }
+      }
+      familiar: allSanitySkill(sort: { fields: name }, filter: { level: { eq: "familiar" } }) {
+         nodes {
+            ...SkillItemFragment
+         }
+      }
+      exploring: allSanitySkill(sort: { fields: name }, filter: { level: { eq: "exploring" } }) {
+         nodes {
+            ...SkillItemFragment
          }
       }
    }

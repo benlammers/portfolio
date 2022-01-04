@@ -6088,10 +6088,12 @@ export type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type ProjectsQuery = { __typename?: 'Query', allSanityProject: { __typename?: 'SanityProjectConnection', nodes: Array<{ __typename?: 'SanityProject', id: string, name: string, title: string, roles: Array<string>, imageAlt: string, isHighlighted: boolean, repository: string, description: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', text: string, marks: Array<string> }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, projectLink: { __typename?: 'SanityExternalLink', url: string, title: string }, stack: Array<{ __typename?: 'SanitySkill', id: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } }, body: Array<{ __typename?: 'SanityBlock', list: string }> }> }> } };
 
+export type SkillItemFragmentFragment = { __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } };
+
 export type SkillsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SkillsQuery = { __typename?: 'Query', allSanitySkill: { __typename?: 'SanitySkillConnection', nodes: Array<{ __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };
+export type SkillsQuery = { __typename?: 'Query', proficient: { __typename?: 'SanitySkillConnection', nodes: Array<{ __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> }, familiar: { __typename?: 'SanitySkillConnection', nodes: Array<{ __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> }, exploring: { __typename?: 'SanitySkillConnection', nodes: Array<{ __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };
 
 export type TimelineQueryVariables = Exact<{ [key: string]: never; }>;
 

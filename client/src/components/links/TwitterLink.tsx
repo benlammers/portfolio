@@ -8,7 +8,7 @@ export const TwitterLink: React.FC<Props> = ({ inFooter }) => {
    return (
       <a className="cursor-pointer" href="https://twitter.com/benlammers_" target="_blank" rel="noopener">
          <svg
-            className={`h-9 w-9 transition-colors ${inFooter ? 'fill-twitter hover:fill-red-500' : 'fill-amber-400 hover:fill-amber-500'}`}
+            className={`h-9 w-9 transition-colors ${inFooter ? 'fill-twitter hover:fill-twitter-hover' : 'fill-amber-400 hover:fill-amber-500'}`}
             width="36"
             height="36"
             viewBox="0 0 36 36"

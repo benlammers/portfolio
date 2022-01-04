@@ -12,11 +12,11 @@ export const HighlightedProject: React.FC<Props> = ({ project, alignEnd }) => {
    const objectPosition = `${project.image.hotspot.x * 100}% ${project.image.hotspot.y * 100}%`;
 
    return (
-      <div className={`w-full grid relative ${alignEnd ? 'justify-items-end' : 'justify-items-start'}`}>
-         <div className={`w-1/2  h-full shadow-lg absolute top-0 ${alignEnd ? 'left-0' : 'right-0'}`}>
+      <article className={`grid relative gap-4 sm:gap-8 ${alignEnd ? 'justify-items-end' : 'justify-items-start'}`}>
+         <div className={`w-full aspect-video shadow-lg md:w-1/2 md:h-full md:absolute top-0 ${alignEnd ? 'left-0' : 'right-0'}`}>
             <GatsbyImage className="w-full h-full" imgStyle={{ objectPosition }} image={project.image.asset.gatsbyImageData} alt={project.imageAlt} />
          </div>
-         <div className="grid grid-rows-[max-content_1fr_max-content] shadow-lg gap-4 w-2/3 my-10 bg-white h-[420px] z-10 p-9 pr-16">
+         <div className="grid grid-rows-[max-content_1fr_max-content] gap-4 md:shadow-lg md:w-2/3 md:my-10 bg-white md:h-[420px] md:z-10 md:p-9 md:pr-16">
             <div className="flex flex-col">
                <h3 className="font-body text-lg font-bold uppercase text-amber-400">{project.name}</h3>
                <span className="text-3xl font-bold font-display capitalize tracking-tighter">{project.title}</span>
@@ -40,6 +40,6 @@ export const HighlightedProject: React.FC<Props> = ({ project, alignEnd }) => {
                </div>
             </div>
          </div>
-      </div>
+      </article>
    );
 };

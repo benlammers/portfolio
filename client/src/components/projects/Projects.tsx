@@ -3,21 +3,20 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { ProjectsQuery } from '../../generated/types';
 import { HighlightedProject } from './HighlightedProject';
 import { SideProject } from './SideProject';
+import { Section } from '../Section';
 
 export const Projects: React.FC = () => {
    const data = useStaticQuery<ProjectsQuery>(query);
 
-   console.log({ data });
-
    return (
-      <section className="flex flex-col gap-24 w-full p-24 pb-0 bg-amber-400">
+      <Section id="projects" bg="md:bg-amber-400" className="flex flex-col gap-8 md:gap-16">
          {data.allSanityProject.nodes.map((project, index) => {
             if (project.isHighlighted) {
                return <HighlightedProject key={project.id} project={project} alignEnd={index % 2 === 1} />;
             }
             return <SideProject key={project.id} project={project} alignEnd={index % 2 === 1} />;
          })}
-      </section>
+      </Section>
    );
 };
 
@@ -56,7 +55,7 @@ const query = graphql`
                alt
                image {
                   asset {
-                     gatsbyImageData(placeholder: BLURRED, width: 36, height: 36)
+                     gatsbyImageData(placeholder: BLURRED, fit: FILL)
                   }
                }
             }
