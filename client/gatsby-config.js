@@ -11,15 +11,6 @@ module.exports = {
             display: 'swap',
          },
       },
-      {
-         resolve: 'gatsby-plugin-use-dark-mode',
-         options: {
-            classNameDark: 'dark',
-            classNameLight: 'light',
-            storageKey: 'darkMode',
-            minify: true,
-         },
-      },
       'gatsby-plugin-postcss',
       'gatsby-plugin-smoothscroll',
       {
@@ -30,10 +21,16 @@ module.exports = {
          },
       },
       'gatsby-plugin-image',
+      'gatsby-plugin-react-helmet',
       {
          resolve: 'gatsby-plugin-manifest',
          options: {
             icon: 'src/images/icon.png',
+            name: 'Ben Lammers',
+            short_name: 'Ben Lammers',
+            start_url: '/',
+            background_color: '#FBBF24',
+            theme_color: '#1A1B1C',
          },
       },
       'gatsby-plugin-sharp',
