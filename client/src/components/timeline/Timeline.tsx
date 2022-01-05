@@ -14,9 +14,8 @@ export const Timeline: React.FC = () => {
             <span className="text-4xl font-bold font-display">What I've Been Up To</span>
          </div>
          <div className="grid grid-flow-row w-full relative">
-            <div className="bg-gray-300 absolute top-0 right-1/2 translate-x-1/2 h-full w-[2px] scale-y-105" />
-            {data.allSanityTimelineItem.nodes.map((item, index) => (
-               <TimelineItem key={item.id} item={item} alignEnd={index % 2 === 1} />
+            {data.allSanityTimelineItem.nodes.map((item) => (
+               <TimelineItem key={item.id} item={item} />
             ))}
          </div>
       </Section>

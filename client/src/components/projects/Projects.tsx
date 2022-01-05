@@ -9,12 +9,12 @@ export const Projects: React.FC = () => {
    const data = useStaticQuery<ProjectsQuery>(query);
 
    return (
-      <Section id="projects" bg="md:bg-amber-400" className="flex flex-col gap-8 md:gap-16">
-         {data.allSanityProject.nodes.map((project, index) => {
+      <Section id="projects" bg="md:bg-amber-400" className="flex flex-col gap-16">
+         {data.allSanityProject.nodes.map((project) => {
             if (project.isHighlighted) {
-               return <HighlightedProject key={project.id} project={project} alignEnd={index % 2 === 1} />;
+               return <HighlightedProject key={project.id} project={project} />;
             }
-            return <SideProject key={project.id} project={project} alignEnd={index % 2 === 1} />;
+            return <SideProject key={project.id} project={project} />;
          })}
       </Section>
    );

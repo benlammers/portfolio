@@ -7,7 +7,7 @@ interface Props {
 export const Paragraph: React.FC<Props> = ({ body }) => (
    <>
       {body.map((block, index) => (
-         <p key={index} className="text-lg font-normal font-body">
+         <p key={index} className="text-base xs:text-lg font-normal font-body">
             {block.children.map((span, index) => {
                if (span.marks.includes('underline')) {
                   return (

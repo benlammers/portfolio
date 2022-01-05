@@ -2,19 +2,17 @@ import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { ProjectsQuery } from '../../generated/types';
 import { Paragraph } from '../Paragraph';
+import { HotspotImage } from '../HotspotImage';
 
 interface Props {
    project: ProjectsQuery['allSanityProject']['nodes'][number];
-   alignEnd?: boolean;
 }
 
-export const SideProject: React.FC<Props> = ({ project, alignEnd }) => {
-   const objectPosition = `${project.image.hotspot.x * 100}% ${project.image.hotspot.y * 100}%`;
-
+export const SideProject: React.FC<Props> = ({ project }) => {
    return (
-      <article className={`grid relative gap-4 sm:gap-8 ${alignEnd ? 'justify-items-end' : 'justify-items-start'}`}>
-         <div className={`w-full aspect-video shadow-lg  md:w-1/3 md:h-full md:absolute top-0 ${alignEnd ? 'left-0' : 'right-0'}`}>
-            <GatsbyImage className="w-full h-full" imgStyle={{ objectPosition }} image={project.image.asset.gatsbyImageData} alt={project.imageAlt} />
+      <article className="group grid relative gap-4 sm:gap-8 justify-items-end odd:justify-items-start">
+         <div className="w-full aspect-video shadow-lg  md:w-1/3 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0">
+            <HotspotImage image={project.image} alt={project.imageAlt} />
          </div>
          <div className="grid grid-cols-[1fr_max-content] md:gap-8 md:w-[70%] md:my-6 bg-white md:h-[260px] md:z-10 md:p-9 md:shadow-lg ">
             <div className="grid grid-rows-[max-content_1fr_max-content_max-content] gap-4">
