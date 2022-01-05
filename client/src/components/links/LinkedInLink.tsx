@@ -8,7 +8,9 @@ export const LinkedInLink: React.FC<Props> = ({ inFooter }) => {
    return (
       <a className="cursor-pointer" href="https://www.linkedin.com/in/ben-lammers-3bb8bb168/" target="_blank" rel="noopener">
          <svg
-            className={`h-9 w-9 transition-colors ${inFooter ? 'fill-linkedin hover:fill-linkedin-hover' : 'fill-amber-400 hover:fill-amber-500'}`}
+            className={`h-9 w-9 ${inFooter ? 'h-14 w-14 sm:h-7 sm:w-7 md:h-9 md:w-9' : ''} transition-colors ${
+               inFooter ? 'fill-linkedin hover:fill-linkedin-hover' : 'fill-amber-400 hover:fill-amber-500'
+            }`}
             width="36"
             height="36"
             viewBox="0 0 36 36"

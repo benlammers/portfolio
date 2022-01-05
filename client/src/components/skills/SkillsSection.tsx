@@ -10,7 +10,7 @@ interface Props {
 export const SkillsSection: React.FC<Props> = ({ title, skills }) => {
    return (
       <div className="flex flex-col gap-4 items-center">
-         <span className="text-xl font-display">{title}</span>
+         <span className="text-xl font-body">{title}</span>
          <ul className="flex flex-wrap justify-center xs:grid xs:grid-cols-3 gap-4 w-full">
             {skills.map((skill) => (
                <SkillItem key={skill.id} skill={skill} />

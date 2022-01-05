@@ -11,8 +11,8 @@ export const About: React.FC = () => {
       <Section id="about" bg="bg-gray-100">
          <div className="flex flex-col gap-4 md:w-4/5 lg:w-3/5">
             <div className="flex flex-col">
-               <h2 className="text-lg uppercase font-normal font-body">About</h2>
-               <span className="text-3xl sm:text-4xl font-bold font-display">{data.sanityAbout.title}</span>
+               <h2 className="heading-label font-bold">About</h2>
+               <span className="heading-secondary">{data.sanityAbout.title}</span>
             </div>
             <Paragraph body={data.sanityAbout.body} />
          </div>

@@ -11,7 +11,7 @@ export const Paragraph: React.FC<Props> = ({ body }) => (
             {block.children.map((span, index) => {
                if (span.marks.includes('underline')) {
                   return (
-                     <span key={index} className="text-amber-500 underline decoration-double underline-offset-2">
+                     <span key={index} className="text-amber-500 underline decoration-single sm:decoration-double underline-offset-4">
                         {span.text}
                      </span>
                   );
