@@ -8,8 +8,8 @@ export const About: React.FC = () => {
    const data = useStaticQuery<AboutQuery>(query);
 
    return (
-      <Section id="about" bg="bg-gray-100">
-         <div className="flex flex-col gap-4 md:w-4/5 lg:w-3/5">
+      <Section id="about" bg="bg-gray-100 dark:bg-dark-gray">
+         <div className="flex flex-col gap-4 md:w-4/5 lg:w-3/5 text-dark-gray dark:text-gray-100">
             <div className="flex flex-col">
                <h2 className="heading-label font-bold">About</h2>
                <span className="heading-secondary">{data.sanityAbout.title}</span>

@@ -13,7 +13,7 @@ export const TimelineItem: React.FC<Props> = ({ item }) => {
 
    return (
       <div className="group grid sm:grid-cols-[1fr_max-content_max-content] md:grid-cols-[32rem_max-content_max-content] lg:grid-cols-[1fr_max-content_1fr] gap-4 justify-center items-center z-10">
-         <div className="grid grid-cols-[1fr_max-content] gap-y-1 bg-gray-100 shadow-md p-4 sm:pr-8 my-2 md:my-4 lg:my-0 max-w-[32rem] col-start-1 lg:group-odd:col-start-3 row-start-1">
+         <div className="grid grid-cols-[1fr_max-content] gap-y-1 bg-gray-100 shadow-md p-4 sm:pr-8 my-2 md:my-4 lg:my-0 max-w-[32rem] col-start-1 lg:group-even:col-start-3 row-start-1 dark:text-dark-gray">
             <div className="sm:hidden h-7 w-7">
                <GatsbyImage image={item.image.asset.gatsbyImageData} alt={item.alt} />
             </div>
@@ -33,7 +33,7 @@ export const TimelineItem: React.FC<Props> = ({ item }) => {
                <GatsbyImage image={item.image.asset.gatsbyImageData} alt={item.alt} />
             </div>
          </div>
-         <div className="hidden sm:flex flex-col items-center w-min col-start-3 justify-self-start lg:group-odd:col-start-1 lg:group-odd:justify-self-end row-start-1">
+         <div className="hidden sm:flex flex-col items-center w-min col-start-3 justify-self-start lg:group-even:col-start-1 lg:group-even:justify-self-end row-start-1">
             <span className="font-body text-sm">{date.format('MMM')}</span>
             <span className="font-body text-xl">{date.format('YYYY')}</span>
          </div>

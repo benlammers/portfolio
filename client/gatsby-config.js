@@ -11,6 +11,15 @@ module.exports = {
             display: 'swap',
          },
       },
+      {
+         resolve: 'gatsby-plugin-use-dark-mode',
+         options: {
+            classNameDark: 'dark',
+            classNameLight: 'light',
+            storageKey: 'darkMode',
+            minify: true,
+         },
+      },
       'gatsby-plugin-postcss',
       'gatsby-plugin-smoothscroll',
       {

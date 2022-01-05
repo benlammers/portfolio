@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+   darkMode: 'class',
    content: ['./src/**/*.{js,jsx,ts,tsx}'],
    theme: {
       fontFamily: {
@@ -19,6 +20,8 @@ module.exports = {
             'linkedin-hover': '#3a80d3',
             twitter: '#1DA1F2',
             'twitter-hover': '#4db5f5',
+            'dark-gray': '#1A1B1C',
+            'dark-gray-2': '#272727',
          },
       },
    },

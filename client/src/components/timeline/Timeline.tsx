@@ -8,7 +8,7 @@ export const Timeline: React.FC = () => {
    const data = useStaticQuery<TimelineQuery>(query);
 
    return (
-      <Section id="timeline" bg="bg-amber-400 md:bg-white" className="flex flex-col gap-8 md:gap-12 items-center">
+      <Section id="timeline" bg="bg-amber-400 md:bg-white dark:bg-dark-gray-2" className="flex flex-col gap-8 md:gap-12 items-center dark:text-gray-100">
          <div className="flex flex-col items-center">
             <h2 className="heading-label font-bold">Timeline</h2>
             <span className="heading-secondary">What I've Been Up To</span>
