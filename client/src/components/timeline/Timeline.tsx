@@ -50,7 +50,7 @@ const query = graphql`
             }
             image {
                asset {
-                  gatsbyImageData(fit: FILL, placeholder: BLURRED)
+                  gatsbyImageData(placeholder: BLURRED, fit: FILL)
                }
             }
             alt

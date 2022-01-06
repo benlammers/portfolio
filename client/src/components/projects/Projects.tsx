@@ -25,6 +25,9 @@ const query = graphql`
       allSanityProject(sort: { fields: name }) {
          nodes {
             id
+            slug {
+               current
+            }
             name
             title
             roles
@@ -36,7 +39,7 @@ const query = graphql`
             }
             image {
                asset {
-                  gatsbyImageData(fit: FILL, placeholder: BLURRED)
+                  gatsbyImageData(placeholder: BLURRED, fit: FILL)
                }
                hotspot {
                   x
@@ -57,18 +60,6 @@ const query = graphql`
                   asset {
                      gatsbyImageData(placeholder: BLURRED, fit: FILL)
                   }
-               }
-            }
-            page {
-               title
-               imageAlt
-               image {
-                  asset {
-                     gatsbyImageData
-                  }
-               }
-               body {
-                  list
                }
             }
          }

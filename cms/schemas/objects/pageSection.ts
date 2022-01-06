@@ -16,16 +16,17 @@ export default {
          of: [{ type: 'block' }],
          validation: (Rule) => Rule.required(),
       },
-      // TODO: Make it so imageAlt gone if image not set
       {
          name: 'image',
          title: 'Image',
          type: 'image',
+         validation: (Rule) => Rule.required(),
       },
       {
          name: 'imageAlt',
          title: 'Image Alt',
          type: 'string',
+         validation: (Rule) => Rule.required(),
       },
    ],
 };

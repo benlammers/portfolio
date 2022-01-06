@@ -1868,6 +1868,7 @@ export type QuerySanityProjectArgs = {
   _rawImage: InputMaybe<JsonQueryOperatorInput>;
   _rawPage: InputMaybe<JsonQueryOperatorInput>;
   _rawProjectLink: InputMaybe<JsonQueryOperatorInput>;
+  _rawSlug: InputMaybe<JsonQueryOperatorInput>;
   _rawStack: InputMaybe<JsonQueryOperatorInput>;
   _rev: InputMaybe<StringQueryOperatorInput>;
   _type: InputMaybe<StringQueryOperatorInput>;
@@ -1885,6 +1886,7 @@ export type QuerySanityProjectArgs = {
   projectLink: InputMaybe<SanityExternalLinkFilterInput>;
   repository: InputMaybe<StringQueryOperatorInput>;
   roles: InputMaybe<StringQueryOperatorInput>;
+  slug: InputMaybe<SanitySlugFilterInput>;
   stack: InputMaybe<SanitySkillFilterListInput>;
   title: InputMaybe<StringQueryOperatorInput>;
 };
@@ -3650,6 +3652,7 @@ export type SanityProject = Node & SanityDocument & {
   _rawImage: Maybe<Scalars['JSON']>;
   _rawPage: Maybe<Scalars['JSON']>;
   _rawProjectLink: Maybe<Scalars['JSON']>;
+  _rawSlug: Maybe<Scalars['JSON']>;
   _rawStack: Maybe<Scalars['JSON']>;
   _rev: Maybe<Scalars['String']>;
   _type: Maybe<Scalars['String']>;
@@ -3667,6 +3670,7 @@ export type SanityProject = Node & SanityDocument & {
   projectLink: Maybe<SanityExternalLink>;
   repository: Maybe<Scalars['String']>;
   roles: Maybe<Array<Maybe<Scalars['String']>>>;
+  slug: Maybe<SanitySlug>;
   stack: Maybe<Array<Maybe<SanitySkill>>>;
   title: Maybe<Scalars['String']>;
 };
@@ -3696,6 +3700,11 @@ export type SanityProject_RawPageArgs = {
 
 
 export type SanityProject_RawProjectLinkArgs = {
+  resolveReferences: InputMaybe<SanityResolveReferencesConfiguration>;
+};
+
+
+export type SanityProject_RawSlugArgs = {
   resolveReferences: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
@@ -3767,6 +3776,7 @@ export enum SanityProjectFieldsEnum {
   _rawImage = '_rawImage',
   _rawPage = '_rawPage',
   _rawProjectLink = '_rawProjectLink',
+  _rawSlug = '_rawSlug',
   _rawStack = '_rawStack',
   _rev = '_rev',
   _type = '_type',
@@ -4003,6 +4013,9 @@ export enum SanityProjectFieldsEnum {
   projectLink___url = 'projectLink___url',
   repository = 'repository',
   roles = 'roles',
+  slug____key = 'slug____key',
+  slug____type = 'slug____type',
+  slug___current = 'slug___current',
   stack = 'stack',
   stack____createdAt = 'stack____createdAt',
   stack____id = 'stack____id',
@@ -4104,6 +4117,7 @@ export type SanityProjectFilterInput = {
   _rawImage: InputMaybe<JsonQueryOperatorInput>;
   _rawPage: InputMaybe<JsonQueryOperatorInput>;
   _rawProjectLink: InputMaybe<JsonQueryOperatorInput>;
+  _rawSlug: InputMaybe<JsonQueryOperatorInput>;
   _rawStack: InputMaybe<JsonQueryOperatorInput>;
   _rev: InputMaybe<StringQueryOperatorInput>;
   _type: InputMaybe<StringQueryOperatorInput>;
@@ -4121,6 +4135,7 @@ export type SanityProjectFilterInput = {
   projectLink: InputMaybe<SanityExternalLinkFilterInput>;
   repository: InputMaybe<StringQueryOperatorInput>;
   roles: InputMaybe<StringQueryOperatorInput>;
+  slug: InputMaybe<SanitySlugFilterInput>;
   stack: InputMaybe<SanitySkillFilterListInput>;
   title: InputMaybe<StringQueryOperatorInput>;
 };
@@ -4504,6 +4519,12 @@ export type SanitySlug = {
   _key: Maybe<Scalars['String']>;
   _type: Maybe<Scalars['String']>;
   current: Maybe<Scalars['String']>;
+};
+
+export type SanitySlugFilterInput = {
+  _key: InputMaybe<StringQueryOperatorInput>;
+  _type: InputMaybe<StringQueryOperatorInput>;
+  current: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SanitySpan = {
@@ -6086,7 +6107,7 @@ export type InfoQuery = { __typename?: 'Query', sanityInfo: { __typename?: 'Sani
 export type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ProjectsQuery = { __typename?: 'Query', allSanityProject: { __typename?: 'SanityProjectConnection', nodes: Array<{ __typename?: 'SanityProject', id: string, name: string, title: string, roles: Array<string>, imageAlt: string, isHighlighted: boolean, repository: string, description: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', text: string, marks: Array<string> }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, projectLink: { __typename?: 'SanityExternalLink', url: string, title: string }, stack: Array<{ __typename?: 'SanitySkill', id: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } }, body: Array<{ __typename?: 'SanityBlock', list: string }> }> }> } };
+export type ProjectsQuery = { __typename?: 'Query', allSanityProject: { __typename?: 'SanityProjectConnection', nodes: Array<{ __typename?: 'SanityProject', id: string, name: string, title: string, roles: Array<string>, imageAlt: string, isHighlighted: boolean, repository: string, slug: { __typename?: 'SanitySlug', current: string }, description: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', text: string, marks: Array<string> }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, projectLink: { __typename?: 'SanityExternalLink', url: string, title: string }, stack: Array<{ __typename?: 'SanitySkill', id: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> }> } };
 
 export type SkillItemFragmentFragment = { __typename?: 'SanitySkill', id: string, name: string, level: string, alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } };
 
@@ -6099,3 +6120,10 @@ export type TimelineQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type TimelineQuery = { __typename?: 'Query', allSanityTimelineItem: { __typename?: 'SanityTimelineItemConnection', nodes: Array<{ __typename?: 'SanityTimelineItem', id: string, title: string, date: any, alt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', text: string, marks: Array<string> }> }>, link: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };
+
+export type ProjectPageQueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type ProjectPageQuery = { __typename?: 'Query', project: { __typename?: 'SanityProject', id: string, name: string, roles: Array<string>, repository: string, imageAlt: string, projectLink: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number }, asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } }, stack: Array<{ __typename?: 'SanitySkill', image: { __typename?: 'SanityImage', hotspot: { __typename?: 'SanityImageHotspot', y: number, x: number }, asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', marks: Array<string>, text: string }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } } }> } };

@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { ProjectsQuery } from '../../generated/types';
 import { Paragraph } from '../Paragraph';
 import { HotspotImage } from '../HotspotImage';
+import { Link } from 'gatsby';
 
 interface Props {
    project: ProjectsQuery['allSanityProject']['nodes'][number];
@@ -50,12 +51,15 @@ export const HighlightedProject: React.FC<Props> = ({ project }) => {
                      <GatsbyImage className="w-10 h-10 md:w-8 md:h-8 lg:w-10 lg:h-10" image={skill.image.asset.gatsbyImageData} alt={skill.alt} key={index} />
                   ))}
                </div>
-               <button className="grid grid-cols-[1fr_max-content] pr-2 min-w-[10rem] md:min-w-[9rem] lg:min-w-[10rem] shadow-md items-center bg-amber-400 dark:bg-amber-500">
+               <Link
+                  to={`/projects/${project.slug.current}`}
+                  className="grid grid-cols-[1fr_max-content] pr-2 min-w-[10rem] md:min-w-[9rem] lg:min-w-[10rem] shadow-md items-center bg-amber-400 dark:bg-amber-500"
+               >
                   <span className="w-full text-lg text-center py-1 dark:text-dark-gray">View Project</span>
                   <svg className="stroke-dark-gray h-4 w-4 pt-[1px]" viewBox="0 0 16 16" fill="none">
                      <path d="M4.8125 1.625L11.1875 8L4.8125 14.375" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-               </button>
+               </Link>
             </div>
          </div>
       </article>

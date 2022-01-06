@@ -80,6 +80,23 @@ export default {
          validation: (Rule) => Rule.required(),
       },
       {
+         name: 'slug',
+         title: 'Slug',
+         type: 'slug',
+         options: {
+            source: 'name',
+            maxLength: 96,
+         },
+         hidden: ({ document }) => !document.isHighlighted,
+         validation: (Rule) =>
+            Rule.custom((field, context) => {
+               if (context.document.isHighlighted && !field) {
+                  return 'You must create a page if the project is highlighted';
+               }
+               return true;
+            }),
+      },
+      {
          name: 'page',
          title: 'Page',
          type: 'array',
