@@ -1,5 +1,4 @@
 @import './animations.css';
-@import './name.css';
 @import './scrollbar.css';
 
 @tailwind base;
@@ -19,6 +18,10 @@
 }
 
 @layer utilities {
+   .timeline-line-height {
+      height: calc(100% + 40px);
+   }
+
    .visually-hidden {
       border: 0;
       padding: 0;

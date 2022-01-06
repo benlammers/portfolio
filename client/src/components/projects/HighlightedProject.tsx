@@ -1,5 +1,6 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { useInView } from 'react-intersection-observer';
 import { ProjectsQuery } from '../../generated/types';
 import { Paragraph } from '../Paragraph';
 import { HotspotImage } from '../HotspotImage';
@@ -9,12 +10,21 @@ interface Props {
 }
 
 export const HighlightedProject: React.FC<Props> = ({ project }) => {
+   const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true });
+
    return (
-      <article className="group grid relative gap-4 sm:gap-8 justify-items-end odd:justify-items-start">
-         <div className="w-full aspect-video shadow-lg md:w-1/2 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0">
+      <article className="group grid relative gap-4 sm:gap-8 justify-items-end odd:justify-items-start" ref={ref}>
+         <div
+            className={`w-full aspect-video shadow-lg md:w-1/2 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0
+               group-even:fade-left-init group-odd:fade-right-init ${inView ? 'group-even:animate-fade-left group-odd:animate-fade-right' : ''}`}
+         >
             <HotspotImage image={project.image} alt={project.imageAlt} />
          </div>
-         <div className="grid grid-rows-[max-content_1fr_max-content] gap-4 md:shadow-lg md:w-[70%] lg:w-2/3 md:my-10 md:min-h-[420px] md:z-10 md:p-9 bg-white dark:bg-dark-gray-2 md:dark:bg-gray-300 transition-colors duration-300">
+         <div
+            className={`grid grid-rows-[max-content_1fr_max-content] gap-4 md:shadow-lg md:w-[70%] lg:w-2/3 md:my-10 md:min-h-[420px] md:z-10 md:p-9 
+            bg-white dark:bg-dark-gray-2 md:dark:bg-gray-300 transition-colors duration-300 group-odd:fade-left-init group-even:fade-right-init
+            ${inView ? 'group-odd:animate-fade-left group-even:animate-fade-right' : ''}`}
+         >
             <div className="flex flex-col dark:text-gray-100 md:dark:text-dark-gray">
                <h3 className="heading-label text-amber-500 font-bold">{project.name}</h3>
                <span className="heading-tertiary capitalize">{project.title}</span>

@@ -54,6 +54,10 @@ module.exports = {
                '40%': { opacity: 0.6, transform: 'translateX(-4px)' },
                '100%': { opacity: 1, transform: 'translateX(0)' },
             },
+            'timeline-line': {
+               '0%': { transform: 'scale(0) translate(-50%, -20px)' },
+               '100%': { transform: 'scale(1) translate(-50%, -20px)' },
+            },
          },
          animation: {
             line: 'line 2s ease forwards',
@@ -63,6 +67,7 @@ module.exports = {
             'fade-up': 'fade-up 0.6s ease forwards',
             'fade-left': 'fade-left 0.6s ease forwards',
             'fade-right': 'fade-right 0.6s ease forwards',
+            'timeline-line': 'timeline-line 6s ease forwards',
          },
       },
    },

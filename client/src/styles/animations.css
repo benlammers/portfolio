@@ -43,4 +43,9 @@
       transform: translateX(-24px);
       @apply animate-fade-right;
    }
+
+   .timeline-line-init {
+      transform: scale(0) translate(-50%, -20px);
+      transform-origin: top center;
+   }
 }
