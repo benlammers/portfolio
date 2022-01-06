@@ -1,3 +1,7 @@
+@import './animations.css';
+@import './name.css';
+@import './scrollbar.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,14 +18,18 @@
    }
 }
 
-body::-webkit-scrollbar {
-   @apply w-4;
-}
-
-body::-webkit-scrollbar-track {
-   @apply bg-gray-300 dark:bg-dark-gray-2 transition-colors;
-}
-
-body::-webkit-scrollbar-thumb {
-   @apply bg-dark-gray-2 dark:bg-gray-100 transition-colors;
+@layer utilities {
+   .visually-hidden {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+      clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+      clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+      white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+   }
 }

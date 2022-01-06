@@ -15,7 +15,7 @@ export const SideProject: React.FC<Props> = ({ project }) => {
          <div className="w-full aspect-video shadow-lg  md:w-1/3 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0">
             <HotspotImage image={project.image} alt={project.imageAlt} />
          </div>
-         <div className="grid grid-cols-[1fr_max-content] bg-white dark:bg-dark-gray md:dark:bg-gray-300 md:gap-8 md:w-[70%] md:my-6 md:min-h-[260px] md:z-10 md:p-9 md:pb-5 md:shadow-lg transition-colors duration-300">
+         <div className="grid grid-cols-[1fr_max-content] bg-white dark:bg-dark-gray-2 md:dark:bg-gray-300 md:gap-8 md:w-[70%] md:my-6 md:min-h-[260px] md:z-10 md:p-9 md:pb-5 md:shadow-lg transition-colors duration-300">
             <div className="grid grid-rows-[max-content_1fr_max-content_max-content] gap-2 dark:text-gray-100 md:dark:text-dark-gray">
                <div className="flex flex-col">
                   <h3 className="heading-label font-bold">{project.name}</h3>

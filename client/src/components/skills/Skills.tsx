@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
    const data = useStaticQuery<SkillsQuery>(query);
 
    return (
-      <Section id="skills" bg="bg-amber-400 dark:bg-dark-gray-2" className="grid gap-8 max-w-[42rem] text-dark-gray dark:text-gray-100">
+      <Section id="skills" bg="bg-amber-400 dark:bg-dark-gray" className="grid gap-8 max-w-[42rem] text-dark-gray dark:text-gray-100">
          <SkillsSection title="I am proficient in" skills={data.proficient.nodes} />
          <SkillsSection title="comfortable with" skills={data.familiar.nodes} />
          <SkillsSection title="and exploring" skills={data.exploring.nodes} />

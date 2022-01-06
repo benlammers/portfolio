@@ -11,7 +11,7 @@ export const DarkToggle: React.FC = () => {
 
    return (
       <div className="w-full absolute top-0 z-50 pt-6 lg:pt-8 px-6 md:px-8 lg:px-12">
-         <div className="flex justify-end items-center max-w-[64rem] mx-auto">
+         <div className="flex justify-end items-center max-w-[64rem] mx-auto fade-down [animation-delay:4800ms]">
             <button
                className={`p-2 items-center rounded-full -rotate-12 hover:rotate-[24deg] transition-transform ${darkMode ? 'bg-gray-100' : 'bg-dark-gray'}`}
                onClick={handleModeChange}

@@ -9,7 +9,7 @@ export const Projects: React.FC = () => {
    const data = useStaticQuery<ProjectsQuery>(query);
 
    return (
-      <Section id="projects" bg="md:bg-amber-400 dark:bg-dark-gray" className="flex flex-col gap-16">
+      <Section id="projects" bg="md:bg-amber-400 dark:bg-dark-gray-2 md:dark:bg-dark-gray" className="flex flex-col gap-16">
          {data.allSanityProject.nodes.map((project) => {
             if (project.isHighlighted) {
                return <HighlightedProject key={project.id} project={project} />;

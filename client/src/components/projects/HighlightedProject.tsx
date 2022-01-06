@@ -14,7 +14,7 @@ export const HighlightedProject: React.FC<Props> = ({ project }) => {
          <div className="w-full aspect-video shadow-lg md:w-1/2 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0">
             <HotspotImage image={project.image} alt={project.imageAlt} />
          </div>
-         <div className="grid grid-rows-[max-content_1fr_max-content] gap-4 md:shadow-lg md:w-[70%] lg:w-2/3 md:my-10 md:min-h-[420px] md:z-10 md:p-9 bg-white dark:bg-dark-gray md:dark:bg-gray-300 transition-colors duration-300">
+         <div className="grid grid-rows-[max-content_1fr_max-content] gap-4 md:shadow-lg md:w-[70%] lg:w-2/3 md:my-10 md:min-h-[420px] md:z-10 md:p-9 bg-white dark:bg-dark-gray-2 md:dark:bg-gray-300 transition-colors duration-300">
             <div className="flex flex-col dark:text-gray-100 md:dark:text-dark-gray">
                <h3 className="heading-label text-amber-500 font-bold">{project.name}</h3>
                <span className="heading-tertiary capitalize">{project.title}</span>
@@ -43,7 +43,7 @@ export const HighlightedProject: React.FC<Props> = ({ project }) => {
                <button className="grid grid-cols-[1fr_max-content] pr-2 min-w-[10rem] md:min-w-[9rem] lg:min-w-[10rem] shadow-md items-center bg-amber-400 dark:bg-amber-500">
                   <span className="w-full text-lg text-center py-1 dark:text-dark-gray">View Project</span>
                   <svg className="stroke-dark-gray h-4 w-4 pt-[1px]" viewBox="0 0 16 16" fill="none">
-                     <path d="M4.8125 1.625L11.1875 8L4.8125 14.375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M4.8125 1.625L11.1875 8L4.8125 14.375" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                </button>
             </div>

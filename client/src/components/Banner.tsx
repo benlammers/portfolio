@@ -2,6 +2,7 @@ import React from 'react';
 import { GithubLink } from './links/GithubLink';
 import { LinkedInLink } from './links/LinkedInLink';
 import { TwitterLink } from './links/TwitterLink';
+import { Name } from './Name';
 
 export const Banner: React.FC = () => {
    return (
@@ -11,11 +12,14 @@ export const Banner: React.FC = () => {
       >
          <div className="h-full max-w-[64rem] mx-auto flex flex-col justify-center gap-12 ">
             <div className="flex flex-col gap-4">
-               <span className="text-lg font-body uppercase font-normal">Hi, my name is</span>
-               <h1 className="text-[2.75rem] leading-[3rem] sm:text-6xl md:text-7xl uppercase font-bold font-display">Ben Lammers</h1>
-               <h2 className="text-lg font-body uppercase font-normal">Front End Developer</h2>
+               <span className="text-lg font-body uppercase font-normal fade-down [animation-delay:4800ms]">Hi, my name is</span>
+               <h1 className="w-full">
+                  <span className="visually-hidden">Ben Lammers</span>
+                  <Name className="min-w-full xs:min-w-[24rem] md:min-w-[32rem] lg:min-w-[40rem] fill-transparent animate-name [animation-delay:3800ms]" />
+               </h1>
+               <h2 className="text-lg font-body uppercase font-normal fade-up [animation-delay:4800ms]">Front End Developer</h2>
             </div>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row gap-4 fade-up [animation-delay:4800ms]">
                <TwitterLink />
                <GithubLink />
                <LinkedInLink />

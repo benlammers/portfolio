@@ -11,14 +11,14 @@ export const Footer: React.FC = () => {
    const data = useStaticQuery<InfoQuery>(query);
 
    return (
-      <footer className="w-full px-16 py-6 pt-12 sm:pt-6 bg-gray-100 dark:bg-dark-gray dark:text-gray-100 transition-colors duration-300">
+      <footer className="w-full px-16 py-6 pt-12 sm:pt-6 bg-gray-100 dark:bg-black dark:text-gray-100 transition-colors duration-300">
          <div className="max-w-[64rem] mx-auto grid items-center gap-12 sm:gap-6">
             <div className="grid gap-y-12 items-center justify-items-center sm:grid-cols-3 sm:justify-items-stretch w-full">
                <div className="flex flex-col gap-2 items-center">
                   <span className="w-max font-display text-4xl sm:text-2xl uppercase font-bold">Ben Lammers</span>
                   <div className="grid grid-cols-2 w-full sm:w-min sm:flex gap-4 text-xl sm:text-base">
                      {['About', 'Skills', 'Projects', 'Timeline'].map((section) => (
-                        <button className="hover:text-gray-700 dark:hover:text-gray-300" onClick={() => scrollTo(`#${section.toLowerCase()}`)}>
+                        <button key={section} className="hover:text-gray-700 dark:hover:text-gray-300" onClick={() => scrollTo(`#${section.toLowerCase()}`)}>
                            {section}
                         </button>
                      ))}
