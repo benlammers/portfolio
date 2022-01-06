@@ -18,7 +18,7 @@ export const Timeline: React.FC = () => {
             </div>
             <div className="grid grid-flow-row w-full sm:w-[105%] sm:translate-x-[2.5%] md:translate-x-0 md:w-full relative">
                {data.allSanityTimelineItem.nodes.map((item, index) => (
-                  <TimelineItem key={item.id} item={item} />
+                  <TimelineItem key={item.id} item={item} isOdd={index % 2 === 1} />
                ))}
                <div
                   className={`bg-gray-300 hidden lg:block absolute top-0 right-1/2 w-[2px] -z-10 timeline-line-height timeline-line-init ${
