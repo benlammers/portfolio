@@ -19,7 +19,6 @@ module.exports = {
          options: {
             projectId: 'mwmzpjpg',
             dataset: 'production',
-            watchMode: true,
          },
       },
       'gatsby-plugin-image',
