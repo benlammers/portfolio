@@ -1,0 +1,51 @@
+@layer utilities {
+   .fade-in-init {
+      opacity: 0;
+   }
+   .fade-up-init {
+      opacity: 0;
+      transform: translateY(12px);
+   }
+   .fade-down-init {
+      opacity: 0;
+      transform: translateY(-12px);
+   }
+   .fade-left-init {
+      opacity: 0;
+      transform: translateX(24px);
+   }
+   .fade-right-init {
+      opacity: 0;
+      transform: translateX(-24px);
+   }
+
+   .fade-in {
+      opacity: 0;
+      @apply animate-fade-in;
+   }
+   .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      @apply animate-fade-up;
+   }
+   .fade-down {
+      opacity: 0;
+      transform: translateY(-12px);
+      @apply animate-fade-down;
+   }
+   .fade-left {
+      opacity: 0;
+      transform: translateX(24px);
+      @apply animate-fade-left;
+   }
+   .fade-right {
+      opacity: 0;
+      transform: translateX(-24px);
+      @apply animate-fade-right;
+   }
+
+   .timeline-line-init {
+      transform: scale(0) translate(-50%, -20px);
+      transform-origin: top center;
+   }
+}

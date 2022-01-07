@@ -1,0 +1,11 @@
+body::-webkit-scrollbar {
+   @apply w-4;
+}
+
+body::-webkit-scrollbar-track {
+   @apply bg-gray-300 transition-colors;
+}
+
+body::-webkit-scrollbar-thumb {
+   @apply bg-gray-400 transition-colors;
+}
