@@ -6,7 +6,7 @@ interface Props {
 
 export const TwitterLink: React.FC<Props> = ({ inFooter }) => {
    return (
-      <a className="cursor-pointer" href="https://twitter.com/benlammers_" target="_blank" rel="noopener">
+      <a className="cursor-pointer" href="https://twitter.com/benlammers_" target="_blank" rel="noopener" aria-label="Open Ben's Twitter profile">
          <svg
             className={`h-9 w-9 ${inFooter ? 'h-14 w-14 sm:h-7 sm:w-7 md:h-9 md:w-9' : ''} transition-colors ${
                inFooter ? 'fill-twitter hover:fill-twitter-hover' : 'fill-amber-400 hover:fill-amber-500'

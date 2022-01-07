@@ -1880,6 +1880,7 @@ export type QuerySanityProjectArgs = {
   imageAlt: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
   isHighlighted: InputMaybe<BooleanQueryOperatorInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
   name: InputMaybe<StringQueryOperatorInput>;
   page: InputMaybe<SanityPageSectionFilterListInput>;
   parent: InputMaybe<NodeFilterInput>;
@@ -3664,6 +3665,7 @@ export type SanityProject = Node & SanityDocument & {
   imageAlt: Maybe<Scalars['String']>;
   internal: Internal;
   isHighlighted: Maybe<Scalars['Boolean']>;
+  metaDescription: Maybe<Scalars['String']>;
   name: Maybe<Scalars['String']>;
   page: Maybe<Array<Maybe<SanityPageSection>>>;
   parent: Maybe<Node>;
@@ -3909,6 +3911,7 @@ export enum SanityProjectFieldsEnum {
   internal___owner = 'internal___owner',
   internal___type = 'internal___type',
   isHighlighted = 'isHighlighted',
+  metaDescription = 'metaDescription',
   name = 'name',
   page = 'page',
   page____key = 'page____key',
@@ -4129,6 +4132,7 @@ export type SanityProjectFilterInput = {
   imageAlt: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
   isHighlighted: InputMaybe<BooleanQueryOperatorInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
   name: InputMaybe<StringQueryOperatorInput>;
   page: InputMaybe<SanityPageSectionFilterListInput>;
   parent: InputMaybe<NodeFilterInput>;
@@ -6126,4 +6130,4 @@ export type ProjectPageQueryVariables = Exact<{
 }>;
 
 
-export type ProjectPageQuery = { __typename?: 'Query', project: { __typename?: 'SanityProject', id: string, name: string, roles: Array<string>, repository: string, imageAlt: string, projectLink: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, stack: Array<{ __typename?: 'SanitySkill', alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', y: number, x: number } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', marks: Array<string>, text: string }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } } }> } };
+export type ProjectPageQuery = { __typename?: 'Query', project: { __typename?: 'SanityProject', id: string, name: string, roles: Array<string>, repository: string, metaDescription: string, imageAlt: string, projectLink: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, stack: Array<{ __typename?: 'SanitySkill', alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', y: number, x: number } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', marks: Array<string>, text: string }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } } }> } };

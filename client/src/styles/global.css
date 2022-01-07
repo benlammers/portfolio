@@ -36,3 +36,10 @@
       white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
    }
 }
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+   height: 100%;
+}

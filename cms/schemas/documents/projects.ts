@@ -91,7 +91,20 @@ export default {
          validation: (Rule) =>
             Rule.custom((field, context) => {
                if (context.document.isHighlighted && !field) {
-                  return 'You must create a page if the project is highlighted';
+                  return 'You must create a slug if the project is highlighted';
+               }
+               return true;
+            }),
+      },
+      {
+         name: 'metaDescription',
+         title: 'Meta Description',
+         type: 'string',
+         hidden: ({ document }) => !document.isHighlighted,
+         validation: (Rule) =>
+            Rule.custom((field, context) => {
+               if (context.document.isHighlighted && !field) {
+                  return 'You must create a meta description if the project is highlighted';
                }
                return true;
             }),

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { ProjectPageQuery } from '../generated/types';
@@ -14,7 +15,12 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
    const { project } = data;
 
    return (
-      <main className="dark:bg-dark-gray-2 transition-colors duration-300">
+      <main className="grid grid-rows-[max-content_max-content_1fr_max-content] h-full dark:bg-dark-gray-2 transition-colors duration-300">
+         <Helmet htmlAttributes={{ lang: 'en' }}>
+            <title>{project.name} - Ben Lammers</title>
+            <meta name="description" content={project.metaDescription} />
+            <meta charSet="utf-8" />
+         </Helmet>
          <Header />
          <Section
             id="banner"
@@ -25,8 +31,10 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
                <h1 className="text-amber-400 font-bold uppercase text-5xl">{project.name}</h1>
                <Roles roles={project.roles} />
                <div className="flex py-6">
-                  <Link href={project.repository} type="github" title="View Repository" />
-                  {project.projectLink && <Link href={project.projectLink.url} type="external" title={project.projectLink.title} />}
+                  <Link href={project.repository} type="github" title="View Repository" ariaLabel={`Open repository for ${project.name}`} />
+                  {project.projectLink && (
+                     <Link href={project.projectLink.url} type="external" ariaLabel={`Open site for ${project.name}`} title={project.projectLink.title} />
+                  )}
                </div>
                <div className="flex gap-4 my-2">
                   {project.stack.map((skill, index) => (
@@ -70,6 +78,7 @@ export const query = graphql`
          name
          roles
          repository
+         metaDescription
          projectLink {
             title
             url

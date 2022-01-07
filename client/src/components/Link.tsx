@@ -5,11 +5,12 @@ interface Props {
    href: string;
    title: string;
    onCard?: boolean;
+   ariaLabel: string;
 }
 
-export const Link: React.FC<Props> = ({ type, href, title, onCard }) => {
+export const Link: React.FC<Props> = ({ type, href, title, onCard, ariaLabel }) => {
    return (
-      <a href={href} target="_blank" rel="noopener">
+      <a href={href} target="_blank" rel="noopener" aria-label={ariaLabel}>
          <div
             className={`grid grid-cols-[max-content_1fr] min-w-[8rem] shadow-md hover:shadow-lg transition-all items-center duration-300 bg-dark-gray hover:bg-dark-gray-2 dark:bg-white dark:hover:bg-gray-300 ${
                onCard ? 'md:dark:bg-dark-gray md:dark:hover:bg-dark-gray-2' : ''

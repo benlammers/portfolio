@@ -10,7 +10,7 @@ import { Timeline } from '../components/timeline/Timeline';
 const Home: React.FC = () => {
    return (
       <main className="relative overflow-hidden">
-         <Helmet>
+         <Helmet htmlAttributes={{ lang: 'en' }}>
             <title>Ben Lammers</title>
             <meta name="description" content="Ben Lammers is a Front End Developer based in Kingston, ON." />
             <meta charSet="utf-8" />

@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
       <footer className="w-full px-16 py-6 pt-12 sm:pt-6 bg-gray-100 dark:bg-black dark:text-gray-100 transition-colors duration-300" ref={ref}>
          <div className={`max-w-[64rem] mx-auto grid items-center gap-12 sm:gap-10 fade-in-init ${inView ? 'animate-fade-in' : ''}`}>
             <div className="grid gap-y-12 items-center justify-items-center sm:grid-cols-3 sm:justify-items-stretch w-full">
-               <div className="flex flex-col gap-2 items-center">
+               <div className="flex flex-col gap-4 items-center">
                   <span className="w-max font-display text-4xl sm:text-2xl uppercase font-bold">Ben Lammers</span>
                   <div className="grid grid-cols-2 w-full sm:w-min sm:flex gap-4 text-xl sm:text-base">
                      {['About', 'Skills', 'Projects', 'Timeline'].map((section) => (
