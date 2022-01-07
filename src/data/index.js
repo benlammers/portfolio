@@ -1,6 +1,0 @@
-export * from './priorities'
-export * from './projects'
-export * from './quotes'
-export * from './skills'
-export * from './social'
-export * from './timeline'
