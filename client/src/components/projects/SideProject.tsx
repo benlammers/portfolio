@@ -31,7 +31,7 @@ export const SideProject: React.FC<Props> = ({ project }) => {
                   <h3 className="heading-label font-bold">{project.name}</h3>
                   <span className="heading-tertiary capitalize">{project.title}</span>
                </div>
-               <div className="flex flex-col gap-2">
+               <div className="flex flex-col gap-2 pb-2">
                   <Paragraph body={project.description} />
                </div>
                <div className="flex gap-4 md:hidden my-2">
