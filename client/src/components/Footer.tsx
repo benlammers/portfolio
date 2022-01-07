@@ -10,7 +10,7 @@ import { InfoQuery } from '../generated/types';
 
 export const Footer: React.FC = () => {
    const data = useStaticQuery<InfoQuery>(query);
-   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+   const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true });
 
    return (
       <footer className="w-full px-16 py-6 pt-12 sm:pt-6 bg-gray-100 dark:bg-black dark:text-gray-100 transition-colors duration-300" ref={ref}>
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
                   </div>
                </div>
                <div className="sm:self-start sm:row-start-1 sm:col-start-1">
-                  <span className="hidden mb-2 sm:mb-1 sm:inline-block font-body text-sm font-medium text-gray-600 dark:text-gray-400">Connect</span>
+                  <span className="hidden mb-2 sm:mb-1 sm:inline-block font-body text-sm text-gray-600 dark:text-gray-400">Connect</span>
                   <div className="flex justify-center sm:justify-start gap-8 sm:gap-3 md:gap-4">
                      <TwitterLink inFooter />
                      <GithubLink inFooter />
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                   </div>
                </div>
                <div className="flex gap-y-2 gap-x-4 items-center sm:flex-col sm:items-end sm:self-start">
-                  <span className="font-body text-base sm:text-sm font-medium text-gray-600 dark:text-gray-400">Built With</span>
+                  <span className="font-body text-base sm:text-sm text-gray-600 dark:text-gray-400">Built With</span>
                   <div className="flex gap-4 sm:gap-3 md:gap-4">
                      {data.sanityInfo.stack.map((skill) => (
                         <div className="h-7 w-7" key={skill.id}>
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                </div>
             </div>
             <div className="flex flex-col md:flex-row-reverse md:justify-between gap-4">
-               <span className="font-body text-center text-sm font-medium text-gray-600 dark:text-gray-400">
+               <span className="font-body text-center text-sm text-gray-600 dark:text-gray-400">
                   Timeline icons made by{' '}
                   <a className="underline" href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener" title="Freepik">
                      Freepik
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
                      www.flaticon.com
                   </a>
                </span>
-               <span className="font-body text-center text-sm font-medium text-gray-600 dark:text-gray-400">&copy; {new Date().getFullYear()} Ben Lammers</span>
+               <span className="font-body text-center text-sm text-gray-600 dark:text-gray-400">&copy; {new Date().getFullYear()} Ben Lammers</span>
             </div>
          </div>
       </footer>

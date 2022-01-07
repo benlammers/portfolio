@@ -1,16 +1,63 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { ProjectPageQuery } from '../generated/types';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { Section } from '../components/Section';
+import { Roles } from '../components/Roles';
+import { Link } from '../components/Link';
+import { Paragraph } from '../components/Paragraph';
+import { HotspotImage } from '../components/HotspotImage';
 
 const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
    const { project } = data;
 
-   console.log({ project });
-
    return (
-      <div>
-         <h1>{project.name}</h1>
-      </div>
+      <main className="dark:bg-dark-gray-2 transition-colors duration-300">
+         <Header />
+         <Section
+            id="banner"
+            parentClass="pt-4 pb-8 lg:pb-32 xs:pb-16"
+            contentClass="grid gap-8 lg:gap-12 xl:gap-16 md:grid-cols-[1fr_1fr] text-dark-gray dark:text-gray-100"
+         >
+            <div className="flex flex-col gap-2 justify-center">
+               <h1 className="text-amber-400 font-bold uppercase text-5xl">{project.name}</h1>
+               <Roles roles={project.roles} />
+               <div className="flex py-6">
+                  <Link href={project.repository} type="github" title="View Repository" />
+                  {project.projectLink && <Link href={project.projectLink.url} type="external" title={project.projectLink.title} />}
+               </div>
+               <div className="flex gap-4 my-2">
+                  {project.stack.map((skill, index) => (
+                     <GatsbyImage className="w-10 h-10" image={skill.image.asset.gatsbyImageData} alt={skill.alt} key={index} />
+                  ))}
+               </div>
+            </div>
+            <div className="aspect-video md:aspect-[9/10] lg:aspect-[7/8] md:justify-self-center shadow-lg md:w-[32vw] lg:max-w-[24rem]">
+               <HotspotImage image={project.image} alt={project.imageAlt} />
+            </div>
+         </Section>
+         <div className="flex flex-col gap-8 xs:gap-12 lg:gap-24 pb-16 xs:pb-24 md:pb-36">
+            {project.page.map((section, index) => (
+               <Section
+                  id={`section-${index}`}
+                  key={index}
+                  parentClass="group"
+                  contentClass="grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12 xl:gap-16 text-dark-gray dark:text-gray-100"
+               >
+                  <div className="flex flex-col gap-2 lg:group-even:col-start-2 lg:row-start-1">
+                     <h2 className="heading-secondary">{section.title}</h2>
+                     <Paragraph body={section.body} />
+                  </div>
+                  <div className="shadow-lg aspect-auto self-center lg:group-even:col-start-1 lg:row-start-1">
+                     <HotspotImage image={section.image} alt={section.imageAlt} />
+                  </div>
+               </Section>
+            ))}
+         </div>
+         <Footer />
+      </main>
    );
 };
 
@@ -28,23 +75,24 @@ export const query = graphql`
             url
          }
          image {
+            asset {
+               gatsbyImageData(placeholder: BLURRED, fit: FILL)
+            }
             hotspot {
                x
                y
             }
-            asset {
-               gatsbyImageData(placeholder: BLURRED, fit: FILL)
-            }
          }
          imageAlt
          stack {
+            alt
             image {
+               asset {
+                  gatsbyImageData(placeholder: BLURRED, fit: FILL)
+               }
                hotspot {
                   y
                   x
-               }
-               asset {
-                  gatsbyImageData(placeholder: BLURRED, fit: FILL)
                }
             }
          }

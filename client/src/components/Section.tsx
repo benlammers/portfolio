@@ -2,14 +2,14 @@ import React from 'react';
 
 interface Props {
    id: string;
-   bg: string;
-   className?: string;
+   parentClass?: string;
+   contentClass?: string;
 }
 
-export const Section: React.FC<Props> = ({ id, bg, className, children }) => {
+export const Section: React.FC<Props> = ({ id, parentClass, contentClass, children }) => {
    return (
-      <section id={id} className={`w-full relative px-6 sm:px-16 py-16 xs:py-24 transition-colors duration-300 ${bg ? bg : ''}`}>
-         <div className={`max-w-[64rem] mx-auto ${className ? className : ''}`}>{children}</div>
+      <section id={id} className={`w-full relative px-6 sm:px-16 transition-colors duration-300 ${parentClass ? parentClass : ''}`}>
+         <div className={`max-w-[64rem] mx-auto ${contentClass ? contentClass : ''}`}>{children}</div>
       </section>
    );
 };

@@ -10,7 +10,7 @@ export const Timeline: React.FC = () => {
    const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
    return (
-      <Section id="timeline" bg="bg-amber-400 md:bg-white dark:bg-dark-gray md:dark:bg-dark-gray-2">
+      <Section id="timeline" parentClass="bg-amber-400 md:bg-white dark:bg-dark-gray md:dark:bg-dark-gray-2" contentClass="py-12 sm:py-16 lg:py-24">
          <div className="flex flex-col gap-8 md:gap-12 items-center dark:text-gray-100" ref={ref}>
             <div className={`flex flex-col items-center fade-in-init ${inView ? 'animate-fade-in' : ''}`}>
                <h2 className="heading-label font-bold">Timeline</h2>

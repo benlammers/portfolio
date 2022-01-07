@@ -5,6 +5,7 @@ import { ProjectsQuery } from '../../generated/types';
 import { Paragraph } from '../Paragraph';
 import { HotspotImage } from '../HotspotImage';
 import { Link } from 'gatsby';
+import { Roles } from '../Roles';
 
 interface Props {
    project: ProjectsQuery['allSanityProject']['nodes'][number];
@@ -29,18 +30,7 @@ export const HighlightedProject: React.FC<Props> = ({ project }) => {
             <div className="flex flex-col dark:text-gray-100 md:dark:text-dark-gray">
                <h3 className="heading-label text-amber-500 font-bold">{project.name}</h3>
                <span className="heading-tertiary capitalize">{project.title}</span>
-               <span className="heading-label flex items-center gap-2">
-                  {project.roles.map((role, index) => (
-                     <React.Fragment key={index}>
-                        {role}{' '}
-                        {index === project.roles.length - 1 ? (
-                           ''
-                        ) : (
-                           <span className="h-[4px] w-[4px] rounded-full bg-dark-gray dark:bg-gray-100 md:dark:bg-dark-gray" />
-                        )}
-                     </React.Fragment>
-                  ))}
-               </span>
+               <Roles roles={project.roles} onCard />
             </div>
             <div className="flex flex-col gap-2 dark:text-gray-100 md:dark:text-dark-gray">
                <Paragraph body={project.description} />
@@ -53,7 +43,7 @@ export const HighlightedProject: React.FC<Props> = ({ project }) => {
                </div>
                <Link
                   to={`/projects/${project.slug.current}`}
-                  className="grid grid-cols-[1fr_max-content] pr-2 min-w-[10rem] md:min-w-[9rem] lg:min-w-[10rem] shadow-md items-center bg-amber-400 dark:bg-amber-500"
+                  className="grid grid-cols-[1fr_max-content] pr-2 min-w-[10rem] md:min-w-[9rem] lg:min-w-[10rem] shadow-md items-center bg-amber-400 dark:bg-amber-500 hover:bg-amber-300 dark:hover:bg-amber-400 transition-colors duration-300"
                >
                   <span className="w-full text-lg text-center py-1 dark:text-dark-gray">View Project</span>
                   <svg className="stroke-dark-gray h-4 w-4 pt-[1px]" viewBox="0 0 16 16" fill="none">

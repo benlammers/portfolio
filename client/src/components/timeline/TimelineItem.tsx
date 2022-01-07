@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 
 interface Props {
    item: TimelineQuery['allSanityTimelineItem']['nodes'][number];
-   isOdd: boolean; // Could not rely on group-even group-odd as could not affect the animation delay directly
+   isOdd: boolean; // Could not rely on group-even group-odd as could not affect the animation delay
 }
 
 export const TimelineItem: React.FC<Props> = ({ item, isOdd }) => {
@@ -34,7 +34,7 @@ export const TimelineItem: React.FC<Props> = ({ item, isOdd }) => {
             <div className="col-span-2">
                <Paragraph body={item.body} />
             </div>
-            <a className="w-max col-start-2 mt-1 sm:text-lg underline underline-offset-4 font-body" href={item.link.url} target="_blank" rel="noopener">
+            <a className="w-max col-start-2 mt-1 sm:text-lg underline underline-offset-4 font-body hover:text-gray-700" href={item.link.url} target="_blank" rel="noopener">
                {item.link.title}
             </a>
          </div>
