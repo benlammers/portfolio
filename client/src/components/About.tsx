@@ -16,7 +16,7 @@ export const About: React.FC = () => {
          contentClass={`py-12 sm:py-16 md:py-24 lg:py-32 flex justify-center fade-in-init ${inView ? 'animate-fade-in' : ''}`}
       >
          <div className="flex flex-col gap-4 md:w-4/5 lg:w-3/5 text-dark-gray dark:text-gray-100" ref={ref}>
-            <div className="flex flex-col md:items-center">
+            <div className="flex flex-col">
                <h2 className="heading-label font-bold">About</h2>
                <span className="heading-secondary">{data.sanityAbout.title}</span>
             </div>
