@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import { Helmet } from 'react-helmet';
 import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -15,7 +16,7 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
    const { project } = data;
 
    return (
-      <main className="grid grid-rows-[max-content_max-content_1fr_max-content] h-full dark:bg-dark-gray-2 transition-colors duration-300">
+      <main className="grid grid-rows-[max-content_max-content_1fr_max-content] h-full">
          <Helmet htmlAttributes={{ lang: 'en' }}>
             <title>{project.name} - Ben Lammers</title>
             <meta name="description" content={project.metaDescription} />
@@ -24,12 +25,13 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
          <Header />
          <Section
             id="banner"
-            parentClass="pt-4 pb-8 lg:pb-32 xs:pb-16"
+            parentClass="pt-12 md:pt-16 pb-16 lg:pb-32 dark:bg-dark-gray-2 transition-colors duration-300"
             contentClass="grid gap-8 lg:gap-12 xl:gap-16 md:grid-cols-[1fr_1fr] text-dark-gray dark:text-gray-100"
          >
             <div className="flex flex-col gap-2 justify-center">
                <h1 className="text-amber-400 font-bold uppercase text-5xl">{project.name}</h1>
                <Roles roles={project.roles} />
+               <span className="text-gray-500 font-body dark:text-gray-300 pt-2">Last Updated: {dayjs(project.updated).format('MMM D, YYYY')}</span>
                <div className="flex py-6">
                   <Link href={project.repository} type="github" title="View Repository" ariaLabel={`Open repository for ${project.name}`} />
                   {project.projectLink && (
@@ -46,20 +48,20 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
                <HotspotImage image={project.image} alt={project.imageAlt} />
             </div>
          </Section>
-         <div className="flex flex-col gap-8 xs:gap-12 lg:gap-24 pb-16 xs:pb-24 md:pb-36">
+         <div className="flex flex-col gap-8 xs:gap-12 pb-16 xs:pb-24 md:pb-36 lg:gap-24 dark:bg-dark-gray-2 transition-colors duration-300">
             {project.page.map((section, index) => (
                <Section
                   id={`section-${index}`}
                   key={index}
                   parentClass="group"
-                  contentClass="grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12 xl:gap-16 text-dark-gray dark:text-gray-100"
+                  contentClass="grid gap-8 lg:grid-cols-[1fr_1fr] items-center lg:gap-12 xl:gap-16 text-dark-gray dark:text-gray-100"
                >
                   <div className="flex flex-col gap-2 lg:group-even:col-start-2 lg:row-start-1">
                      <h2 className="heading-secondary">{section.title}</h2>
                      <Paragraph body={section.body} />
                   </div>
-                  <div className="shadow-lg aspect-auto self-center lg:group-even:col-start-1 lg:row-start-1">
-                     <HotspotImage image={section.image} alt={section.imageAlt} />
+                  <div className="shadow-lg border-2 border-gray-200 aspect-auto lg:group-even:col-start-1 lg:row-start-1">
+                     <GatsbyImage image={section.image.asset.gatsbyImageData} alt={section.imageAlt} />
                   </div>
                </Section>
             ))}
@@ -79,6 +81,7 @@ export const query = graphql`
          roles
          repository
          metaDescription
+         updated(locale: "en-CA")
          projectLink {
             title
             url
@@ -99,10 +102,6 @@ export const query = graphql`
                asset {
                   gatsbyImageData(placeholder: BLURRED, fit: FILL)
                }
-               hotspot {
-                  y
-                  x
-               }
             }
          }
          page {
@@ -116,10 +115,6 @@ export const query = graphql`
             image {
                asset {
                   gatsbyImageData(placeholder: BLURRED, fit: FILL)
-               }
-               hotspot {
-                  x
-                  y
                }
             }
             imageAlt

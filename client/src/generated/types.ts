@@ -1890,6 +1890,7 @@ export type QuerySanityProjectArgs = {
   slug: InputMaybe<SanitySlugFilterInput>;
   stack: InputMaybe<SanitySkillFilterListInput>;
   title: InputMaybe<StringQueryOperatorInput>;
+  updated: InputMaybe<DateQueryOperatorInput>;
 };
 
 
@@ -3675,6 +3676,7 @@ export type SanityProject = Node & SanityDocument & {
   slug: Maybe<SanitySlug>;
   stack: Maybe<Array<Maybe<SanitySkill>>>;
   title: Maybe<Scalars['String']>;
+  updated: Maybe<Scalars['Date']>;
 };
 
 
@@ -3717,6 +3719,14 @@ export type SanityProject_RawStackArgs = {
 
 
 export type SanityProject_UpdatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+export type SanityProjectUpdatedArgs = {
   difference: InputMaybe<Scalars['String']>;
   formatString: InputMaybe<Scalars['String']>;
   fromNow: InputMaybe<Scalars['Boolean']>;
@@ -4109,7 +4119,8 @@ export enum SanityProjectFieldsEnum {
   stack___parent___internal___type = 'stack___parent___internal___type',
   stack___parent___parent___children = 'stack___parent___parent___children',
   stack___parent___parent___id = 'stack___parent___parent___id',
-  title = 'title'
+  title = 'title',
+  updated = 'updated'
 }
 
 export type SanityProjectFilterInput = {
@@ -4142,6 +4153,7 @@ export type SanityProjectFilterInput = {
   slug: InputMaybe<SanitySlugFilterInput>;
   stack: InputMaybe<SanitySkillFilterListInput>;
   title: InputMaybe<StringQueryOperatorInput>;
+  updated: InputMaybe<DateQueryOperatorInput>;
 };
 
 export type SanityProjectGroupConnection = {
@@ -6130,4 +6142,4 @@ export type ProjectPageQueryVariables = Exact<{
 }>;
 
 
-export type ProjectPageQuery = { __typename?: 'Query', project: { __typename?: 'SanityProject', id: string, name: string, roles: Array<string>, repository: string, metaDescription: string, imageAlt: string, projectLink: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, stack: Array<{ __typename?: 'SanitySkill', alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', y: number, x: number } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', marks: Array<string>, text: string }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } } }> } };
+export type ProjectPageQuery = { __typename?: 'Query', project: { __typename?: 'SanityProject', id: string, name: string, roles: Array<string>, repository: string, metaDescription: string, updated: any, imageAlt: string, projectLink: { __typename?: 'SanityExternalLink', title: string, url: string }, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any }, hotspot: { __typename?: 'SanityImageHotspot', x: number, y: number } }, stack: Array<{ __typename?: 'SanitySkill', alt: string, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }>, page: Array<{ __typename?: 'SanityPageSection', title: string, imageAlt: string, body: Array<{ __typename?: 'SanityBlock', children: Array<{ __typename?: 'SanitySpan', marks: Array<string>, text: string }> }>, image: { __typename?: 'SanityImage', asset: { __typename?: 'SanityImageAsset', gatsbyImageData: any } } }> } };

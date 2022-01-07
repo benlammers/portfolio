@@ -110,6 +110,19 @@ export default {
             }),
       },
       {
+         name: 'updated',
+         title: 'Updated',
+         type: 'date',
+         hidden: ({ document }) => !document.isHighlighted,
+         validation: (Rule) =>
+            Rule.custom((field, context) => {
+               if (context.document.isHighlighted && !field) {
+                  return 'You must create a last updated date if the project is highlighted';
+               }
+               return true;
+            }),
+      },
+      {
          name: 'page',
          title: 'Page',
          type: 'array',

@@ -3,9 +3,9 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-   @apply bg-gray-300 dark:bg-[#343434] transition-colors;
+   @apply bg-gray-300 transition-colors;
 }
 
 body::-webkit-scrollbar-thumb {
-   @apply bg-dark-gray-2 dark:bg-gray-100 transition-colors;
+   @apply bg-gray-400 transition-colors;
 }
