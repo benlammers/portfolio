@@ -52,11 +52,11 @@ export const Footer: React.FC = () => {
             <div className="flex flex-col md:flex-row-reverse md:justify-between gap-4">
                <span className="font-body text-center text-sm text-gray-600 dark:text-gray-400">
                   Timeline icons made by{' '}
-                  <a className="underline" href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener" title="Freepik">
+                  <a className="underline" href="https://www.flaticon.com/authors/freepik" title="Freepik">
                      Freepik
                   </a>{' '}
                   from{' '}
-                  <a className="underline" href="https://www.flaticon.com/" target="_blank" rel="noopener" title="Flaticon">
+                  <a className="underline" href="https://www.flaticon.com/" title="Flaticon">
                      www.flaticon.com
                   </a>
                </span>

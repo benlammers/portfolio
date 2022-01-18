@@ -6,7 +6,7 @@ interface Props {
 
 export const GithubLink: React.FC<Props> = ({ inFooter }) => {
    return (
-      <a className="cursor-pointer" href="https://github.com/benlammers" target="_blank" rel="noopener" aria-label="Open Ben's Github profile">
+      <a className="cursor-pointer" href="https://github.com/benlammers" aria-label="Open Ben's Github profile">
          <svg
             className={`h-9 w-9 ${inFooter ? 'h-14 w-14 sm:h-7 sm:w-7 md:h-9 md:w-9' : ''} transition-colors ${
                inFooter ? 'fill-github hover:fill-github-hover dark:fill-white dark:hover:fill-gray-300' : 'fill-amber-400 hover:fill-amber-500'

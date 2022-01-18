@@ -14,9 +14,13 @@ export const TimelineItem: React.FC<Props> = ({ item, isOdd }) => {
    const [ref, inView] = useInView({ threshold: 1, triggerOnce: true });
    const date = dayjs(item.date);
 
-   let cardAnim = `fade-left-init ${isOdd ? 'lg:fade-right-init' : ''} ${inView ? `animate-fade-left ${isOdd ? 'lg:animate-fade-right' : ''}` : ''} [animation-delay:200ms] lg:[animation-delay:800ms]`;
+   let cardAnim = `fade-left-init ${isOdd ? 'lg:fade-right-init' : ''} ${
+      inView ? `animate-fade-left ${isOdd ? 'lg:animate-fade-right' : ''}` : ''
+   } [animation-delay:200ms] lg:[animation-delay:800ms]`;
    let iconAnim = `fade-in-init ${inView ? 'animate-fade-in' : ''} [animation-delay:200ms] lg:[animation-delay:800ms]`;
-   let dateAnim = `fade-right-init ${isOdd ? 'lg:fade-left-init' : ''} ${inView ? `animate-fade-right ${isOdd ? 'lg:animate-fade-left' : ''}` : ''} [animation-delay:200ms] lg:[animation-delay:800ms]`;
+   let dateAnim = `fade-right-init ${isOdd ? 'lg:fade-left-init' : ''} ${
+      inView ? `animate-fade-right ${isOdd ? 'lg:animate-fade-left' : ''}` : ''
+   } [animation-delay:200ms] lg:[animation-delay:800ms]`;
 
    return (
       <div
@@ -34,7 +38,11 @@ export const TimelineItem: React.FC<Props> = ({ item, isOdd }) => {
             <div className="col-span-2">
                <Paragraph body={item.body} />
             </div>
-            <a className="w-max col-start-2 mt-1 sm:text-lg underline underline-offset-4 font-body hover:text-gray-700" aria-label={`${item.link.title} called ${item.title}`} href={item.link.url} target="_blank" rel="noopener">
+            <a
+               className="w-max col-start-2 mt-1 sm:text-lg underline underline-offset-4 font-body hover:text-gray-700"
+               aria-label={`${item.link.title} called ${item.title}`}
+               href={item.link.url}
+            >
                {item.link.title}
             </a>
          </div>
