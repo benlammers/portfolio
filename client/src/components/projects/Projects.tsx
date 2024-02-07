@@ -26,7 +26,7 @@ export const Projects: React.FC = () => {
 
 const query = graphql`
    query Projects {
-      allSanityProject(sort: { fields: name }) {
+      allSanityProject(sort: { fields: name, order: DESC }) {
          nodes {
             id
             slug {
