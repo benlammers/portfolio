@@ -33,7 +33,9 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
                <Roles roles={project.roles} />
                <span className="text-gray-500 font-body dark:text-gray-300 pt-2">Last Updated: {dayjs(project.updated).format('MMM D, YYYY')}</span>
                <div className="flex py-6">
-                  <Link href={project.repository} type="github" title="View Repository" ariaLabel={`Open repository for ${project.name}`} />
+                  {project.repository && (
+                     <Link href={project.repository} type="github" title="View Repository" ariaLabel={`Open repository for ${project.name}`} />
+                  )}
                   {project.projectLink && (
                      <Link href={project.projectLink.url} type="external" ariaLabel={`Open site for ${project.name}`} title={project.projectLink.title} />
                   )}

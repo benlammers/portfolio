@@ -40,8 +40,18 @@ export const SideProject: React.FC<Props> = ({ project }) => {
                   ))}
                </div>
                <div className="flex gap-4 mt-2">
-                  <Link type="github" href={project.repository} title="View Repository" onCard ariaLabel={`Open repository for ${project.name}`} />
-                  {project.projectLink && <Link type="external" href={project.projectLink.url} title={project.projectLink.title} onCard ariaLabel={`Open site for ${project.name}`} />}
+                  {project.repository && (
+                     <Link type="github" href={project.repository} title="View Repository" onCard ariaLabel={`Open repository for ${project.name}`} />
+                  )}
+                  {project.projectLink && (
+                     <Link
+                        type="external"
+                        href={project.projectLink.url}
+                        title={project.projectLink.title}
+                        onCard
+                        ariaLabel={`Open site for ${project.name}`}
+                     />
+                  )}
                </div>
             </div>
             <div className="flex-col gap-4 lg:gap-2 hidden md:flex">

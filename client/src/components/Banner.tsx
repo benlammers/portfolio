@@ -22,7 +22,7 @@ export const Banner: React.FC = () => {
                      <span className="visually-hidden">Ben Lammers</span>
                      <Name className="min-w-full xs:min-w-[24rem] md:min-w-[32rem] lg:min-w-[40rem] fill-transparent animate-name [animation-delay:3800ms]" />
                   </h1>
-                  <h2 className="text-lg font-body uppercase font-normal fade-up [animation-delay:4800ms]">Front End Developer</h2>
+                  <h2 className="text-lg font-body uppercase font-normal fade-up [animation-delay:4800ms]">Full Stack Developer</h2>
                </div>
                <div className="flex flex-row gap-4 fade-up [animation-delay:4800ms]">
                   <TwitterLink />

@@ -12,7 +12,7 @@ export const Projects: React.FC = () => {
       <Section
          id="projects"
          parentClass="md:bg-amber-400 dark:bg-dark-gray-2 md:dark:bg-dark-gray"
-         contentClass="py-12 sm:py-16 lg:pb-24 flex flex-col gap-16 lg:gap-24"
+         contentClass="py-12 sm:py-16 lg:py-24 flex flex-col gap-16 lg:gap-24"
       >
          {data.allSanityProject.nodes.map((project) => {
             if (project.isHighlighted) {

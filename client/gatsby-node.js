@@ -20,7 +20,7 @@ async function createProjectPages(graphql, actions) {
    const projectNodes = (result.data.allSanityProject || {}).nodes || [];
 
    projectNodes.forEach((project) => {
-      // Desctructure the id and slug fields for each category
+      // Destructure the id and slug fields for each category
       const { id, slug = {} } = project;
       // If there isn't a slug, we want to do nothing
       if (!slug) return;

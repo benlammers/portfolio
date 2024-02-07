@@ -66,7 +66,6 @@ export default {
          name: 'repository',
          title: 'Repository',
          type: 'url',
-         validation: (Rule) => Rule.required(),
       },
       {
          name: 'projectLink',
