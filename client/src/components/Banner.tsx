@@ -25,7 +25,6 @@ export const Banner: React.FC = () => {
                   <h2 className="text-lg font-body uppercase font-normal fade-up [animation-delay:4800ms]">Full Stack Developer</h2>
                </div>
                <div className="flex flex-row gap-4 fade-up [animation-delay:4800ms]">
-                  <TwitterLink />
                   <GithubLink />
                   <LinkedInLink />
                </div>

@@ -12,7 +12,7 @@ export const Link: React.FC<Props> = ({ type, href, title, onCard, ariaLabel }) 
    return (
       <a href={href} aria-label={ariaLabel}>
          <div
-            className={`grid grid-cols-[max-content_1fr] min-w-[8rem] shadow-md hover:shadow-lg transition-all items-center duration-300 bg-dark-gray hover:bg-dark-gray-2 dark:bg-white dark:hover:bg-gray-300 ${
+            className={`grid rounded-md grid-cols-[max-content_1fr] pl-1 pr-2 shadow-md hover:shadow-lg transition-all items-center duration-300 bg-dark-gray hover:bg-dark-gray-2 dark:bg-white dark:hover:bg-gray-300 ${
                onCard ? 'md:dark:bg-dark-gray md:dark:hover:bg-dark-gray-2' : ''
             }`}
          >
@@ -31,7 +31,7 @@ export const Link: React.FC<Props> = ({ type, href, title, onCard, ariaLabel }) 
                   <path d="M2.16667 3C2.16667 2.77899 2.25446 2.56702 2.41074 2.41074C2.56702 2.25446 2.77899 2.16667 3 2.16667H6.33333C6.55435 2.16667 6.76631 2.07887 6.92259 1.92259C7.07887 1.76631 7.16667 1.55435 7.16667 1.33333C7.16667 1.11232 7.07887 0.900358 6.92259 0.744078C6.76631 0.587797 6.55435 0.5 6.33333 0.5H3C2.33696 0.5 1.70107 0.763392 1.23223 1.23223C0.763392 1.70107 0.5 2.33696 0.5 3V13C0.5 13.663 0.763392 14.2989 1.23223 14.7678C1.70107 15.2366 2.33696 15.5 3 15.5H13C13.663 15.5 14.2989 15.2366 14.7678 14.7678C15.2366 14.2989 15.5 13.663 15.5 13V9.66667C15.5 9.44565 15.4122 9.23369 15.2559 9.07741C15.0996 8.92113 14.8877 8.83333 14.6667 8.83333C14.4457 8.83333 14.2337 8.92113 14.0774 9.07741C13.9211 9.23369 13.8333 9.44565 13.8333 9.66667V13C13.8333 13.221 13.7455 13.433 13.5893 13.5893C13.433 13.7455 13.221 13.8333 13 13.8333H3C2.77899 13.8333 2.56702 13.7455 2.41074 13.5893C2.25446 13.433 2.16667 13.221 2.16667 13V3ZM10.5 0.5C10.279 0.5 10.067 0.587797 9.91074 0.744078C9.75446 0.900358 9.66667 1.11232 9.66667 1.33333C9.66667 1.55435 9.75446 1.76631 9.91074 1.92259C10.067 2.07887 10.279 2.16667 10.5 2.16667H12.655L7.41083 7.41083C7.25904 7.568 7.17504 7.7785 7.17694 7.997C7.17884 8.2155 7.26648 8.42451 7.42098 8.57901C7.57549 8.73352 7.7845 8.82116 8.003 8.82306C8.2215 8.82496 8.432 8.74096 8.58917 8.58917L13.8333 3.345V5.5C13.8333 5.72101 13.9211 5.93297 14.0774 6.08926C14.2337 6.24554 14.4457 6.33333 14.6667 6.33333C14.8877 6.33333 15.0996 6.24554 15.2559 6.08926C15.4122 5.93297 15.5 5.72101 15.5 5.5V1.33333C15.5 1.11232 15.4122 0.900358 15.2559 0.744078C15.0996 0.587797 14.8877 0.5 14.6667 0.5H10.5Z" />
                </svg>
             )}
-            <span className={`text-white dark:text-dark-gray ${onCard ? 'md:dark:text-white' : ''} w-full text-center whitespace-nowrap px-2 py-1 xs:px-3`}>
+            <span className={`text-white dark:text-dark-gray ${onCard ? 'md:dark:text-white' : ''} w-full whitespace-nowrap px-1 py-1.5`}>
                {title}
             </span>
          </div>

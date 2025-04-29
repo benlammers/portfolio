@@ -28,7 +28,7 @@ export const TimelineItem: React.FC<Props> = ({ item, isOdd }) => {
          ref={ref}
       >
          <div
-            className={`grid grid-cols-[1fr_max-content] gap-y-1 bg-gray-100 shadow-md p-4 sm:pr-8 my-2 md:my-4 lg:my-0 max-w-[32rem] col-start-1 lg:group-even:col-start-3 row-start-1 dark:text-dark-gray ${cardAnim}`}
+            className={`grid grid-cols-[1fr_max-content] rounded-md gap-y-1 bg-gray-100 shadow-md p-4 sm:pr-8 my-2 md:my-4 lg:my-0 max-w-[32rem] col-start-1 lg:group-even:col-start-3 row-start-1 dark:text-dark-gray ${cardAnim}`}
          >
             <div className="sm:hidden h-7 w-7">
                <GatsbyImage image={item.image.asset.gatsbyImageData} alt={item.alt} />

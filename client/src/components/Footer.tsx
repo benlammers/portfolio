@@ -33,7 +33,6 @@ export const Footer: React.FC = () => {
                <div className="sm:self-start sm:row-start-1 sm:col-start-1">
                   <span className="hidden mb-2 sm:mb-1 sm:inline-block font-body text-sm text-gray-600 dark:text-gray-400">Connect</span>
                   <div className="flex justify-center sm:justify-start gap-8 sm:gap-3 md:gap-4">
-                     <TwitterLink inFooter />
                      <GithubLink inFooter />
                      <LinkedInLink inFooter />
                   </div>

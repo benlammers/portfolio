@@ -16,13 +16,13 @@ export const SideProject: React.FC<Props> = ({ project }) => {
    return (
       <article className="group grid relative gap-8 justify-items-end odd:justify-items-start" ref={ref}>
          <div
-            className={`w-full aspect-video shadow-lg  md:w-1/3 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0
+            className={`w-full rounded-md overflow-hidden aspect-video shadow-lg  md:w-1/3 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0
             group-even:fade-left-init group-odd:fade-right-init ${inView ? 'group-even:animate-fade-left group-odd:animate-fade-right' : ''}`}
          >
             <HotspotImage image={project.image} alt={project.imageAlt} />
          </div>
          <div
-            className={`grid grid-cols-[1fr_max-content]  md:gap-8 md:w-[70%] md:my-6 md:min-h-[260px] md:z-10 md:p-9 md:pb-5 md:shadow-lg 
+            className={`grid rounded-md grid-cols-[1fr_max-content]  md:gap-8 md:w-[70%] md:my-6 md:min-h-[260px] md:z-10 md:p-9 md:pb-5 md:shadow-lg 
             transition-colors duration-300 bg-white dark:bg-dark-gray-2 md:dark:bg-gray-300
             group-odd:fade-left-init group-even:fade-right-init ${inView ? 'group-odd:animate-fade-left group-even:animate-fade-right' : ''}`}
          >
