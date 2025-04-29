@@ -6,6 +6,7 @@ import { Paragraph } from '../Paragraph';
 import { HotspotImage } from '../HotspotImage';
 import { Link } from 'gatsby';
 import { Roles } from '../Roles';
+import { Trophy } from '../Trophy';
 
 interface Props {
    project: ProjectsQuery['allSanityProject']['nodes'][number];
@@ -17,10 +18,10 @@ export const HighlightedProject: React.FC<Props> = ({ project }) => {
    return (
       <article className="group grid relative gap-4 sm:gap-8 justify-items-end odd:justify-items-start" ref={ref}>
          <div
-            className={`w-full rounded-md overflow-hidden aspect-video shadow-lg md:w-1/2 md:h-full md:absolute top-0 group-even:left-0 group-odd:right-0
+            className={`w-full rounded-md overflow-hidden shadow-lg md:w-1/3 bg-[#EAEAEA] p-12 md:absolute top-1/4 group-even:left-0 group-odd:right-6
                group-even:fade-left-init group-odd:fade-right-init ${inView ? 'group-even:animate-fade-left group-odd:animate-fade-right' : ''}`}
          >
-            <HotspotImage image={project.image} alt={project.imageAlt} />
+            <Trophy />
          </div>
          <div
             className={`grid rounded-md grid-rows-[max-content_1fr_max-content] gap-4 md:shadow-lg md:w-[70%] lg:w-2/3 md:my-10 md:min-h-[420px] md:z-10 md:p-9 

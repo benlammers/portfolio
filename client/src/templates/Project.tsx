@@ -26,7 +26,7 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
          <Section
             id="banner"
             parentClass="pt-12 md:pt-16 pb-16 lg:pb-32 dark:bg-dark-gray-2 transition-colors duration-300"
-            contentClass="grid gap-8 lg:gap-12 xl:gap-16 md:grid-cols-[1fr_1fr] text-dark-gray dark:text-gray-100"
+            contentClass="grid gap-8 lg:gap-12 xl:gap-16 md:grid-cols-[1fr_3fr] text-dark-gray dark:text-gray-100"
          >
             <div className="flex flex-col gap-2 justify-center">
                <h1 className="text-amber-400 font-bold uppercase text-5xl">{project.name}</h1>
@@ -40,13 +40,8 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
                      <Link href={project.projectLink.url} type="external" ariaLabel={`Open site for ${project.name}`} title={project.projectLink.title} />
                   )}
                </div>
-               <div className="flex gap-4 my-2">
-                  {project.stack.map((skill, index) => (
-                     <GatsbyImage className="w-10 h-10" image={skill.image.asset.gatsbyImageData} alt={skill.alt} key={index} />
-                  ))}
-               </div>
             </div>
-            <div className="aspect-video md:aspect-[9/10] lg:aspect-[7/8] md:justify-self-center shadow-lg md:w-[32vw] lg:max-w-[24rem]">
+            <div className="">
                <HotspotImage image={project.image} alt={project.imageAlt} />
             </div>
          </Section>
@@ -62,7 +57,7 @@ const Project: React.FC<PageProps<ProjectPageQuery>> = ({ data }) => {
                      <h2 className="heading-secondary">{section.title}</h2>
                      <Paragraph body={section.body} />
                   </div>
-                  <div className="shadow-lg border-2 border-gray-200 aspect-auto lg:group-even:col-start-1 lg:row-start-1">
+                  <div className="rounded-md overflow-hidden aspect-auto lg:group-even:col-start-1 lg:row-start-1">
                      <GatsbyImage image={section.image.asset.gatsbyImageData} alt={section.imageAlt} />
                   </div>
                </Section>
